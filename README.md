@@ -95,3 +95,14 @@ const netInfo = useNetInfo()
 
 console.log('netInfo type: ', netInfo.type)
 ```
+
+### `useKeyboard`
+
+```js
+import { useKeyboard } from 'react-native-hooks'
+
+const keyboard = useKeyboard()
+
+console.log('keyboard show: ', keyboard.show)
+console.log('keyboard height: ', keyboard.height)
+```
