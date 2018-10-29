@@ -18,13 +18,13 @@ yarn add react-native-hooks
 ```
 
 ## API
-[useAccessibilityInfo]()
-[useAppState]()
-[useCameraRoll]()
-[useClipboard]()
-[useDimensions]()
-[useGeolocation]()
-[useNetInfo]()
+- [useAccessibilityInfo]()
+- [useAppState]()
+- [useCameraRoll]()
+- [useClipboard]()
+- [useDimensions]()
+- [useGeolocation]()
+- [useNetInfo]()
 
 
 ###`useAccessibilityInfo`
