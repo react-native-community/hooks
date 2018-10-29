@@ -3,8 +3,7 @@
 ## React Native Hooks
 React Native APIs turned into React Hooks allowing you to access asynchrnous APIs directly in your functional components.
 
-> Install
-Note: This is an experimental library becasue as of this time React Native does not yet support React version 16.7.
+> Note: This is an experimental library. As of this time React Native does not yet support React version 16.7. Once support for React <= 16.7 is added to React Native, this library will be ready to use.
 
 ### With npm
 
