@@ -17,13 +17,13 @@ yarn add react-native-hooks
 ```
 
 ## API
-- [useAccessibilityInfo](https://github.com/react-native-training/react-native-hooks#useaccessibilityinfo)
-- [useAppState](https://github.com/react-native-training/react-native-hooks#useappstate)
-- [useCameraRoll](https://github.com/react-native-training/react-native-hooks#usecameraroll)
-- [useClipboard](https://github.com/react-native-training/react-native-hooks#useclipboard)
-- [useDimensions](https://github.com/react-native-training/react-native-hooks#usedimensions)
-- [useGeolocation](https://github.com/react-native-training/react-native-hooks#usegeolocation)
-- [useNetInfo](https://github.com/react-native-training/react-native-hooks#usenetinfo)
+- [useAccessibilityInfo](https://github.com/dabit3/react-native-hooks#useaccessibilityinfo)
+- [useAppState](https://github.com/dabit3/react-native-hooks#useappstate)
+- [useCameraRoll](https://github.com/dabit3/react-native-hooks#usecameraroll)
+- [useClipboard](https://github.com/dabit3/react-native-hooks#useclipboard)
+- [useDimensions](https://github.com/dabit3/react-native-hooks#usedimensions)
+- [useGeolocation](https://github.com/dabit3/react-native-hooks#usegeolocation)
+- [useNetInfo](https://github.com/dabit3/react-native-hooks#usenetinfo)
 
 
 ### `useAccessibilityInfo`
