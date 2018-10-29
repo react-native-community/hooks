@@ -29,3 +29,70 @@ yarn add react-native-hooks
 
 ### `useAccessibilityInfo`
 
+```js
+import { useAccessibilityInfo } from 'react-native-hooks'
+
+const isScreenReaderEnabled = useAccessibilityInfo()
+```
+
+### `useAppState`
+
+```js
+import { useAppState } from 'react-native-hooks'
+
+const currentAppState = useAppState()
+```
+
+### `useCameraRoll`
+
+```js
+import { useCameraRoll } from 'react-native-hooks'
+
+const [photos, getPhotos, saveToCameraRoll] = useAppState()
+
+{
+  photos.map((photo, index) => /* render photos */)
+}
+
+<Button onPress={() => getPhotos()}>Get Photos</Button>
+```
+
+### `useClipboard`
+
+```js
+import { useClipboard } from 'react-native-hooks'
+
+const [data, setString] = useClipboard()
+
+<Text>{data}</Text>
+
+<Button onPress={() => setString('new clipboard data')}>Set Clipboard</Button>
+```
+
+### `useDimensions`
+
+```js
+import { useDimensions } from 'react-native-hooks'
+
+const dimensions = useDimensions()
+```
+
+### `useGeolocation`
+
+```js
+import { useGeolocation } from 'react-native-hooks'
+
+const [position, stopObserving, setRNConfiguration] = useGeolocation()
+
+console.log('latitude: ', position.coords.latitude)
+```
+
+### `useNetInfo`
+
+```js
+import { useNetInfo } from 'react-native-hooks'
+
+const netInfo = useNetInfo()
+
+console.log('netInfo type: ', netInfo.type)
+```
