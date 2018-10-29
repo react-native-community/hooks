@@ -47,7 +47,7 @@ const currentAppState = useAppState()
 ```js
 import { useCameraRoll } from 'react-native-hooks'
 
-const [photos, getPhotos, saveToCameraRoll] = useAppState()
+const [photos, getPhotos, saveToCameraRoll] = useCameraRoll()
 
 {
   photos.map((photo, index) => /* render photos */)
