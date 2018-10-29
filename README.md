@@ -27,5 +27,5 @@ yarn add react-native-hooks
 - [useNetInfo]()
 
 
-###`useAccessibilityInfo`
+`###useAccessibilityInfo`
 
