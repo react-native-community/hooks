@@ -24,6 +24,7 @@ yarn add react-native-hooks
 - [useDimensions](https://github.com/dabit3/react-native-hooks#usedimensions)
 - [useGeolocation](https://github.com/dabit3/react-native-hooks#usegeolocation)
 - [useNetInfo](https://github.com/dabit3/react-native-hooks#usenetinfo)
+- [useKeyboard](https://github.com/dabit3/react-native-hooks#usekeyboard)
 
 
 ### `useAccessibilityInfo`
