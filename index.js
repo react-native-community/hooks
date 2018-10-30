@@ -7,6 +7,7 @@ import useGeolocation from './lib/useGeolocation'
 import useNetInfo from './lib/useNetInfo'
 import useKeyboard from './lib/useKeyboard'
 import useInteractionManager from './lib/useInteractionManager'
+import useDeviceOrientation from './lib/useDeviceOrientation'
 
 export {
   useDimensions,
@@ -18,4 +19,5 @@ export {
   useNetInfo,
   useKeyboard,
   useInteractionManager,
+  useDeviceOrientation,
 }
