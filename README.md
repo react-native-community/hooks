@@ -3,7 +3,7 @@
 ## React Native Hooks
 React Native APIs turned into React Hooks allowing you to access asynchronous APIs directly in your functional components.
 
-> Note: This is an experimental library. As of this time React Native does not yet support React version 16.7 out of the box. 
+> Note: This is an experimental library. As of this time React Native does not yet support React version 16.7 out of the box.
 
 To get started with hooks in React Native right away, follow the instructions on [this](https://github.com/facebook/react-native/issues/21967#issuecomment-434113687) thread.
 
@@ -27,6 +27,7 @@ yarn add react-native-hooks
 - [useGeolocation](https://github.com/react-native-community/react-native-hooks#usegeolocation)
 - [useNetInfo](https://github.com/react-native-community/react-native-hooks#usenetinfo)
 - [useKeyboard](https://github.com/react-native-community/react-native-hooks#usekeyboard)
+- [useInteractionManager](https://github.com/react-native-community/react-native-hooks#useinteractionmanager)
 
 
 ### `useAccessibilityInfo`
@@ -108,4 +109,14 @@ const keyboard = useKeyboard()
 
 console.log('keyboard show: ', keyboard.show)
 console.log('keyboard height: ', keyboard.height)
+```
+
+### `useInteractionManager`
+
+```js
+import { useInteractionManager } from 'react-native-hooks'
+
+const interactionReady = useInteractionManager()
+
+console.log('interaction ready: ', interactionReady)
 ```
