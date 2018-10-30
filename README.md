@@ -56,7 +56,7 @@ const [photos, getPhotos, saveToCameraRoll] = useCameraRoll()
   photos.map((photo, index) => /* render photos */)
 }
 
-<Button title='Get Photos" onPress={() => getPhotos()}>Get Photos</Button>
+<Button title='Get Photos' onPress={() => getPhotos()}>Get Photos</Button>
 ```
 
 ### `useClipboard`
