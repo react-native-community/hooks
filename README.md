@@ -56,7 +56,7 @@ const [photos, getPhotos, saveToCameraRoll] = useCameraRoll()
   photos.map((photo, index) => /* render photos */)
 }
 
-<Button onPress={() => getPhotos()}>Get Photos</Button>
+<Button title='Get Photos" onPress={() => getPhotos()}>Get Photos</Button>
 ```
 
 ### `useClipboard`
@@ -68,7 +68,7 @@ const [data, setString] = useClipboard()
 
 <Text>{data}</Text>
 
-<Button onPress={() => setString('new clipboard data')}>Set Clipboard</Button>
+<Button title='Update Clipboard' onPress={() => setString('new clipboard data')}>Set Clipboard</Button>
 ```
 
 ### `useDimensions`
