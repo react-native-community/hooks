@@ -28,6 +28,7 @@ yarn add react-native-hooks
 - [useNetInfo](https://github.com/react-native-community/react-native-hooks#usenetinfo)
 - [useKeyboard](https://github.com/react-native-community/react-native-hooks#usekeyboard)
 - [useInteractionManager](https://github.com/react-native-community/react-native-hooks#useinteractionmanager)
+- [useDeviceOrientation](https://github.com/react-native-community/react-native-hooks#usedeviceorientation)
 
 
 ### `useAccessibilityInfo`
@@ -119,4 +120,15 @@ import { useInteractionManager } from 'react-native-hooks'
 const interactionReady = useInteractionManager()
 
 console.log('interaction ready: ', interactionReady)
+```
+
+### `useDeviceOrientation`
+
+```js
+import { useDeviceOrientation } from 'react-native-hooks'
+
+const orientation = useDeviceOrientation()
+
+console.log('is orientation portrait: ', orientation.portrait)
+console.log('is orientation landscape: ', orientation.landscape)
 ```
