@@ -6,6 +6,7 @@ import useAccessibilityInfo from './lib/useAccessibilityInfo'
 import useGeolocation from './lib/useGeolocation'
 import useNetInfo from './lib/useNetInfo'
 import useKeyboard from './lib/useKeyboard'
+import useInteractionManager from './lib/useInteractionManager'
 
 export {
   useDimensions,
@@ -16,4 +17,5 @@ export {
   useGeolocation,
   useNetInfo,
   useKeyboard,
+  useInteractionManager,
 }
