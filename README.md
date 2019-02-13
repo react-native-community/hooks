@@ -47,6 +47,18 @@ import { useAppState } from 'react-native-hooks'
 const currentAppState = useAppState()
 ```
 
+### `useBackHandler`
+
+```js
+import { useBackHandler } from 'react-native-hooks'
+
+const backpress = useBackHandler()
+
+console.log('backpress', backpress.press)
+// backpress will be false by default and true if clicked
+
+```
+
 ### `useCameraRoll`
 
 ```js
