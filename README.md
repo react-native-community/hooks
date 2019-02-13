@@ -21,6 +21,7 @@ yarn add react-native-hooks
 ## API
 - [useAccessibilityInfo](https://github.com/react-native-community/react-native-hooks#useaccessibilityinfo)
 - [useAppState](https://github.com/react-native-community/react-native-hooks#useappstate)
+- [useBackHandler](https://github.com/react-native-community/react-native-hooks#usebackhandler)
 - [useCameraRoll](https://github.com/react-native-community/react-native-hooks#usecameraroll)
 - [useClipboard](https://github.com/react-native-community/react-native-hooks#useclipboard)
 - [useDimensions](https://github.com/react-native-community/react-native-hooks#usedimensions)
