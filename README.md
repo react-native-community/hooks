@@ -1,6 +1,7 @@
 ![React Native Hooks](reactnativehooks.jpg)
 
 ## React Native Hooks
+
 React Native APIs turned into React Hooks allowing you to access asynchronous APIs directly in your functional components.
 
 > Note: This is an experimental library. As of this time React Native does not yet support React version 16.7 out of the box.
@@ -14,11 +15,13 @@ npm install react-native-hooks
 ```
 
 Installation with yarn
+
 ```sh
 yarn add react-native-hooks
 ```
 
 ## API
+
 - [useAccessibilityInfo](https://github.com/react-native-community/react-native-hooks#useaccessibilityinfo)
 - [useAppState](https://github.com/react-native-community/react-native-hooks#useappstate)
 - [useBackHandler](https://github.com/react-native-community/react-native-hooks#usebackhandler)
@@ -31,33 +34,31 @@ yarn add react-native-hooks
 - [useInteractionManager](https://github.com/react-native-community/react-native-hooks#useinteractionmanager)
 - [useDeviceOrientation](https://github.com/react-native-community/react-native-hooks#usedeviceorientation)
 
-
 ### `useAccessibilityInfo`
 
 ```js
-import { useAccessibilityInfo } from 'react-native-hooks'
+import { useAccessibilityInfo } from "react-native-hooks";
 
-const isScreenReaderEnabled = useAccessibilityInfo()
+const isScreenReaderEnabled = useAccessibilityInfo();
 ```
 
 ### `useAppState`
 
 ```js
-import { useAppState } from 'react-native-hooks'
+import { useAppState } from "react-native-hooks";
 
-const currentAppState = useAppState()
+const currentAppState = useAppState();
 ```
 
 ### `useBackHandler`
 
 ```js
-import { useBackHandler } from 'react-native-hooks'
+import { useBackHandler } from "react-native-hooks";
 
-const backpress = useBackHandler()
+const backpress = useBackHandler();
 
-console.log('backpress', backpress.press)
+console.log("backpress", backpress.press);
 // backpress will be false by default and true if clicked
-
 ```
 
 ### `useCameraRoll`
@@ -89,59 +90,59 @@ const [data, setString] = useClipboard()
 ### `useDimensions`
 
 ```js
-import { useDimensions } from 'react-native-hooks'
+import { useDimensions } from "react-native-hooks";
 
-const dimensions = useDimensions()
+const dimensions = useDimensions();
 ```
 
 ### `useGeolocation`
 
 ```js
-import { useGeolocation } from 'react-native-hooks'
+import { useGeolocation } from "react-native-hooks";
 
-const [position, stopObserving, setRNConfiguration] = useGeolocation()
+const [position, stopObserving, setRNConfiguration] = useGeolocation();
 
-console.log('latitude: ', position.coords.latitude)
+console.log("latitude: ", position.coords.latitude);
 ```
 
 ### `useNetInfo`
 
 ```js
-import { useNetInfo } from 'react-native-hooks'
+import { useNetInfo } from "react-native-hooks";
 
-const netInfo = useNetInfo()
+const netInfo = useNetInfo();
 
-console.log('netInfo type: ', netInfo.type)
+console.log("netInfo type: ", netInfo.type);
 ```
 
 ### `useKeyboard`
 
 ```js
-import { useKeyboard } from 'react-native-hooks'
+import { useKeyboard } from "react-native-hooks";
 
-const keyboard = useKeyboard()
+const keyboard = useKeyboard();
 
-console.log('keyboard show: ', keyboard.show)
-console.log('keyboard height: ', keyboard.height)
+console.log("keyboard show: ", keyboard.show);
+console.log("keyboard height: ", keyboard.height);
 ```
 
 ### `useInteractionManager`
 
 ```js
-import { useInteractionManager } from 'react-native-hooks'
+import { useInteractionManager } from "react-native-hooks";
 
-const interactionReady = useInteractionManager()
+const interactionReady = useInteractionManager();
 
-console.log('interaction ready: ', interactionReady)
+console.log("interaction ready: ", interactionReady);
 ```
 
 ### `useDeviceOrientation`
 
 ```js
-import { useDeviceOrientation } from 'react-native-hooks'
+import { useDeviceOrientation } from "react-native-hooks";
 
-const orientation = useDeviceOrientation()
+const orientation = useDeviceOrientation();
 
-console.log('is orientation portrait: ', orientation.portrait)
-console.log('is orientation landscape: ', orientation.landscape)
+console.log("is orientation portrait: ", orientation.portrait);
+console.log("is orientation landscape: ", orientation.landscape);
 ```
