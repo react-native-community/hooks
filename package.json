@@ -9,6 +9,6 @@
   "author": "Nader Dabit",
   "license": "ISC",
   "dependencies": {
-    "react": "^16.7.0-alpha.0"
+    "react": "^16.8.3"
   }
 }
