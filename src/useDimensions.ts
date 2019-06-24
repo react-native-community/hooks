@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { Dimensions } from 'react-native'
 
 const window = Dimensions.get('window')
@@ -9,9 +9,9 @@ export default () => {
     window, screen
   })
 
-  onChange = ({ window, screen }) => {
-    setDimensions({ window, screen })
-  }
+  const onChange = useCallback(({ window, screen }) => {
+    setDimensions({ window, screen });
+  }, [])
 
   useEffect(() => {
     Dimensions.addEventListener('change', onChange)
