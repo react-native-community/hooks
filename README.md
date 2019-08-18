@@ -91,16 +91,6 @@ const [position, stopObserving, setRNConfiguration] = useGeolocation()
 console.log('latitude: ', position.coords.latitude)
 ```
 
-### `useNetInfo`
-
-```js
-import { useNetInfo } from 'react-native-hooks'
-
-const netInfo = useNetInfo()
-
-console.log('netInfo type: ', netInfo.type)
-```
-
 ### `useKeyboard`
 
 ```js
