@@ -1,6 +1,6 @@
 {
   "name": "react-native-hooks",
-  "version": "0.0.7",
+  "version": "0.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
   },
   "author": "Nader Dabit",
   "license": "ISC",
-  "dependencies": {
-    "react": "^16.8.3"
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-native": ">=0.59"
   }
 }
