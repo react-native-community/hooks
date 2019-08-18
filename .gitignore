@@ -1,3 +1,14 @@
-.idea/*
+# VSCode
+.vscode/
+jsconfig.json
 
+# IntelliJ/Webstorm
+.idea
+
+# OS X
+.DS_Store
+
+# NodeJS
+npm-debug.log
 node_modules
+yarn-error.log
