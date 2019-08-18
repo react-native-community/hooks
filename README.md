@@ -24,8 +24,6 @@ yarn add react-native-hooks
 - [useCameraRoll](https://github.com/react-native-community/react-native-hooks#usecameraroll)
 - [useClipboard](https://github.com/react-native-community/react-native-hooks#useclipboard)
 - [useDimensions](https://github.com/react-native-community/react-native-hooks#usedimensions)
-- [useGeolocation](https://github.com/react-native-community/react-native-hooks#usegeolocation)
-- [useNetInfo](https://github.com/react-native-community/react-native-hooks#usenetinfo)
 - [useKeyboard](https://github.com/react-native-community/react-native-hooks#usekeyboard)
 - [useInteractionManager](https://github.com/react-native-community/react-native-hooks#useinteractionmanager)
 - [useDeviceOrientation](https://github.com/react-native-community/react-native-hooks#usedeviceorientation)
@@ -81,26 +79,6 @@ import { useDimensions } from 'react-native-hooks'
 const dimensions = useDimensions()
 ```
 
-### `useGeolocation`
-
-```js
-import { useGeolocation } from 'react-native-hooks'
-
-const [position, stopObserving, setRNConfiguration] = useGeolocation()
-
-console.log('latitude: ', position.coords.latitude)
-```
-
-### `useNetInfo`
-
-```js
-import { useNetInfo } from 'react-native-hooks'
-
-const netInfo = useNetInfo()
-
-console.log('netInfo type: ', netInfo.type)
-```
-
 ### `useKeyboard`
 
 ```js
@@ -108,8 +86,8 @@ import { useKeyboard } from 'react-native-hooks'
 
 const keyboard = useKeyboard()
 
-console.log('keyboard show: ', keyboard.show)
-console.log('keyboard height: ', keyboard.height)
+console.log('keyboard show: ', keyboard.isKeyboardShow)
+console.log('keyboard height: ', keyboard.keyboardHeight)
 ```
 
 ### `useInteractionManager`
