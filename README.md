@@ -110,3 +110,16 @@ const orientation = useDeviceOrientation()
 console.log('is orientation portrait: ', orientation.portrait)
 console.log('is orientation landscape: ', orientation.landscape)
 ```
+
+### `useLayout`
+
+```js
+import { useLayout } from 'react-native-hooks'
+
+const {x, y, width, height, onLayout}  = useLayout()
+
+<View onLayout={onLayout}>
+  <View style={{width: width, height: width, backgroundColor: 'red'}} />
+  <View style={{width: width, height: width, backgroundColor: 'green'}} />
+</View>
+```
