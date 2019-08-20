@@ -86,13 +86,8 @@ import { useKeyboard } from 'react-native-hooks'
 
 const keyboard = useKeyboard()
 
-<<<<<<< HEAD
-console.log('keyboard show: ', keyboard.isKeyboardShow)
-console.log('keyboard height: ', keyboard.keyboardHeight)
-=======
 console.log('keyboard isKeyboardShow: ', keyboard.isKeyboardShow)
 console.log('keyboard keyboardHeight: ', keyboard.keyboardHeight)
->>>>>>> cc65860b67d810b6422ecc70c058ad43a9d2b2a0
 ```
 
 ### `useInteractionManager`
