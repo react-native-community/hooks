@@ -40,6 +40,8 @@ const isScreenReaderEnabled = useAccessibilityInfo()
 
 ### `useAppState`
 
+AppState will change between one of 'active', 'background', or (iOS) 'inactive' when the app is closed or put into the background.
+
 ```js
 import { useAppState } from 'react-native-hooks'
 
