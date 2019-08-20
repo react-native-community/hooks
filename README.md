@@ -89,10 +89,16 @@ const [data, setString] = useClipboard()
 
 ### `useDimensions`
 
+Gets dimensions and sets up a listener that will change the dimensions if the user changes device orientation.
+
 ```js
 import { useDimensions } from 'react-native-hooks'
 
 const dimensions = useDimensions()
+// or
+const { width, height } = useDimensions().window
+// or
+const screen = useDimensions().screen
 ```
 
 ### `useKeyboard`
