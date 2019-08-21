@@ -28,7 +28,7 @@ yarn add react-native-hooks
 - [useKeyboard](https://github.com/react-native-community/react-native-hooks#usekeyboard)
 - [useInteractionManager](https://github.com/react-native-community/react-native-hooks#useinteractionmanager)
 - [useDeviceOrientation](https://github.com/react-native-community/react-native-hooks#usedeviceorientation)
-
+- [useLayout](https://github.com/react-native-community/react-native-hooks#uselayout)
 
 ### `useAccessibilityInfo`
 
@@ -140,10 +140,9 @@ console.log('is orientation landscape: ', orientation.landscape)
 ```js
 import { useLayout } from 'react-native-hooks'
 
-const {x, y, width, height, onLayout}  = useLayout()
+const { onLayout, ...layout } = useLayout()
 
-<View onLayout={onLayout}>
-  <View style={{width: width, height: width, backgroundColor: 'red'}} />
-  <View style={{width: width, height: width, backgroundColor: 'green'}} />
-</View>
+console.log('layout: ', layout)
+
+<View onLayout={onLayout} style={{width: 200, height: 200, marginTop: 30}} />
 ```
