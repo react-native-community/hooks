@@ -5,8 +5,6 @@ React Native APIs turned into React Hooks allowing you to access asynchronous AP
 
 > Note: You must use React Native >= 0.59.0
 
-To get started with hooks in React Native right away, follow the instructions on [this](https://github.com/facebook/react-native/issues/21967#issuecomment-434113687) thread.
-
 ### Installation with npm
 
 ```sh
