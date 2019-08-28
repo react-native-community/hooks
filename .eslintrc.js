@@ -1,3 +1,3 @@
 module.exports = {
-    "extends": "google"
+    "extends": "@react-native-community"
 };
