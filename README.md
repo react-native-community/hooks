@@ -16,6 +16,10 @@ Installation with yarn
 yarn add react-native-hooks
 ```
 
+## Typescript
+
+✅ A Typescript definition file is included with the library
+
 ## API
 - [useAccessibilityInfo](https://github.com/react-native-community/react-native-hooks#useaccessibilityinfo)
 - [useAppState](https://github.com/react-native-community/react-native-hooks#useappstate)
