@@ -12,7 +12,7 @@ declare function useBackHandler(handler: () => boolean);
 declare function useCameraRoll(): {
   photos: GetPhotosReturnType;
   getPhotos: (config?: { first: number; groupTypes: string }) => Promise<void>;
-  saveToCameraRoll: (tag: any, type: any) => Promise<void>;
+  saveToCameraRoll: (tag: string, type?: "photo" | "video") => Promise<void>;
 };
 declare function useClipboard(): {
   data: string;
