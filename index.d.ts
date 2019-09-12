@@ -3,7 +3,8 @@ import {
   AppStateStatus,
   ScaledSize,
   KeyboardStatic,
-  GetPhotosReturnType
+  GetPhotosReturnType,
+  LayoutRectangle
 } from "react-native";
 
 declare function useDimensions(): { window: ScaledSize; screen: ScaledSize };
@@ -25,14 +26,10 @@ declare function useDeviceOrientation(): {
   portrait: boolean;
   landscape: boolean;
 };
-declare function useLayout(): {
-  x: number;
-  y: number;
-  width: number;
-  height: number;
+declare function useLayout(): LayoutRectangle & {
   onLayout: (event: {
     nativeEvent: {
-      layout: { x: number; y: number; width: number; height: number };
+      layout: LayoutRectangle;
     };
   }) => void;
 };
