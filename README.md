@@ -27,6 +27,7 @@ yarn add react-native-hooks
 - [useInteractionManager](https://github.com/react-native-community/react-native-hooks#useinteractionmanager)
 - [useDeviceOrientation](https://github.com/react-native-community/react-native-hooks#usedeviceorientation)
 - [useLayout](https://github.com/react-native-community/react-native-hooks#uselayout)
+- [usePermission](https://github.com/react-native-community/react-native-hooks#usePermission)
 
 ### `useAccessibilityInfo`
 
@@ -143,4 +144,25 @@ const { onLayout, ...layout } = useLayout()
 console.log('layout: ', layout)
 
 <View onLayout={onLayout} style={{width: 200, height: 200, marginTop: 30}} />
+```
+
+### `usePermission`
+
+On ios is always granted as it handles the permission by itself
+
+```jsx
+import { usePermission } from 'react-native-hooks'
+
+const locationPermission = usePermission('android.permission.ACCESS_FINE_LOCATION', {
+  title: 'Location permission',
+  message: 'We need to know where you are',
+  buttonPositive: 'Oh yeah',
+  buttonNegative: 'Hell no'
+});
+
+console.log('Permission granted: ', locationPermission? 'yes': 'no')
+
+<View style={{width: 200, height: 200, marginTop: 30}}>
+  {locationPermission && <Text>Now we know where you are</Text>}
+</View>
 ```
