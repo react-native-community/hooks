@@ -150,6 +150,21 @@ console.log('layout: ', layout)
 
 On ios is always granted as it handles the permission by itself
 
+### AndroidManifest.xml
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.testApp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--- ADD THIS LINE WITH THE PERMISSION YOU WOULD LIKE TO ACCESS -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> 
+
+    <application
+      android:name=".MainApplication"
+      ...
+```
+
 ```jsx
 import { usePermission } from 'react-native-hooks'
 
