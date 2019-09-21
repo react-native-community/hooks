@@ -9,7 +9,7 @@ import {
 
 declare function useDimensions(): { window: ScaledSize; screen: ScaledSize };
 declare function useAppState(): AppStateStatus;
-declare function useBackHandler(handler: () => boolean);
+declare function useBackHandler(handler: () => boolean): void;
 declare function useCameraRoll(): {
   photos: GetPhotosReturnType;
   getPhotos: (config?: { first: number; groupTypes: string }) => Promise<void>;
