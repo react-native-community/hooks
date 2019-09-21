@@ -7,6 +7,11 @@ import {
   LayoutRectangle
 } from "react-native";
 
+export interface DeviceOrientation {
+  portrait?: boolean;
+  landscape?: boolean;
+}
+
 declare function useDimensions(): { window: ScaledSize; screen: ScaledSize };
 declare function useAppState(): AppStateStatus;
 declare function useBackHandler(handler: () => boolean): void;
@@ -22,10 +27,7 @@ declare function useClipboard(): {
 declare function useAccessibilityInfo(): boolean;
 declare function useKeyboard(): KeyboardStatic;
 declare function useInteractionManager(): boolean;
-declare function useDeviceOrientation(): {
-  portrait: boolean;
-  landscape: boolean;
-};
+declare function useDeviceOrientation(): DeviceOrientation;
 declare function useLayout(): LayoutRectangle & {
   onLayout: (event: {
     nativeEvent: {
