@@ -1,3 +1,5 @@
+lib/
+
 # VSCode
 .vscode/
 jsconfig.json
@@ -5,7 +7,7 @@ jsconfig.json
 # IntelliJ/Webstorm
 .idea
 
-# OS X
+# macOS
 .DS_Store
 
 # NodeJS
