@@ -18,5 +18,9 @@
     "@types/react-native": "^0.60.21",
     "release-it": "^12.3.5",
     "typescript": "^3.6.4"
-  }
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ]
 }
