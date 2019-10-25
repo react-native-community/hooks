@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+
 const initialState = {
   timeStamp: null,
   coords: {
@@ -13,7 +14,7 @@ const initialState = {
   }
 }
 
-export default (positionOptions = {}) => {  
+export default (positionOptions = {}) => {
   const [position, setPosition] = useState(initialState)
 
   useEffect(() => {

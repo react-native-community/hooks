@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { NetInfo } from 'react-native'
 
+
 const inititalState = {
   type: null, effectiveType: null
 }
@@ -8,7 +9,7 @@ const inititalState = {
 export default () => {
   const [netInfo, setNetInfo] = useState(inititalState)
 
-  onChange = (newState) => {
+  const onChange = (newState) => {
     setNetInfo(newState)
   }
 

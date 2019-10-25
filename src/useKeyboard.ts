@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { Keyboard } from 'react-native'
 
+
 export default () => {
   const [keyboard, setKeyboard] = useState({})
 
-  keyboardWillShow = e => {
+  const keyboardWillShow = e => {
     setKeyboard({
       isKeyboardShow: true,
       keyboardHeight: e.endCoordinates.height
     })
   }
 
-  keyboardWillHide = e => {
+  const keyboardWillHide = e => {
     setKeyboard({
       isKeyboardShow: false,
       keyboardHeight: e.endCoordinates.height

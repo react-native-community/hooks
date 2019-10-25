@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
 import {
-  CameraRoll
+  CameraRoll, GetPhotosParamType, GetPhotosReturnType
 } from 'react-native'
 
-const initialState = {
+
+const initialState: GetPhotosReturnType = {
   edges: [],
   page_info: {
     end_cursor: '',
-    has_next_page: null,
+    has_next_page: false,
     start_cursor: ''
   }
 }
 
-const defaultConfig = {
+const defaultConfig: GetPhotosParamType = {
   first: 20,
   groupTypes: 'All'
 }
