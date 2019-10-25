@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { Dimensions } from 'react-native';
+import { Dimensions, ScaledSize } from 'react-native';
+
 
 const screen = Dimensions.get('screen');
 
 export default () => {
+	const isOrientationPortrait = ({ width, height }: { width: number, height: number }) => height >= width;
+	const isOrientationLandscape = ({ width, height }: { width: number, height: number }) => width >= height;
+
   const [orientation, setOrientation] = useState({
     portrait: isOrientationPortrait(screen),
     landscape: isOrientationLandscape(screen)
   });
 
-  isOrientationPortrait = ({ width, height }) => height >= width;
-  isOrientationLandscape = ({ width, height }) => width >= height;
-
-  onChange = ({ screen }) => {
+  const onChange = ({ screen }: { screen: ScaledSize }) => {
     setOrientation({
       portrait: isOrientationPortrait(screen),
       landscape: isOrientationLandscape(screen)

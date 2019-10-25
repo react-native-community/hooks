@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { AccessibilityInfo } from 'react-native'
 
+
 export default () => {
   const [screenReaderEnabled, updateScreenReaderInfo] = useState(null)
 
@@ -17,7 +18,7 @@ export default () => {
 
   useEffect(() => {
     AccessibilityInfo.addEventListener('change', onChange)
-    
+
     return () => AccessibilityInfo.removeEventListener('change', onChange)
   }, [])
 
