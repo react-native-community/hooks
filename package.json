@@ -2,9 +2,11 @@
   "name": "react-native-hooks",
   "version": "0.0.6",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "tsc"
   },
   "author": "Nader Dabit",
   "license": "ISC",
