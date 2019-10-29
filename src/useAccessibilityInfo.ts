@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import { AccessibilityInfo } from 'react-native'
+import { useEffect, useState } from 'react'
+import { AccessibilityInfo, AccessibilityEvent } from 'react-native'
 
 
 export default () => {
-  const [screenReaderEnabled, updateScreenReaderInfo] = useState(null)
+  const [screenReaderEnabled, updateScreenReaderInfo] = useState<AccessibilityEvent|null>(null)
 
 
   useEffect(() => {
-    AccessibilityInfo.fetch().then((isEnabled) => {
+    AccessibilityInfo.fetch().then((isEnabled: AccessibilityEvent) => {
       updateScreenReaderInfo(isEnabled)
     })
   }, [])
 
-  function onChange(isEnabled) {
+  function onChange(isEnabled: AccessibilityEvent) {
     updateScreenReaderInfo(isEnabled)
   }
 
