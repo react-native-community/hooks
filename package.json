@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.10",
-    "@types/react-native": "^0.60.21",
+    "@types/react-native": "^0.60.22",
     "typescript": "^3.6.4"
   },
   "files": [
