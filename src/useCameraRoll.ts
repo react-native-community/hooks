@@ -30,7 +30,7 @@ export default function() {
     }
   }
 
-  async function saveToCameraRoll(tag, type) {
+  async function saveToCameraRoll(tag:string, type:'photo'|'video'|undefined) {
     try {
       await CameraRoll.saveToCameraRoll(tag, type)
     } catch (err) {
