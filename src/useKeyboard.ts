@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Keyboard } from "react-native";
+import { Keyboard, EmitterSubscription } from "react-native";
 
 const useKeyboard = () => {
   const [keyboard, setKeyboard] = useState({});
 
-  // @ts-ignore TODO: add types
-  const keyboardWillShow = e => {
+  let keyboardWillShowListener: EmitterSubscription
+  let keyboardWillHideListener: EmitterSubscription
+  
+  function keyboardWillShow(e:any)  {
     setKeyboard({
       isKeyboardShow: true,
       keyboardHeight: e.endCoordinates.height
     });
   };
 
-  // @ts-ignore TODO: add types
-  const keyboardWillHide = e => {
+  function keyboardWillHide(e:any) {
     setKeyboard({
       isKeyboardShow: false,
       keyboardHeight: e.endCoordinates.height
@@ -21,22 +22,19 @@ const useKeyboard = () => {
   };
 
   useEffect(() => {
-    // @ts-ignore TODO: add types
-    this.keyboardWillShowListener = Keyboard.addListener(
+    keyboardWillShowListener = Keyboard.addListener(
       "keyboardWillShow",
       keyboardWillShow
     );
-    // @ts-ignore TODO: add types
-    this.keyboardWillHideListener = Keyboard.addListener(
+    
+    keyboardWillHideListener = Keyboard.addListener(
       "keyboardWillHide",
       keyboardWillHide
     );
 
     return () => {
-      // @ts-ignore TODO: add types
-      this.keyboardWillShowListener.remove();
-      // @ts-ignore TODO: add types
-      this.keyboardWillHideListener.remove();
+      keyboardWillShowListener.remove();
+      keyboardWillHideListener.remove();
     };
   }, []);
   return keyboard;
