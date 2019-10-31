@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "release-it"
+    "build": "yarn tsc",
+    "release": "release-it",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nader Dabit",
   "license": "ISC",
