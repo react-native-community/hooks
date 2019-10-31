@@ -2,36 +2,51 @@ import React, { useEffect, useState } from 'react'
 import { Keyboard } from 'react-native'
 
 
-export default () => {
-  const [keyboard, setKeyboard] = useState({})
+export default function useKeyboard() {
+  const [keyboard, setKeyboard] = useState({ Keyboard })
 
-  const keyboardWillShow = e => {
+  function keyboardShown(e) {
     setKeyboard({
       isKeyboardShow: true,
-      keyboardHeight: e.endCoordinates.height
+      Keyboard,
+      endCoordinates: e.endCoordinates,
+      startCoordinates: e.startCoordinates
     })
   }
 
-  const keyboardWillHide = e => {
+  function keyboardHidden(e) {
     setKeyboard({
       isKeyboardShow: false,
-      keyboardHeight: e.endCoordinates.height
+      Keyboard,
+      endCoordinates: e.endCoordinates,
+      startCoordinates: e.startCoordinates
     })
   }
 
   useEffect(() => {
-    this.keyboardWillShowListener = Keyboard.addListener(
+    keyboardDidShowListener = Keyboard.addListener(
       'keyboardWillShow',
-      keyboardWillShow
+      keyboardHidden
     )
-    this.keyboardWillHideListener = Keyboard.addListener(
+
+    keyboardDidShowListener = Keyboard.addListener(
+      'keyboardDidShow',
+      keyboardShown
+    )
+
+    keyboardDidShowListener = Keyboard.addListener(
       'keyboardWillHide',
-      keyboardWillHide
+      keyboardShown
+    )
+
+    keyboardDidHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      keyboardHidden
     )
 
     return () => {
-      this.keyboardWillShowListener.remove()
-      this.keyboardWillHideListener.remove()
+      keyboardDidShowListener.remove()
+      keyboardDidHideListener.remove()
     }
   }, [])
   return keyboard
