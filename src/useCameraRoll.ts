@@ -18,7 +18,7 @@ const defaultConfig: GetPhotosParamType = {
   groupTypes: 'All'
 }
 
-export default function() {
+export default function useCameraRoll() {
   const [photos, setPhotos] = useState(initialState)
 
   async function getPhotos(config = defaultConfig) {

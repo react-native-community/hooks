@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { AccessibilityInfo } from 'react-native'
 
 
-export default () => {
+export default function useAccessibilityInfo() {
   const [screenReaderEnabled, updateScreenReaderInfo] = useState(null)
 
 

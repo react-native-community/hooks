@@ -4,7 +4,7 @@ import { Dimensions, ScaledSize } from 'react-native';
 
 const screen = Dimensions.get('screen');
 
-export default () => {
+export default function() {
 	const isOrientationPortrait = ({ width, height }: { width: number, height: number }) => height >= width;
 	const isOrientationLandscape = ({ width, height }: { width: number, height: number }) => width >= height;
 

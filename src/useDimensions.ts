@@ -5,7 +5,7 @@ import { Dimensions, ScaledSize } from 'react-native'
 const window = Dimensions.get('window')
 const screen = Dimensions.get('screen')
 
-export default () => {
+export default function useDimensions() {
   const [dimensions, setDimensions] = useState({
     window, screen
   })
