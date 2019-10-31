@@ -1,53 +1,45 @@
 import React, { useEffect, useState } from 'react'
-import { Keyboard } from 'react-native'
+import { Keyboard, KeyboardEventListener, ScreenRect } from 'react-native'
 
 
 export default function useKeyboard() {
-  const [keyboard, setKeyboard] = useState({ Keyboard })
+	const [shown, setShown] = useState(false)
+	const [coordinates, setCoordinates] = useState<{ start: ScreenRect, end: ScreenRect }>({
+		start: { screenX:0, screenY: 0, width: 0, height: 0 },
+		end: { screenX:0, screenY: 0, width: 0, height: 0 },
+	})
 
-  function keyboardShown(e) {
-    setKeyboard({
-      isKeyboardShow: true,
-      Keyboard,
-      endCoordinates: e.endCoordinates,
-      startCoordinates: e.startCoordinates
-    })
+  const handleKeyboardWillShow: KeyboardEventListener = (e) => {
+	  setCoordinates({ start: e.startCoordinates, end: e.endCoordinates })
   }
-
-  function keyboardHidden(e) {
-    setKeyboard({
-      isKeyboardShow: false,
-      Keyboard,
-      endCoordinates: e.endCoordinates,
-      startCoordinates: e.startCoordinates
-    })
+  const handleKeyboardDidShow: KeyboardEventListener = (e) => {
+	  setShown(true)
+	  setCoordinates({ start: e.startCoordinates, end: e.endCoordinates })
+  }
+  const handleKeyboardWillHide: KeyboardEventListener = (e) => {
+	  setCoordinates({ start: e.startCoordinates, end: e.endCoordinates })
+  }
+  const handleKeyboardDidHide: KeyboardEventListener = (e) => {
+	  setShown(false)
+	  setCoordinates({ start: e.startCoordinates, end: e.endCoordinates })
   }
 
   useEffect(() => {
-    keyboardDidShowListener = Keyboard.addListener(
-      'keyboardWillShow',
-      keyboardHidden
-    )
-
-    keyboardDidShowListener = Keyboard.addListener(
-      'keyboardDidShow',
-      keyboardShown
-    )
-
-    keyboardDidShowListener = Keyboard.addListener(
-      'keyboardWillHide',
-      keyboardShown
-    )
-
-    keyboardDidHideListener = Keyboard.addListener(
-      'keyboardDidHide',
-      keyboardHidden
-    )
+    const keyboardWillShowListener = Keyboard.addListener('keyboardWillShow', handleKeyboardWillShow)
+    const keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', handleKeyboardDidShow)
+    const keyboardWillHideListener = Keyboard.addListener('keyboardWillHide', handleKeyboardWillHide)
+    const keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', handleKeyboardDidHide)
 
     return () => {
-      keyboardDidShowListener.remove()
+		keyboardWillShowListener.remove()
+	  keyboardDidShowListener.remove()
+	  keyboardWillHideListener.remove()
       keyboardDidHideListener.remove()
     }
   }, [])
-  return keyboard
+
+  return {
+	  keyboardShown: shown,
+	  coordinates,
+  }
 }
