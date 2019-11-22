@@ -6,14 +6,14 @@ export default function useClipBoard() {
 
   async function updateClipboard() {
     const content = await Clipboard.getString()
-    updateClipboardData(content);
+    updateClipboardData(content)
   }
 
   useEffect(() => {
     updateClipboard()
   }, [])
 
-  function setString(content) {
+  function setString(content: string) {
     Clipboard.setString(content)
     updateClipboardData(content)
   }

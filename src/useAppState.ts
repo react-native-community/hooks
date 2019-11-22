@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { AppState } from 'react-native'
+import { AppState, AppStateStatus } from 'react-native'
 
 export default function useAppState() {
   const currentState = AppState.currentState
   const [appState, setAppState] = useState(currentState)
 
-  function onChange (newState) {
+  function onChange(newState: AppStateStatus) {
     setAppState(newState)
   }
 

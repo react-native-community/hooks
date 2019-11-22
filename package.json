@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "release-it"
+    "build": "yarn tsc",
+    "release": "release-it",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nader Dabit",
   "license": "ISC",
@@ -14,6 +15,13 @@
     "react-native": ">=0.59"
   },
   "devDependencies": {
-    "release-it": "^12.3.5"
-  }
+    "@types/react": "^16.9.10",
+    "@types/react-native": "^0.60.21",
+    "release-it": "^12.3.5",
+    "typescript": "^3.6.4"
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ]
 }
