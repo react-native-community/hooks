@@ -3,17 +3,17 @@ import { Dimensions, ScaledSize } from 'react-native'
 
 const screen = Dimensions.get('screen')
 
-export default function() {
+export default function useDeviceOrientation() {
   const isOrientationPortrait = ({
     width,
-    height,
+    height
   }: {
     width: number
     height: number
   }) => height >= width
   const isOrientationLandscape = ({
     width,
-    height,
+    height
   }: {
     width: number
     height: number
@@ -21,13 +21,13 @@ export default function() {
 
   const [orientation, setOrientation] = useState({
     portrait: isOrientationPortrait(screen),
-    landscape: isOrientationLandscape(screen),
+    landscape: isOrientationLandscape(screen)
   })
 
   const onChange = ({ screen }: { screen: ScaledSize }) => {
     setOrientation({
       portrait: isOrientationPortrait(screen),
-      landscape: isOrientationLandscape(screen),
+      landscape: isOrientationLandscape(screen)
     })
   }
 

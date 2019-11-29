@@ -1,13 +1,13 @@
-import useDimensions from './lib/useDimensions'
-import useAppState from './lib/useAppState'
-import useBackHandler from './lib/useBackHandler'
-import useCameraRoll from './lib/useCameraRoll'
-import useClipboard from './lib/useClipboard'
-import useAccessibilityInfo from './lib/useAccessibilityInfo'
-import useKeyboard from './lib/useKeyboard'
-import useInteractionManager from './lib/useInteractionManager'
-import useDeviceOrientation from './lib/useDeviceOrientation'
-import useLayout from './lib/useLayout'
+import useDimensions from './src/useDimensions'
+import useAppState from './src/useAppState'
+import useBackHandler from './src/useBackHandler'
+import useCameraRoll from './src/useCameraRoll'
+import useClipboard from './src/useClipboard'
+import useAccessibilityInfo from './src/useAccessibilityInfo'
+import useKeyboard from './src/useKeyboard'
+import useInteractionManager from './src/useInteractionManager'
+import useDeviceOrientation from './src/useDeviceOrientation'
+import useLayout from './src/useLayout'
 
 export {
   useDimensions,
