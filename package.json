@@ -7,7 +7,7 @@
     "build": "yarn tsc",
     "release": "release-it",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
+    "lint": "eslint src/**/*.ts"
   },
   "author": "Nader Dabit",
   "license": "ISC",
