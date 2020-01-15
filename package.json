@@ -2,8 +2,10 @@
   "name": "react-native-hooks",
   "version": "0.9.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
+    "prepare":"yarn build",
     "build": "yarn tsc",
     "release": "release-it",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,7 +28,6 @@
     "typescript": "^3.6.4"
   },
   "files": [
-    "index.js",
     "lib"
   ]
 }
