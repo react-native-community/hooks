@@ -19,5 +19,5 @@ export {
   useKeyboard,
   useInteractionManager,
   useDeviceOrientation,
-  useLayout
+  useLayout,
 }

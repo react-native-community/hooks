@@ -1,21 +1,21 @@
-import {useEffect, useState} from 'react';
-import {AppState, AppStateStatus} from 'react-native';
+import {useEffect, useState} from 'react'
+import {AppState, AppStateStatus} from 'react-native'
 
 export default function useAppState() {
-  const currentState = AppState.currentState;
-  const [appState, setAppState] = useState(currentState);
+  const currentState = AppState.currentState
+  const [appState, setAppState] = useState(currentState)
 
   function onChange(newState: AppStateStatus) {
-    setAppState(newState);
+    setAppState(newState)
   }
 
   useEffect(() => {
-    AppState.addEventListener('change', onChange);
+    AppState.addEventListener('change', onChange)
 
     return () => {
-      AppState.removeEventListener('change', onChange);
-    };
-  });
+      AppState.removeEventListener('change', onChange)
+    }
+  })
 
-  return appState;
+  return appState
 }

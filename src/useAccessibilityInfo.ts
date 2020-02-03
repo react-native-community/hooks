@@ -1,43 +1,43 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react'
 import {
   AccessibilityInfo,
   AccessibilityChangeEvent,
   AccessibilityEvent,
-} from 'react-native';
+} from 'react-native'
 
 export default function useAccessibilityInfo() {
-  const [reduceMotionEnabled, setReduceMotionEnabled] = useState(false);
-  const [screenReaderEnabled, setScreenReaderEnabled] = useState(false);
+  const [reduceMotionEnabled, setReduceMotionEnabled] = useState(false)
+  const [screenReaderEnabled, setScreenReaderEnabled] = useState(false)
 
   const handleReduceMotionChanged = (enabled: AccessibilityChangeEvent) =>
-    setReduceMotionEnabled(enabled);
+    setReduceMotionEnabled(enabled)
   const handleScreenReaderChanged = (enabled: AccessibilityChangeEvent) =>
-    setScreenReaderEnabled(enabled);
+    setScreenReaderEnabled(enabled)
 
   useEffect(() => {
-    AccessibilityInfo.isReduceMotionEnabled().then(handleReduceMotionChanged);
-    AccessibilityInfo.isScreenReaderEnabled().then(handleScreenReaderChanged);
+    AccessibilityInfo.isReduceMotionEnabled().then(handleReduceMotionChanged)
+    AccessibilityInfo.isScreenReaderEnabled().then(handleScreenReaderChanged)
 
     AccessibilityInfo.addEventListener(
       'reduceMotionChanged',
       handleReduceMotionChanged as (event: AccessibilityEvent) => void,
-    );
+    )
     AccessibilityInfo.addEventListener(
       'screenReaderChanged',
       handleScreenReaderChanged as (event: AccessibilityEvent) => void,
-    );
+    )
 
     return () => {
       AccessibilityInfo.removeEventListener(
         'reduceMotionChanged',
         handleReduceMotionChanged as (event: AccessibilityEvent) => void,
-      );
+      )
       AccessibilityInfo.removeEventListener(
         'screenReaderChanged',
         handleScreenReaderChanged as (event: AccessibilityEvent) => void,
-      );
-    };
-  }, []);
+      )
+    }
+  }, [])
 
-  return {reduceMotionEnabled, screenReaderEnabled};
+  return {reduceMotionEnabled, screenReaderEnabled}
 }

@@ -1,22 +1,22 @@
-import {useEffect, useState} from 'react';
-import {Clipboard} from 'react-native';
+import {useEffect, useState} from 'react'
+import {Clipboard} from 'react-native'
 
 export default function useClipBoard() {
-  const [data, updateClipboardData] = useState('');
+  const [data, updateClipboardData] = useState('')
 
   async function updateClipboard() {
-    const content = await Clipboard.getString();
-    updateClipboardData(content);
+    const content = await Clipboard.getString()
+    updateClipboardData(content)
   }
 
   useEffect(() => {
-    updateClipboard();
-  }, []);
+    updateClipboard()
+  }, [])
 
   function setString(content: string) {
-    Clipboard.setString(content);
-    updateClipboardData(content);
+    Clipboard.setString(content)
+    updateClipboardData(content)
   }
 
-  return [data, setString];
+  return [data, setString]
 }
