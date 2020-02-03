@@ -1,6 +1,9 @@
 ![React Native Hooks](reactnativehooks.jpg)
 
 ## React Native Hooks
+
+[![Version][version-badge]][package]
+
 React Native APIs turned into React Hooks allowing you to access asynchronous APIs directly in your functional components.
 
 > Note: You must use React Native >= 0.59.0
@@ -144,3 +147,6 @@ console.log('layout: ', layout)
 
 <View onLayout={onLayout} style={{width: 200, height: 200, marginTop: 30}} />
 ```
+
+[version-badge]: https://img.shields.io/npm/v/react-native-hooks.svg?style=flat-square
+[package]: https://www.npmjs.com/package/react-native-hooks
