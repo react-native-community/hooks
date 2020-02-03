@@ -1,13 +1,13 @@
-import React from 'react'
+import {useState, useCallback} from 'react'
 
 export default function useLayout() {
-  const [layout, setLayout] = React.useState({
+  const [layout, setLayout] = useState({
     x: 0,
     y: 0,
     width: 0,
     height: 0,
   })
-  const onLayout = React.useCallback((e) => setLayout(e.nativeEvent.layout), [])
+  const onLayout = useCallback(e => setLayout(e.nativeEvent.layout), [])
 
   return {
     onLayout,
