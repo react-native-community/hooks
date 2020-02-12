@@ -149,4 +149,4 @@ console.log('layout: ', layout)
 ```
 
 [version-badge]: https://img.shields.io/npm/v/react-native-hooks.svg?style=flat-square
-[package]: https://www.npmjs.com/package/react-native-hooks
+[package]: https://www.npmjs.com/package/@react-native-community/hooks
