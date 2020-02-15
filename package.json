@@ -1,5 +1,5 @@
 {
-  "name": "react-native-hooks",
+  "name": "@react-native-community/hooks",
   "version": "1.1.0",
   "description": "",
   "main": "lib/index.js",

@@ -11,12 +11,12 @@ React Native APIs turned into React Hooks allowing you to access asynchronous AP
 ### Installation with npm
 
 ```sh
-npm install react-native-hooks
+npm install @react-native-community/hooks
 ```
 
 Installation with yarn
 ```sh
-yarn add react-native-hooks
+yarn add @react-native-community/hooks
 ```
 
 ## API
@@ -34,7 +34,7 @@ yarn add react-native-hooks
 ### `useAccessibilityInfo`
 
 ```js
-import { useAccessibilityInfo } from 'react-native-hooks'
+import { useAccessibilityInfo } from '@react-native-community/hooks'
 
 const isScreenReaderEnabled = useAccessibilityInfo()
 ```
@@ -44,7 +44,7 @@ const isScreenReaderEnabled = useAccessibilityInfo()
 AppState will change between one of 'active', 'background', or (iOS) 'inactive' when the app is closed or put into the background.
 
 ```js
-import { useAppState } from 'react-native-hooks'
+import { useAppState } from '@react-native-community/hooks'
 
 const currentAppState = useAppState()
 ```
@@ -52,7 +52,7 @@ const currentAppState = useAppState()
 ### `useBackHandler`
 
 ```js
-import { useBackHandler } from 'react-native-hooks'
+import { useBackHandler } from '@react-native-community/hooks'
 
 useBackHandler(() => {
   if (shouldBeHandledHere) {
@@ -67,7 +67,7 @@ useBackHandler(() => {
 ### `useCameraRoll`
 
 ```js
-import { useCameraRoll } from 'react-native-hooks'
+import { useCameraRoll } from '@react-native-community/hooks'
 
 const [photos, getPhotos, saveToCameraRoll] = useCameraRoll()
 
@@ -81,7 +81,7 @@ const [photos, getPhotos, saveToCameraRoll] = useCameraRoll()
 ### `useClipboard`
 
 ```js
-import { useClipboard } from 'react-native-hooks'
+import { useClipboard } from '@react-native-community/hooks'
 
 const [data, setString] = useClipboard()
 
@@ -95,7 +95,7 @@ const [data, setString] = useClipboard()
 Gets dimensions and sets up a listener that will change the dimensions if the user changes device orientation.
 
 ```js
-import { useDimensions } from 'react-native-hooks'
+import { useDimensions } from '@react-native-community/hooks'
 
 const dimensions = useDimensions()
 // or
@@ -107,7 +107,7 @@ const screen = useDimensions().screen
 ### `useKeyboard`
 
 ```js
-import { useKeyboard } from 'react-native-hooks'
+import { useKeyboard } from '@react-native-community/hooks'
 
 const keyboard = useKeyboard()
 
@@ -118,7 +118,7 @@ console.log('keyboard keyboardHeight: ', keyboard.keyboardHeight)
 ### `useInteractionManager`
 
 ```js
-import { useInteractionManager } from 'react-native-hooks'
+import { useInteractionManager } from '@react-native-community/hooks'
 
 const interactionReady = useInteractionManager()
 
@@ -128,7 +128,7 @@ console.log('interaction ready: ', interactionReady)
 ### `useDeviceOrientation`
 
 ```js
-import { useDeviceOrientation } from 'react-native-hooks'
+import { useDeviceOrientation } from '@react-native-community/hooks'
 
 const orientation = useDeviceOrientation()
 
@@ -139,7 +139,7 @@ console.log('is orientation landscape: ', orientation.landscape)
 ### `useLayout`
 
 ```js
-import { useLayout } from 'react-native-hooks'
+import { useLayout } from '@react-native-community/hooks'
 
 const { onLayout, ...layout } = useLayout()
 
@@ -148,5 +148,5 @@ console.log('layout: ', layout)
 <View onLayout={onLayout} style={{width: 200, height: 200, marginTop: 30}} />
 ```
 
-[version-badge]: https://img.shields.io/npm/v/react-native-hooks.svg?style=flat-square
-[package]: https://www.npmjs.com/package/react-native-hooks
+[version-badge]: https://img.shields.io/npm/v/@react-native-community/hooks.svg?style=flat-square
+[package]: https://www.npmjs.com/package/@react-native-community/hooks
