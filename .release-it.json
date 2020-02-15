@@ -4,6 +4,6 @@
     "access": "public"
   },
   "github": {
-    "release": false
+    "release": true
   }
 }
