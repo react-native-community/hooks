@@ -15,7 +15,7 @@ export default function useAppState() {
     return () => {
       AppState.removeEventListener('change', onChange)
     }
-  })
+  }, [])
 
   return appState
 }
