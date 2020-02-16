@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Dimensions, ScaledSize } from 'react-native'
+import {useEffect, useState, useCallback} from 'react'
+import {Dimensions, ScaledSize} from 'react-native'
 
 const screen = Dimensions.get('screen')
 
@@ -24,12 +24,12 @@ export default function() {
     landscape: isOrientationLandscape(screen),
   })
 
-  const onChange = ({ screen }: { screen: ScaledSize }) => {
+  const onChange = useCallback(({screen}: {screen: ScaledSize}) => {
     setOrientation({
       portrait: isOrientationPortrait(screen),
       landscape: isOrientationLandscape(screen),
     })
-  }
+  }, [])
 
   useEffect(() => {
     Dimensions.addEventListener('change', onChange)
@@ -37,7 +37,7 @@ export default function() {
     return () => {
       Dimensions.removeEventListener('change', onChange)
     }
-  }, [orientation.portrait, orientation.landscape])
+  }, [orientation.portrait, orientation.landscape, onChange])
 
   return orientation
 }

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Keyboard, KeyboardEventListener, ScreenRect } from 'react-native'
+import {useEffect, useState} from 'react'
+import {Keyboard, KeyboardEventListener, ScreenRect} from 'react-native'
 
 export default function useKeyboard() {
   const [shown, setShown] = useState(false)
@@ -7,23 +7,26 @@ export default function useKeyboard() {
     start: ScreenRect
     end: ScreenRect
   }>({
-    start: { screenX: 0, screenY: 0, width: 0, height: 0 },
-    end: { screenX: 0, screenY: 0, width: 0, height: 0 },
+    start: {screenX: 0, screenY: 0, width: 0, height: 0},
+    end: {screenX: 0, screenY: 0, width: 0, height: 0},
   })
+  const [keyboardHeight, setKeyboardHeight] = useState<number>(0)
 
-  const handleKeyboardWillShow: KeyboardEventListener = (e) => {
-    setCoordinates({ start: e.startCoordinates, end: e.endCoordinates })
+  const handleKeyboardWillShow: KeyboardEventListener = e => {
+    setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
   }
-  const handleKeyboardDidShow: KeyboardEventListener = (e) => {
+  const handleKeyboardDidShow: KeyboardEventListener = e => {
     setShown(true)
-    setCoordinates({ start: e.startCoordinates, end: e.endCoordinates })
+    setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
+    setKeyboardHeight(e.endCoordinates.height)
   }
-  const handleKeyboardWillHide: KeyboardEventListener = (e) => {
-    setCoordinates({ start: e.startCoordinates, end: e.endCoordinates })
+  const handleKeyboardWillHide: KeyboardEventListener = e => {
+    setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
   }
-  const handleKeyboardDidHide: KeyboardEventListener = (e) => {
+  const handleKeyboardDidHide: KeyboardEventListener = e => {
     setShown(false)
-    setCoordinates({ start: e.startCoordinates, end: e.endCoordinates })
+    setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
+    setKeyboardHeight(0)
   }
 
   useEffect(() => {
@@ -44,5 +47,6 @@ export default function useKeyboard() {
   return {
     keyboardShown: shown,
     coordinates,
+    keyboardHeight,
   }
 }

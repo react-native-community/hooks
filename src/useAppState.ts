@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { AppState, AppStateStatus } from 'react-native'
+import {useEffect, useState} from 'react'
+import {AppState, AppStateStatus} from 'react-native'
 
 export default function useAppState() {
   const currentState = AppState.currentState
@@ -15,7 +15,7 @@ export default function useAppState() {
     return () => {
       AppState.removeEventListener('change', onChange)
     }
-  })
+  }, [])
 
   return appState
 }
