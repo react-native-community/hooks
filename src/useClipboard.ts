@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Clipboard } from 'react-native'
+import {useEffect, useState} from 'react'
+import {Clipboard} from 'react-native'
 
 export default function useClipBoard() {
   const [data, updateClipboardData] = useState('')

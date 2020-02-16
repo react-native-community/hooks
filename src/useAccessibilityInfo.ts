@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
 import {
   AccessibilityInfo,
   AccessibilityChangeEvent,
@@ -39,5 +39,5 @@ export default function useAccessibilityInfo() {
     }
   }, [])
 
-  return { reduceMotionEnabled, screenReaderEnabled }
+  return {reduceMotionEnabled, screenReaderEnabled}
 }
