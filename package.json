@@ -7,27 +7,40 @@
   "scripts": {
     "prepare": "yarn build",
     "build": "yarn tsc",
-    "release": "release-it",
+    "release": "auto shipit",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/**/*.ts"
   },
-  "author": "Nader Dabit",
-  "license": "ISC",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-native": ">=0.59"
   },
   "devDependencies": {
+    "@auto-it/all-contributors": "^9.10.7",
+    "@auto-it/first-time-contributor": "^9.10.7",
     "@react-native-community/eslint-config": "^0.0.7",
     "@types/react": "^16.9.10",
     "@types/react-native": "^0.61.0",
+    "all-contributors-cli": "^6.13.0",
+    "auto": "^9.10.7",
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.2",
     "prettier": "^1.19.1",
-    "release-it": "^12.3.5",
     "typescript": "^3.6.4"
   },
+  "author": "Nader Dabit",
+  "license": "ISC",
+  "repository": "react-native-community/hooks",
   "files": [
     "lib"
-  ]
+  ],
+  "auto": {
+    "plugins": [
+      "npm",
+      "all-contributors",
+      "first-time-contributor",
+      "released"
+    ],
+    "onlyPublishWithReleaseLabel": true
+  }
 }
