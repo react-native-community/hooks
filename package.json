@@ -1,13 +1,13 @@
 {
   "name": "@react-native-community/hooks",
-  "version": "2.0.1",
+  "version": "2.0.2-canary.b19264a.0",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "prepare": "yarn build",
     "build": "yarn tsc",
-    "release": "release-it",
+    "release": "auto shipit",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/**/*.ts"
   },
