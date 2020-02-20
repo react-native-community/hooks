@@ -1,6 +1,6 @@
 {
   "name": "@react-native-community/hooks",
-  "version": "2.0.3",
+  "version": "2.0.4-canary.44b.0",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
