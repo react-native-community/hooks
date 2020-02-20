@@ -20,16 +20,16 @@ yarn add @react-native-community/hooks
 ```
 
 ## API
-- [useAccessibilityInfo](https://github.com/react-native-community/react-native-hooks#useaccessibilityinfo)
-- [useAppState](https://github.com/react-native-community/react-native-hooks#useappstate)
-- [useBackHandler](https://github.com/react-native-community/react-native-hooks#usebackhandler)
-- [useCameraRoll](https://github.com/react-native-community/react-native-hooks#usecameraroll)
-- [useClipboard](https://github.com/react-native-community/react-native-hooks#useclipboard)
-- [useDimensions](https://github.com/react-native-community/react-native-hooks#usedimensions)
-- [useKeyboard](https://github.com/react-native-community/react-native-hooks#usekeyboard)
-- [useInteractionManager](https://github.com/react-native-community/react-native-hooks#useinteractionmanager)
-- [useDeviceOrientation](https://github.com/react-native-community/react-native-hooks#usedeviceorientation)
-- [useLayout](https://github.com/react-native-community/react-native-hooks#uselayout)
+- [useAccessibilityInfo](https://github.com/react-native-community/hooks#useaccessibilityinfo)
+- [useAppState](https://github.com/react-native-community/hooks#useappstate)
+- [useBackHandler](https://github.com/react-native-community/hooks#usebackhandler)
+- [useCameraRoll](https://github.com/react-native-community/hooks#usecameraroll)
+- [useClipboard](https://github.com/react-native-community/hooks#useclipboard)
+- [useDimensions](https://github.com/react-native-community/hooks#usedimensions)
+- [useKeyboard](https://github.com/react-native-community/hooks#usekeyboard)
+- [useInteractionManager](https://github.com/react-native-community/hooks#useinteractionmanager)
+- [useDeviceOrientation](https://github.com/react-native-community/hooks#usedeviceorientation)
+- [useLayout](https://github.com/react-native-community/hooks#uselayout)
 
 ### `useAccessibilityInfo`
 
