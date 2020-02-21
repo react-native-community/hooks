@@ -40,6 +40,10 @@
     "typescript": "^3.6.4"
   },
   "author": "Nader Dabit",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/react-native-community/hooks.git"
+  },
   "license": "ISC",
   "files": [
     "lib"
