@@ -1,6 +1,6 @@
 {
   "name": "@react-native-community/hooks",
-  "version": "2.0.3",
+  "version": "2.1.1",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -8,7 +8,7 @@
     "build": "tsc",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
-    "release": "yarn auto release && yarn auto shipit"
+    "release": "auto shipit"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
