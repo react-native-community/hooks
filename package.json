@@ -41,7 +41,6 @@
   },
   "author": "Nader Dabit",
   "license": "ISC",
-  "repository": "react-native-community/hooks",
   "files": [
     "lib"
   ]
