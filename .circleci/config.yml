@@ -1,17 +1,48 @@
 version: 2.1
+
+
 orbs:
-  node: circleci/node@1.1.6
+  rn: react-native-community/react-native@1.2.0
+
+
 jobs:
-  build-and-test:
-    executor:
-      name: node/default
+  checkout_code:
+    executor: rn/linux_js
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: yarn install
-            - run: yarn test
+      - persist_to_workspace:
+          root: .
+          paths: .
+  analyze:
+    executor: rn/linux_js
+    steps:
+      - attach_workspace:
+          at: .
+      - rn/yarn_install
+      - run:
+          name: Lint JS Code (ESLint)
+          command: yarn lint
+      - run:
+          name: Jest
+          command: yarn test
+  publish:
+    executor: rn/linux_js
+    steps:
+      - attach_workspace:
+          at: .
+      - rn/yarn_install
+      # - run:
+          # name: Publish to NPM
+          # command: yarn ci:publish
+
+
 workflows:
-    build-and-test:
+    test:
       jobs:
-        - build-and-test
+        - checkout_code
+        - analyze:
+            requires:
+              - checkout_code
+        # - publish:
+            # requires:
+              # - analyze
