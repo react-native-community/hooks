@@ -2,7 +2,7 @@ version: 2.1
 
 
 orbs:
-  rn: react-native-community/react-native@1.2.0
+  rn: react-native-community/react-native@3.0.1
 
 
 jobs:
