@@ -25,14 +25,14 @@ jobs:
       - run:
           name: Jest
           command: yarn test
-  publish:
+  release:
     executor: rn/linux_js
     steps:
       - attach_workspace:
           at: .
       - rn/yarn_install
       - run:
-          name: Publish to NPM
+          name: Publish a release to NPM
           command: yarn semantic-release
 
 
@@ -43,6 +43,6 @@ workflows:
         - analyze:
             requires:
               - checkout_code
-        - publish:
+        - release:
             requires:
               - analyze
