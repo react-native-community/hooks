@@ -37,7 +37,7 @@ jobs:
 
 
 workflows:
-    test:
+    build-test-release:
       jobs:
         - checkout_code
         - analyze:
