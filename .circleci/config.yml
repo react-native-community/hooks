@@ -31,9 +31,9 @@ jobs:
       - attach_workspace:
           at: .
       - rn/yarn_install
-      # - run:
-          # name: Publish to NPM
-          # command: yarn ci:publish
+      - run:
+          name: Publish to NPM
+          command: yarn release
 
 
 workflows:
@@ -46,3 +46,12 @@ workflows:
         # - publish:
             # requires:
               # - analyze
+
+
+
+
+
+
+      # - run:
+          # name: release
+          # command: npm run semantic-release || true
