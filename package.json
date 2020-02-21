@@ -8,7 +8,7 @@
     "build": "tsc",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
-    "release": "auto shipit"
+    "release": "yarn auto release && yarn auto shipit"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
