@@ -1,3 +1,3 @@
 module.exports = {
-  plugins: ['npm', 'first-time-contributor', 'released'],
+  plugins: ['git-tag', 'npm', 'first-time-contributor', 'released'],
 }

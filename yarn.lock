@@ -36,6 +36,40 @@
     typescript-memoize "^1.0.0-alpha.3"
     url-join "^4.0.0"
 
+"@auto-it/core@^9.10.8":
+  version "9.10.8"
+  resolved "https://registry.npmjs.org/@auto-it/core/-/core-9.10.8.tgz#b301aaf2ee6b12e442d21ff7609a63ebb1ad6b24"
+  integrity sha512-KEcpCnHcQ7h2u9B4bPIe34NX302P4dBxDEiF3L+yAsHU3GPiThqtDtarIMOxtMawwCm5SpJxndmYFWbZHZWceA==
+  dependencies:
+    "@octokit/core" "2.4.0"
+    "@octokit/graphql" "4.3.1"
+    "@octokit/plugin-enterprise-compatibility" "1.2.1"
+    "@octokit/plugin-retry" "3.0.1"
+    "@octokit/plugin-throttling" "^3.2.0"
+    "@octokit/rest" "16.43.1"
+    await-to-js "^2.1.1"
+    chalk "^3.0.0"
+    cosmiconfig "6.0.0"
+    deepmerge "^4.0.0"
+    dotenv "^8.0.0"
+    endent "^1.3.0"
+    enquirer "^2.3.4"
+    env-ci "^5.0.1"
+    gitlog "^3.1.2"
+    https-proxy-agent "^5.0.0"
+    import-cwd "^3.0.0"
+    lodash.chunk "^4.2.0"
+    log-symbols "^3.0.0"
+    node-fetch "2.6.0"
+    semver "^7.0.0"
+    signale "^1.4.0"
+    tapable "^2.0.0-beta.2"
+    terminal-link "^2.1.1"
+    tinycolor2 "^1.4.1"
+    tslib "1.10.0"
+    typescript-memoize "^1.0.0-alpha.3"
+    url-join "^4.0.0"
+
 "@auto-it/first-time-contributor@^9.10.7":
   version "9.10.7"
   resolved "https://registry.npmjs.org/@auto-it/first-time-contributor/-/first-time-contributor-9.10.7.tgz#29c20811a2dee3ca7ade5c1d9ad0fda8128f7bd9"
@@ -43,6 +77,15 @@
   dependencies:
     "@auto-it/core" "^9.10.7"
     array.prototype.flatmap "^1.2.2"
+    tslib "1.10.0"
+
+"@auto-it/git-tag@^9.10.8":
+  version "9.10.8"
+  resolved "https://registry.npmjs.org/@auto-it/git-tag/-/git-tag-9.10.8.tgz#ef0aa05c46fdf1bd93743c5175348bb291ef4fe1"
+  integrity sha512-hNIjjLUZV/q6MTVpBk0kZjcc6nW5pm1B9nG8jeotIb9v2KgB60/p3Xg5B/mrxpK9sC39P/1m4FdJEWO0MKv2uQ==
+  dependencies:
+    "@auto-it/core" "^9.10.8"
+    semver "^7.0.0"
     tslib "1.10.0"
 
 "@auto-it/npm@^9.10.7":
