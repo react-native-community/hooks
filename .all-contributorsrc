@@ -23,6 +23,18 @@
         "maintenance",
         "test"
       ]
+    },
+    {
+      "login": "melihberberolu",
+      "name": "Melih",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/3721734?v=4",
+      "profile": "https://github.com/melihberberolu",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7
