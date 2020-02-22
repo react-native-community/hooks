@@ -110,6 +110,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jozn",
+      "name": "jozn",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3476299?v=4",
+      "profile": "https://github.com/jozn",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
