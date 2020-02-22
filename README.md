@@ -180,6 +180,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://linkedin.com/in/farazamiruddin"><img src="https://avatars2.githubusercontent.com/u/6789822?v=4" width="100px;" alt=""/><br /><sub><b>faraz ahmad</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=faahmad" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.naderdabit.me"><img src="https://avatars1.githubusercontent.com/u/1857282?v=4" width="100px;" alt=""/><br /><sub><b>Nader Dabit</b></sub></a><br /><a href="#ideas-dabit3" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://twitter.com/dani_akash_"><img src="https://avatars3.githubusercontent.com/u/6841445?v=4" width="100px;" alt=""/><br /><sub><b>Dani Akash</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=DaniAkash" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->

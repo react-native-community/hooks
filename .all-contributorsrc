@@ -148,6 +148,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "DaniAkash",
+      "name": "Dani Akash",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6841445?v=4",
+      "profile": "http://twitter.com/dani_akash_",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
