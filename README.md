@@ -178,6 +178,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/jozn"><img src="https://avatars2.githubusercontent.com/u/3476299?v=4" width="100px;" alt=""/><br /><sub><b>jozn</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=jozn" title="Documentation">📖</a></td>
     <td align="center"><a href="http://hipstersmoothie.com"><img src="https://avatars3.githubusercontent.com/u/1192452?v=4" width="100px;" alt=""/><br /><sub><b>Andrew Lisowski</b></sub></a><br /><a href="#infra-hipstersmoothie" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#platform-hipstersmoothie" title="Packaging/porting to new platform">📦</a> <a href="#tool-hipstersmoothie" title="Tools">🔧</a></td>
     <td align="center"><a href="https://linkedin.com/in/farazamiruddin"><img src="https://avatars2.githubusercontent.com/u/6789822?v=4" width="100px;" alt=""/><br /><sub><b>faraz ahmad</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=faahmad" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.naderdabit.me"><img src="https://avatars1.githubusercontent.com/u/1857282?v=4" width="100px;" alt=""/><br /><sub><b>Nader Dabit</b></sub></a><br /><a href="#ideas-dabit3" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
