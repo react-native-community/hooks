@@ -1,0 +1,48 @@
+version: 2.1
+
+
+orbs:
+  rn: react-native-community/react-native@3.0.1
+
+
+jobs:
+  checkout_code:
+    executor: rn/linux_js
+    steps:
+      - checkout
+      - persist_to_workspace:
+          root: .
+          paths: .
+  analyze:
+    executor: rn/linux_js
+    steps:
+      - attach_workspace:
+          at: .
+      - rn/yarn_install
+      - run:
+          name: Lint JS Code (ESLint)
+          command: yarn lint
+      - run:
+          name: Jest
+          command: yarn test
+  release:
+    executor: rn/linux_js
+    steps:
+      - attach_workspace:
+          at: .
+      - rn/yarn_install
+      - run:
+          name: Publish a release to NPM
+          command: yarn release
+
+
+workflows:
+    build-test-release:
+      jobs:
+        - checkout_code
+        - analyze:
+            requires:
+              - checkout_code
+        - release:
+            requires:
+              - analyze

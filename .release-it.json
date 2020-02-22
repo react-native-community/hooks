@@ -1,9 +1,0 @@
-{
-  "npm": {
-    "publish": true,
-    "access": "public"
-  },
-  "github": {
-    "release": true
-  }
-}
