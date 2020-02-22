@@ -53,6 +53,6 @@
       "released"
     ],
     "onlyPublishWithReleaseLabel": true,
-    "noVersionPrefix": true 
+    "noVersionPrefix": true
   }
 }
