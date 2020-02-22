@@ -1,3 +1,26 @@
+# v2.4.2 (Sat Feb 22 2020)
+
+#### 🐛  Bug Fix
+
+- ok [#70](https://github.com/react-native-community/hooks/pull/70) ([@pvinis](https://github.com/pvinis))
+- hm [#69](https://github.com/react-native-community/hooks/pull/69) ([@pvinis](https://github.com/pvinis))
+- set up auto [#66](https://github.com/react-native-community/hooks/pull/66) ([@hipstersmoothie](https://github.com/hipstersmoothie) [@pvinis](https://github.com/pvinis))
+- (fix): Add a prepare script to package.json [#68](https://github.com/react-native-community/hooks/pull/68) ([@Naturalclar](https://github.com/Naturalclar))
+
+#### ⚠️  Pushed to master
+
+- move config out  ([@pvinis](https://github.com/pvinis))
+- upgrade  ([@pvinis](https://github.com/pvinis))
+- add renovate  ([@pvinis](https://github.com/pvinis))
+
+#### Authors: 3
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- Jesse Katsumata ([@Naturalclar](https://github.com/Naturalclar))
+- Pavlos Vinieratos ([@pvinis](https://github.com/pvinis))
+
+---
+
 # (Fri Feb 21 2020)
 
 :tada: This release contains work from new contributors! :tada:
