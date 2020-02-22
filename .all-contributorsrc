@@ -35,6 +35,18 @@
         "infra",
         "test"
       ]
+    },
+    {
+      "login": "Naturalclar",
+      "name": "Jesse Katsumata",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6936373?v=4",
+      "profile": "https://naturalclar.dev",
+      "contributions": [
+        "code",
+        "doc",
+        "maintenance",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7
