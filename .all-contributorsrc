@@ -56,6 +56,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "zeljkoX",
+      "name": "Zeljko",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2046481?v=4",
+      "profile": "http://www.linkedin.com/in/zeljko-markovic-19266344",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
