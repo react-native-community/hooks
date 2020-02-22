@@ -1,3 +1,22 @@
+# v2.4.3 (Sat Feb 22 2020)
+
+#### 🐛  Bug Fix
+
+- upg [#72](https://github.com/react-native-community/hooks/pull/72) ([@pvinis](https://github.com/pvinis))
+- aha [#71](https://github.com/react-native-community/hooks/pull/71) ([@pvinis](https://github.com/pvinis))
+
+#### ⚠️  Pushed to master
+
+- use v prefix :(  ([@pvinis](https://github.com/pvinis))
+- Merge branch 'master' of github.com:react-native-community/hooks  ([@pvinis](https://github.com/pvinis))
+- Revert "move config out"  ([@pvinis](https://github.com/pvinis))
+
+#### Authors: 1
+
+- Pavlos Vinieratos ([@pvinis](https://github.com/pvinis))
+
+---
+
 # v2.4.2 (Sat Feb 22 2020)
 
 #### 🐛  Bug Fix
