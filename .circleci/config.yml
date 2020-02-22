@@ -33,7 +33,7 @@ jobs:
       - rn/yarn_install
       - run:
           name: Publish a release to NPM
-          command: yarn semantic-release
+          command: yarn release
 
 
 workflows:

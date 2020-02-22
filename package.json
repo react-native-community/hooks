@@ -9,26 +9,23 @@
     "build": "tsc",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
-    "semantic-release": "semantic-release"
+    "release": "auto shipit"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-native": ">=0.59"
   },
   "devDependencies": {
+    "@auto-it/all-contributors": "^9.11.0",
+    "@auto-it/first-time-contributor": "^9.11.0",
     "@react-native-community/eslint-config": "^0.0.7",
-    "@semantic-release/changelog": "^5.0.0",
-    "@semantic-release/commit-analyzer": "^8.0.1",
-    "@semantic-release/git": "^9.0.0",
-    "@semantic-release/github": "^7.0.4",
-    "@semantic-release/npm": "^7.0.3",
-    "@semantic-release/release-notes-generator": "^9.0.0",
     "@testing-library/react-hooks": "^3.2.1",
     "@testing-library/react-native": "^5.0.3",
     "@types/jest": "^25.1.3",
     "@types/react": "^16.9.10",
     "@types/react-native": "^0.61.0",
     "all-contributors-cli": "^6.13.0",
+    "auto": "^9.11.0",
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.2",
     "jest": "^25.1.0",
@@ -36,7 +33,6 @@
     "react": "^16.12.0",
     "react-native": "^0.61.5",
     "react-test-renderer": "^16.12.0",
-    "semantic-release": "^17.0.4",
     "ts-jest": "^25.2.1",
     "typescript": "^3.6.4"
   },
@@ -48,5 +44,15 @@
   "license": "ISC",
   "files": [
     "lib"
-  ]
+  ],
+  "auto": {
+    "plugins": [
+      "npm",
+      "all-contributors",
+      "first-time-contributor",
+      "released"
+    ],
+    "onlyPublishWithReleaseLabel": true,
+    "noVersionPrefix": true 
+  }
 }
