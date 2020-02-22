@@ -130,6 +130,15 @@
         "platform",
         "tool"
       ]
+    },
+    {
+      "login": "faahmad",
+      "name": "faraz ahmad",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6789822?v=4",
+      "profile": "https://linkedin.com/in/farazamiruddin",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
