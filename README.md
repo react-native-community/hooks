@@ -169,6 +169,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://twitter.com/webtaculars"><img src="https://avatars0.githubusercontent.com/u/11532969?v=4" width="100px;" alt=""/><br /><sub><b>abhishek gupta</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/issues?q=author%3Awebtaculars" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://www.linkedin.com/in/zeljko-markovic-19266344"><img src="https://avatars3.githubusercontent.com/u/2046481?v=4" width="100px;" alt=""/><br /><sub><b>Zeljko</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=zeljkoX" title="Code">💻</a></td>
     <td align="center"><a href="http://linus.unnebäck.se/"><img src="https://avatars0.githubusercontent.com/u/189580?v=4" width="100px;" alt=""/><br /><sub><b>Linus Unnebäck</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=LinusU" title="Code">💻</a></td>
+    <td align="center"><a href="http://stackoverflow.com/users/692499/tony"><img src="https://avatars1.githubusercontent.com/u/696842?v=4" width="100px;" alt=""/><br /><sub><b>Tony Xiao</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=tonyxiao" title="Code">💻</a></td>
   </tr>
 </table>
 

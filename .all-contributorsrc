@@ -74,6 +74,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "tonyxiao",
+      "name": "Tony Xiao",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/696842?v=4",
+      "profile": "http://stackoverflow.com/users/692499/tony",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
