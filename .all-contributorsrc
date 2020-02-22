@@ -9,6 +9,21 @@
   "imageSize": 100,
   "commit": true,
   "commitConvention": "none",
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "pvinis",
+      "name": "Pavlos Vinieratos",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/100233?v=4",
+      "profile": "http://pavlos.dev",
+      "contributions": [
+        "code",
+        "design",
+        "doc",
+        "infra",
+        "maintenance",
+        "test"
+      ]
+    }
+  ],
   "contributorsPerLine": 7
 }

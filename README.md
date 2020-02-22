@@ -161,6 +161,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://pavlos.dev"><img src="https://avatars2.githubusercontent.com/u/100233?v=4" width="100px;" alt=""/><br /><sub><b>Pavlos Vinieratos</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=pvinis" title="Code">💻</a> <a href="#design-pvinis" title="Design">🎨</a> <a href="https://github.com/react-native-community/hooks/commits?author=pvinis" title="Documentation">📖</a> <a href="#infra-pvinis" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-pvinis" title="Maintenance">🚧</a> <a href="https://github.com/react-native-community/hooks/commits?author=pvinis" title="Tests">⚠️</a></td>
+  </tr>
+</table>
+
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
