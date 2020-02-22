@@ -30,19 +30,18 @@ export default function useKeyboard() {
   }
 
   useEffect(() => {
-    Keyboard.addListener('keyboardWillShow', handleKeyboardWillShow);
-    Keyboard.addListener('keyboardDidShow', handleKeyboardDidShow);
-    Keyboard.addListener('keyboardWillHide', handleKeyboardWillHide);
-    Keyboard.addListener('keyboardDidHide', handleKeyboardDidHide);
+    Keyboard.addListener('keyboardWillShow', handleKeyboardWillShow)
+    Keyboard.addListener('keyboardDidShow', handleKeyboardDidShow)
+    Keyboard.addListener('keyboardWillHide', handleKeyboardWillHide)
+    Keyboard.addListener('keyboardDidHide', handleKeyboardDidHide)
 
     return () => {
-      Keyboard.removeListener('keyboardWillShow', handleKeyboardWillShow);
-      Keyboard.removeListener('keyboardDidShow', handleKeyboardDidShow);
-      Keyboard.removeListener('keyboardWillHide', handleKeyboardWillHide);
-      Keyboard.removeListener('keyboardDidHide', handleKeyboardDidHide);
-    };
-  }, []);
-
+      Keyboard.removeListener('keyboardWillShow', handleKeyboardWillShow)
+      Keyboard.removeListener('keyboardDidShow', handleKeyboardDidShow)
+      Keyboard.removeListener('keyboardWillHide', handleKeyboardWillHide)
+      Keyboard.removeListener('keyboardDidHide', handleKeyboardDidHide)
+    }
+  }, [])
 
   return {
     keyboardShown: shown,
