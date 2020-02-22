@@ -1,0 +1,172 @@
+{
+  "projectName": "hooks",
+  "projectOwner": "react-native-community",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "pvinis",
+      "name": "Pavlos Vinieratos",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/100233?v=4",
+      "profile": "http://pavlos.dev",
+      "contributions": [
+        "code",
+        "design",
+        "doc",
+        "infra",
+        "maintenance",
+        "test"
+      ]
+    },
+    {
+      "login": "melihberberolu",
+      "name": "Melih",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/3721734?v=4",
+      "profile": "https://github.com/melihberberolu",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "test"
+      ]
+    },
+    {
+      "login": "Naturalclar",
+      "name": "Jesse Katsumata",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6936373?v=4",
+      "profile": "https://naturalclar.dev",
+      "contributions": [
+        "code",
+        "doc",
+        "maintenance",
+        "test"
+      ]
+    },
+    {
+      "login": "webtaculars",
+      "name": "abhishek gupta",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/11532969?v=4",
+      "profile": "https://twitter.com/webtaculars",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "zeljkoX",
+      "name": "Zeljko",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2046481?v=4",
+      "profile": "http://www.linkedin.com/in/zeljko-markovic-19266344",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "LinusU",
+      "name": "Linus Unnebäck",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/189580?v=4",
+      "profile": "http://linus.unnebäck.se/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "tonyxiao",
+      "name": "Tony Xiao",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/696842?v=4",
+      "profile": "http://stackoverflow.com/users/692499/tony",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ronal2do",
+      "name": "Ronaldo Lima",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/4389565?v=4",
+      "profile": "https://github.com/ronal2do",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "reime005",
+      "name": "Marius Reimer",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/15148377?v=4",
+      "profile": "https://mariusreimer.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "pnishith",
+      "name": "Nishith Patel",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/24517032?v=4",
+      "profile": "https://github.com/pnishith",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "jozn",
+      "name": "jozn",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3476299?v=4",
+      "profile": "https://github.com/jozn",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "hipstersmoothie",
+      "name": "Andrew Lisowski",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1192452?v=4",
+      "profile": "http://hipstersmoothie.com",
+      "contributions": [
+        "infra",
+        "platform",
+        "tool"
+      ]
+    },
+    {
+      "login": "faahmad",
+      "name": "faraz ahmad",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6789822?v=4",
+      "profile": "https://linkedin.com/in/farazamiruddin",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "dabit3",
+      "name": "Nader Dabit",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1857282?v=4",
+      "profile": "http://www.naderdabit.me",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "DaniAkash",
+      "name": "Dani Akash",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6841445?v=4",
+      "profile": "http://twitter.com/dani_akash_",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "DylanVann",
+      "name": "Dylan Vann",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1537615?v=4",
+      "profile": "https://dylanvann.com/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
