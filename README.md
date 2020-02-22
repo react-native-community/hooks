@@ -174,6 +174,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/ronal2do"><img src="https://avatars3.githubusercontent.com/u/4389565?v=4" width="100px;" alt=""/><br /><sub><b>Ronaldo Lima</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=ronal2do" title="Code">💻</a></td>
     <td align="center"><a href="https://mariusreimer.com"><img src="https://avatars3.githubusercontent.com/u/15148377?v=4" width="100px;" alt=""/><br /><sub><b>Marius Reimer</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=reime005" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/pnishith"><img src="https://avatars1.githubusercontent.com/u/24517032?v=4" width="100px;" alt=""/><br /><sub><b>Nishith Patel</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=pnishith" title="Code">💻</a></td>
   </tr>
 </table>
 
