@@ -65,6 +65,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "LinusU",
+      "name": "Linus Unnebäck",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/189580?v=4",
+      "profile": "http://linus.unnebäck.se/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
