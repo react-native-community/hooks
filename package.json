@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "prepare": "yarn build",
     "build": "tsc",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
