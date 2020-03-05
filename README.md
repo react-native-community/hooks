@@ -111,7 +111,7 @@ import { useKeyboard } from '@react-native-community/hooks'
 
 const keyboard = useKeyboard()
 
-console.log('keyboard isKeyboardShow: ', keyboard.isKeyboardShow)
+console.log('keyboard isKeyboardShow: ', keyboard.keyboardShown)
 console.log('keyboard keyboardHeight: ', keyboard.keyboardHeight)
 ```
 
