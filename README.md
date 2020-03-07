@@ -26,6 +26,7 @@ yarn add @react-native-community/hooks
 - [useCameraRoll](https://github.com/react-native-community/hooks#usecameraroll)
 - [useClipboard](https://github.com/react-native-community/hooks#useclipboard)
 - [useDimensions](https://github.com/react-native-community/hooks#usedimensions)
+- [useImageDimensions](https://github.com/react-native-community/hooks#useImageDimensions)
 - [useKeyboard](https://github.com/react-native-community/hooks#usekeyboard)
 - [useInteractionManager](https://github.com/react-native-community/hooks#useinteractionmanager)
 - [useDeviceOrientation](https://github.com/react-native-community/hooks#usedeviceorientation)
