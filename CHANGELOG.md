@@ -1,3 +1,15 @@
+# v2.4.5 (Mon Mar 16 2020)
+
+#### 🐛  Bug Fix
+
+- Use a global list of clipboard listeners [#76](https://github.com/react-native-community/hooks/pull/76) ([@LinusU](https://github.com/LinusU))
+
+#### Authors: 1
+
+- Linus Unnebäck ([@LinusU](https://github.com/LinusU))
+
+---
+
 # v2.4.4 (Mon Mar 16 2020)
 
 :tada: This release contains work from new contributors! :tada:
