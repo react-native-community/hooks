@@ -167,6 +167,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "thinklinux",
+      "name": "Tihomir Valkanov",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/326949?v=4",
+      "profile": "https://github.com/thinklinux",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
