@@ -178,6 +178,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "pistou",
+      "name": "Pierre Skowron",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6703711?v=4",
+      "profile": "http://twitter.com/pistoudev",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7

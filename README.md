@@ -184,6 +184,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://twitter.com/dani_akash_"><img src="https://avatars3.githubusercontent.com/u/6841445?v=4" width="100px;" alt=""/><br /><sub><b>Dani Akash</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=DaniAkash" title="Code">💻</a></td>
     <td align="center"><a href="https://dylanvann.com/"><img src="https://avatars0.githubusercontent.com/u/1537615?v=4" width="100px;" alt=""/><br /><sub><b>Dylan Vann</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=DylanVann" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/thinklinux"><img src="https://avatars1.githubusercontent.com/u/326949?v=4" width="100px;" alt=""/><br /><sub><b>Tihomir Valkanov</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=thinklinux" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://twitter.com/pistoudev"><img src="https://avatars1.githubusercontent.com/u/6703711?v=4" width="100px;" alt=""/><br /><sub><b>Pierre Skowron</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=pistou" title="Code">💻</a></td>
   </tr>
 </table>
 
