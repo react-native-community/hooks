@@ -1,3 +1,24 @@
+# v2.4.6 (Wed Mar 18 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- chore: specify type for clipboard [#82](https://github.com/react-native-community/hooks/pull/82) ([@Naturalclar](https://github.com/Naturalclar))
+- Pin dependencies [#80](https://github.com/react-native-community/hooks/pull/80) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- upgrade a bunch of versions [#79](https://github.com/react-native-community/hooks/pull/79) ([@pvinis](https://github.com/pvinis))
+
+#### Authors: 4
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Jesse Katsumata ([@Naturalclar](https://github.com/Naturalclar))
+- Pavlos Vinieratos ([@pvinis](https://github.com/pvinis))
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v2.4.5 (Mon Mar 16 2020)
 
 #### 🐛  Bug Fix
