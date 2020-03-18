@@ -108,23 +108,21 @@ const screen = useDimensions().screen
 ### `useImageDimensions`
 
 ```js
-import { useImageDimensions } from '@react-native-community/hooks'
+import {useImageDimensions} from '@react-native-community/hooks'
 
-const assetSource = require('./assets/yourImage.png')
-const uriSource = { uri: 'https://your.image.URI' }
-const mixedSources = [assetSource, uriSource]
-
-const dimensions = useImageDimensions(assetSource)
+const dimensions = useImageDimensions(require('./assets/yourImage.png'))
 // or
-const dimensions = useImageDimensions(uriSource, () => console.error('Loading failure ...'))
+const dimensions = useImageDimensions({uri: 'https://your.image.URI'})
 // or
-const dimensions = useImageDimensions(mixedSources[i], () => console.error('Loading failure ...'))
+const dimensions = useImageDimensions({uri: 'https://your.image.URI'}, error => {
+  onImageFetchFailure(error)
+})
 
-if (typeof dimensions === 'undefined') {
+if (!dimensions) {
   return null
 }
 
-const { width, height } = dimensions
+const {width, height} = dimensions
 ```
 
 ### `useKeyboard`

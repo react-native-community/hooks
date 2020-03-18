@@ -4,31 +4,30 @@ import {Image, ImageRequireSource} from 'react-native'
 export interface URISource {
   uri: string
 }
-type ImageDimensions =
-  | {
-      width: number
-      height: number
-    }
-  | undefined
+
+type ImageDimensions = {
+  width: number
+  height: number
+} | null
 type FailureCallback = (error: any) => void
 
 /**
- * @param source A local file resource.
+ * @param source local file resource.
  * @returns Original image width and height.
  */
 function useImageDimensions(source: ImageRequireSource): ImageDimensions
 /**
- * @param source A remote URL
- * @param failure The function that will be called if there was an error, such as failing to retrieve the image (see https://reactnative.dev/docs/image#getsize).
+ * @param source remote URL
+ * @param failure the function that will be called if there was an error, such as failing to retrieve the image (see https://reactnative.dev/docs/image#getsize).
  * @returns Original image width and height.
  */
 function useImageDimensions(
   source: URISource,
-  failure: FailureCallback,
+  failure?: FailureCallback,
 ): ImageDimensions
 function useImageDimensions(
   source: ImageRequireSource | URISource,
-  failure: FailureCallback,
+  failure?: FailureCallback,
 ): ImageDimensions
 function useImageDimensions(
   source: ImageRequireSource | URISource,
@@ -37,16 +36,18 @@ function useImageDimensions(
   const [dimensions, setDimensions] = useState<ImageDimensions>()
   useEffect(() => {
     if (typeof source === 'object') {
-      if (!failure) {
-        throw new Error(
-          '"failure" callback parameter is required in case when URI source is using.',
-        )
-      }
       const {uri} = source
       Image.getSize(
         uri,
         (width, height) => setDimensions({width, height}),
-        failure,
+        error => {
+          setDimensions(null)
+          if (failure) {
+            failure(error)
+          } else {
+            console.error(error)
+          }
+        },
       )
     } else {
       setDimensions(Image.resolveAssetSource(source))
