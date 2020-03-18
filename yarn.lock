@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@auto-it/all-contributors@9.19.5":
-  version "9.19.5"
-  resolved "https://registry.yarnpkg.com/@auto-it/all-contributors/-/all-contributors-9.19.5.tgz#ab5b43f06f4b14a2d33e65ca3bdcda2b9b1568c5"
-  integrity sha512-dpkKbECDRz/g3kEZuI2cdVUeO8siFgeQ4fKTTpYULIdlNCHg6kkPS7yh8bb879TJZWktrBD3sAYQt4VKxyW++A==
+"@auto-it/all-contributors@9.20.0":
+  version "9.20.0"
+  resolved "https://registry.yarnpkg.com/@auto-it/all-contributors/-/all-contributors-9.20.0.tgz#0f254a86fe74700ed1bfbbee5637373f98bc8378"
+  integrity sha512-546MIRjZHsqFA0rbYMkTGdgsitnZd2LuBtRLAAzZQ0w1jwlZLJImtXsF2M6Wtt/flDVIwbskvrxU7E9od2iYLw==
   dependencies:
-    "@auto-it/bot-list" "^9.19.5"
-    "@auto-it/core" "^9.19.5"
+    "@auto-it/bot-list" "^9.20.0"
+    "@auto-it/core" "^9.20.0"
     anymatch "^3.1.1"
     await-to-js "^2.1.1"
     fp-ts "^2.5.3"
