@@ -37,7 +37,7 @@ yarn add @react-native-community/hooks
 ```js
 import { useAccessibilityInfo } from '@react-native-community/hooks'
 
-const isScreenReaderEnabled = useAccessibilityInfo()
+const { reduceMotionEnabled, screenReaderEnabled } = useAccessibilityInfo()
 ```
 
 ### `useAppState`
@@ -164,8 +164,9 @@ console.log('layout: ', layout)
 [version-badge]: https://img.shields.io/npm/v/@react-native-community/hooks.svg?style=flat-square
 [package]: https://www.npmjs.com/package/@react-native-community/hooks
 
-We use [auto](https://github.com/intuit/auto) for automatic releases, an awesome tool by an awesome [dude](https://github.com/hipstersmoothie)!
+## Thanks
 
+We use [auto](https://github.com/intuit/auto) for automatic releases, an awesome tool by an awesome [dude](https://github.com/hipstersmoothie)!
 
 ## Contributors ✨
 
@@ -181,7 +182,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://naturalclar.dev"><img src="https://avatars1.githubusercontent.com/u/6936373?v=4" width="100px;" alt=""/><br /><sub><b>Jesse Katsumata</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=Naturalclar" title="Code">💻</a> <a href="https://github.com/react-native-community/hooks/commits?author=Naturalclar" title="Documentation">📖</a> <a href="#maintenance-Naturalclar" title="Maintenance">🚧</a> <a href="https://github.com/react-native-community/hooks/commits?author=Naturalclar" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://twitter.com/webtaculars"><img src="https://avatars0.githubusercontent.com/u/11532969?v=4" width="100px;" alt=""/><br /><sub><b>abhishek gupta</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/issues?q=author%3Awebtaculars" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://www.linkedin.com/in/zeljko-markovic-19266344"><img src="https://avatars3.githubusercontent.com/u/2046481?v=4" width="100px;" alt=""/><br /><sub><b>Zeljko</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=zeljkoX" title="Code">💻</a></td>
-    <td align="center"><a href="http://linus.unnebäck.se/"><img src="https://avatars0.githubusercontent.com/u/189580?v=4" width="100px;" alt=""/><br /><sub><b>Linus Unnebäck</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=LinusU" title="Code">💻</a></td>
+    <td align="center"><a href="http://linus.unnebäck.se/"><img src="https://avatars0.githubusercontent.com/u/189580?v=4" width="100px;" alt=""/><br /><sub><b>Linus Unnebäck</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=LinusU" title="Code">💻</a> <a href="#infra-LinusU" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     <td align="center"><a href="http://stackoverflow.com/users/692499/tony"><img src="https://avatars1.githubusercontent.com/u/696842?v=4" width="100px;" alt=""/><br /><sub><b>Tony Xiao</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=tonyxiao" title="Code">💻</a></td>
   </tr>
   <tr>
@@ -189,13 +190,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://mariusreimer.com"><img src="https://avatars3.githubusercontent.com/u/15148377?v=4" width="100px;" alt=""/><br /><sub><b>Marius Reimer</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=reime005" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/pnishith"><img src="https://avatars1.githubusercontent.com/u/24517032?v=4" width="100px;" alt=""/><br /><sub><b>Nishith Patel</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=pnishith" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/jozn"><img src="https://avatars2.githubusercontent.com/u/3476299?v=4" width="100px;" alt=""/><br /><sub><b>jozn</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=jozn" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://hipstersmoothie.com"><img src="https://avatars3.githubusercontent.com/u/1192452?v=4" width="100px;" alt=""/><br /><sub><b>Andrew Lisowski</b></sub></a><br /><a href="#infra-hipstersmoothie" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#platform-hipstersmoothie" title="Packaging/porting to new platform">📦</a> <a href="#tool-hipstersmoothie" title="Tools">🔧</a></td>
+    <td align="center"><a href="http://hipstersmoothie.com"><img src="https://avatars3.githubusercontent.com/u/1192452?v=4" width="100px;" alt=""/><br /><sub><b>Andrew Lisowski</b></sub></a><br /><a href="#infra-hipstersmoothie" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#platform-hipstersmoothie" title="Packaging/porting to new platform">📦</a> <a href="#tool-hipstersmoothie" title="Tools">🔧</a> <a href="https://github.com/react-native-community/hooks/commits?author=hipstersmoothie" title="Code">💻</a> <a href="https://github.com/react-native-community/hooks/commits?author=hipstersmoothie" title="Documentation">📖</a></td>
     <td align="center"><a href="https://linkedin.com/in/farazamiruddin"><img src="https://avatars2.githubusercontent.com/u/6789822?v=4" width="100px;" alt=""/><br /><sub><b>faraz ahmad</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=faahmad" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.naderdabit.me"><img src="https://avatars1.githubusercontent.com/u/1857282?v=4" width="100px;" alt=""/><br /><sub><b>Nader Dabit</b></sub></a><br /><a href="#ideas-dabit3" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
   <tr>
     <td align="center"><a href="http://twitter.com/dani_akash_"><img src="https://avatars3.githubusercontent.com/u/6841445?v=4" width="100px;" alt=""/><br /><sub><b>Dani Akash</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=DaniAkash" title="Code">💻</a></td>
     <td align="center"><a href="https://dylanvann.com/"><img src="https://avatars0.githubusercontent.com/u/1537615?v=4" width="100px;" alt=""/><br /><sub><b>Dylan Vann</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=DylanVann" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/thinklinux"><img src="https://avatars1.githubusercontent.com/u/326949?v=4" width="100px;" alt=""/><br /><sub><b>Tihomir Valkanov</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=thinklinux" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://twitter.com/pistoudev"><img src="https://avatars1.githubusercontent.com/u/6703711?v=4" width="100px;" alt=""/><br /><sub><b>Pierre Skowron</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=pistou" title="Code">💻</a></td>
   </tr>
 </table>
 

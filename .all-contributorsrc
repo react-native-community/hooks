@@ -72,7 +72,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/189580?v=4",
       "profile": "http://linus.unnebäck.se/",
       "contributions": [
-        "code"
+        "code",
+        "infra"
       ]
     },
     {
@@ -128,7 +129,9 @@
       "contributions": [
         "infra",
         "platform",
-        "tool"
+        "tool",
+        "code",
+        "doc"
       ]
     },
     {
@@ -163,6 +166,24 @@
       "name": "Dylan Vann",
       "avatar_url": "https://avatars0.githubusercontent.com/u/1537615?v=4",
       "profile": "https://dylanvann.com/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "thinklinux",
+      "name": "Tihomir Valkanov",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/326949?v=4",
+      "profile": "https://github.com/thinklinux",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "pistou",
+      "name": "Pierre Skowron",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6703711?v=4",
+      "profile": "http://twitter.com/pistoudev",
       "contributions": [
         "code"
       ]
