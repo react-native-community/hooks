@@ -1,3 +1,31 @@
+# v2.4.7 (Thu Mar 19 2020)
+
+:tada: This release contains work from new contributors! :tada:
+
+Thanks for all your work!
+
+:heart: WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+:heart: Peter Makowski ([@petermakowski](https://github.com/petermakowski))
+
+#### 🐛 Bug Fix
+
+- test [#89](https://github.com/react-native-community/hooks/pull/89) ([@pvinis](https://github.com/pvinis))
+- Update dependency auto to v9.20.0 [#88](https://github.com/react-native-community/hooks/pull/88) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update README.md [#84](https://github.com/react-native-community/hooks/pull/84) ([@petermakowski](https://github.com/petermakowski))
+- Update dependency @auto-it/all-contributors to v9.20.0 [#85](https://github.com/react-native-community/hooks/pull/85) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @auto-it/first-time-contributor to v9.20.0 [#86](https://github.com/react-native-community/hooks/pull/86) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @types/react-native to v0.61.23 [#83](https://github.com/react-native-community/hooks/pull/83) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 4
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Pavlos Vinieratos ([@pvinis](https://github.com/pvinis))
+- Peter Makowski ([@petermakowski](https://github.com/petermakowski))
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v2.4.6 (Wed Mar 18 2020)
 
 :tada: This release contains work from a new contributor! :tada:
