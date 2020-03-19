@@ -5,55 +5,32 @@ export interface URISource {
   uri: string
 }
 
-type ImageDimensions = {
-  width: number
-  height: number
-} | null
-type FailureCallback = (error: any) => void
-
 /**
- * @param source local file resource.
- * @returns Original image width and height.
+ * @param source either a remote URL or a local file resource.
+ * @returns original image width and height.
  */
-function useImageDimensions(source: ImageRequireSource): ImageDimensions
-/**
- * @param source remote URL
- * @param failure the function that will be called if there was an error, such as failing to retrieve the image (see https://reactnative.dev/docs/image#getsize).
- * @returns Original image width and height.
- */
-function useImageDimensions(
-  source: URISource,
-  failure?: FailureCallback,
-): ImageDimensions
-function useImageDimensions(
-  source: ImageRequireSource | URISource,
-  failure?: FailureCallback,
-): ImageDimensions
-function useImageDimensions(
-  source: ImageRequireSource | URISource,
-  failure?: FailureCallback,
-) {
-  const [dimensions, setDimensions] = useState<ImageDimensions>()
+function useImageDimensions(source: ImageRequireSource | URISource) {
+  const [state, setState] = useState<{
+    width?: number
+    height?: number
+    loading?: boolean
+    error?: any
+  }>({})
   useEffect(() => {
-    if (typeof source === 'object') {
-      const {uri} = source
+    if (typeof source === 'object' && typeof source.uri === 'string') {
+      setState({loading: true})
       Image.getSize(
-        uri,
-        (width, height) => setDimensions({width, height}),
-        error => {
-          setDimensions(null)
-          if (failure) {
-            failure(error)
-          } else {
-            console.error(error)
-          }
-        },
+        source.uri,
+        (width, height) => setState({width, height}),
+        error => setState({error}),
       )
+    } else if (typeof source === 'number') {
+      setState(Image.resolveAssetSource(source))
     } else {
-      setDimensions(Image.resolveAssetSource(source))
+      setState({error: 'not implemented'})
     }
-  }, [source, failure])
-  return dimensions
+  }, [source])
+  return state
 }
 
 export default useImageDimensions
