@@ -56,9 +56,11 @@ workflows:
             requires:
               - analyze
             filters:
-              ignore: master
+              branches:
+                ignore: master
         - release:
             requires:
               - analyze
             filters:
-              only: master
+              branches:
+                only: master
