@@ -117,12 +117,12 @@
     tslib "1.11.1"
     url-join "^4.0.0"
 
-"@auto-it/npm@^9.20.0":
-  version "9.20.0"
-  resolved "https://registry.yarnpkg.com/@auto-it/npm/-/npm-9.20.0.tgz#7750cd259ead1af38900b6228b681f2c3d116083"
-  integrity sha512-c/t0aqwAUix35rUceB2lEylJriHZASYg3WWzRmOr8s69r/CQEwBOic2wHIFFg0QN96P0XPDqkhNyJV/CueZszw==
+"@auto-it/npm@^9.20.1":
+  version "9.20.1"
+  resolved "https://registry.yarnpkg.com/@auto-it/npm/-/npm-9.20.1.tgz#b0f2b9636c19546247e00e248b06f2471732c378"
+  integrity sha512-8Gzm0RrdcVFjgJP90LRwCIsY4DCNACiw6K2H4TWA78if8eobijgzEkXruqHNX7S1ky8LeyUPz2v2+yLrSOAQhw==
   dependencies:
-    "@auto-it/core" "^9.20.0"
+    "@auto-it/core" "^9.20.1"
     env-ci "^5.0.1"
     fp-ts "^2.5.3"
     get-monorepo-packages "^1.1.0"
@@ -136,12 +136,12 @@
     url-join "^4.0.0"
     user-home "^2.0.0"
 
-"@auto-it/released@^9.20.0":
-  version "9.20.0"
-  resolved "https://registry.yarnpkg.com/@auto-it/released/-/released-9.20.0.tgz#be22dc14b430799df989993e4a54a9f860a85253"
-  integrity sha512-2vA0/EEyaJ21p2zOKyekaYf/MRYM5Zwnao3WdQ4YrD7fMJNYUpDDuUVC9alnOMKL3rHf6UcC18c+0ofyjhIM3Q==
+"@auto-it/released@^9.20.1":
+  version "9.20.1"
+  resolved "https://registry.yarnpkg.com/@auto-it/released/-/released-9.20.1.tgz#7240ba4633dc12eaf2fe04574e32553a56d805a3"
+  integrity sha512-KQYUxYkHMU2i4IyAhYl68q29QPw/YwpKxuj7ncoLCS8V/FCw21f9og+V5cUlYNFkbqdhFhFs4jVMv24NLAmSVw==
   dependencies:
-    "@auto-it/core" "^9.20.0"
+    "@auto-it/core" "^9.20.1"
     deepmerge "^4.0.0"
     fp-ts "^2.5.3"
     io-ts "^2.1.2"
@@ -1907,14 +1907,14 @@ author-regex@^1.0.0:
   resolved "https://registry.npmjs.org/author-regex/-/author-regex-1.0.0.tgz#d08885be6b9bbf9439fe087c76287245f0a81450"
   integrity sha1-0IiFvmubv5Q5/gh8dihyRfCoFFA=
 
-auto@9.20.0:
-  version "9.20.0"
-  resolved "https://registry.yarnpkg.com/auto/-/auto-9.20.0.tgz#48f913dd72bb11343e4e72e1e6f22c894ab17b4f"
-  integrity sha512-bXixBrPxxs00ryMxtTI2Fkeh1g5Kyejp+ZyVbGcnlaQVAxBJ+gaJUsUTqtdkOcujzabAWLiK6NhdO9T+iiM16g==
+auto@9.20.1:
+  version "9.20.1"
+  resolved "https://registry.yarnpkg.com/auto/-/auto-9.20.1.tgz#36de85ede26842b7d2c89d81c36e030f8726a79b"
+  integrity sha512-TFCnigNX9HI+X08k29Yq7auYnyiuutABffKZM2ZYjouNkBiaW9nEbwOL+5UeebNlt45tpw8/CTf5SUE7J/FOUQ==
   dependencies:
-    "@auto-it/core" "^9.20.0"
-    "@auto-it/npm" "^9.20.0"
-    "@auto-it/released" "^9.20.0"
+    "@auto-it/core" "^9.20.1"
+    "@auto-it/npm" "^9.20.1"
+    "@auto-it/released" "^9.20.1"
     await-to-js "^2.1.1"
     chalk "^3.0.0"
     command-line-application "^0.9.3"
