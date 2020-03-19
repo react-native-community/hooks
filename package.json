@@ -9,7 +9,8 @@
     "build": "tsc",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
-    "release": "auto shipit"
+    "release": "auto shipit",
+    "release-canary": "auto canary"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

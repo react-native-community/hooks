@@ -151,8 +151,9 @@ console.log('layout: ', layout)
 [version-badge]: https://img.shields.io/npm/v/@react-native-community/hooks.svg?style=flat-square
 [package]: https://www.npmjs.com/package/@react-native-community/hooks
 
-We use [auto](https://github.com/intuit/auto) for automatic releases, an awesome tool by an awesome [dude](https://github.com/hipstersmoothie)!
+## Thanks
 
+We use [auto](https://github.com/intuit/auto) for automatic releases, an awesome tool by an awesome [dude](https://github.com/hipstersmoothie)!
 
 ## Contributors ✨
 
