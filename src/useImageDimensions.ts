@@ -7,30 +7,51 @@ export interface URISource {
 
 /**
  * @param source either a remote URL or a local file resource.
- * @returns original image width and height.
+ * @returns original image dimensions (width and height).
  */
 function useImageDimensions(source: ImageRequireSource | URISource) {
-  const [state, setState] = useState<{
-    width?: number
-    height?: number
-    loading?: boolean
-    error?: any
-  }>({})
+  const localAsset = typeof source === 'number'
+  const [dimensions, setDimensions] = useState<
+    | {
+        width: number
+        height: number
+      }
+    | undefined
+  >(localAsset ? Image.resolveAssetSource(source) : undefined)
+  const [error, setError] = useState<Error>()
   useEffect(() => {
-    if (typeof source === 'object' && typeof source.uri === 'string') {
-      setState({loading: true})
-      Image.getSize(
-        source.uri,
-        (width, height) => setState({width, height}),
-        error => setState({error}),
-      )
-    } else if (typeof source === 'number') {
-      setState(Image.resolveAssetSource(source))
-    } else {
-      setState({error: 'not implemented'})
+    if (localAsset) {
+      return
     }
-  }, [source])
-  return state
+    try {
+      Image.getSize(
+        (source as URISource).uri,
+        (width, height) => setDimensions({width, height}),
+        e => {
+          throw e
+        },
+      )
+    } catch (e) {
+      setError(e)
+    }
+  }, [source, localAsset])
+
+  return {
+    dimensions,
+    error,
+    /**
+     * width to height ratio
+     */
+    get aspectRatio() {
+      return dimensions && dimensions.width / dimensions.height
+    },
+    /**
+     * loading indicator for remote image
+     */
+    get loading() {
+      return !dimensions && !error
+    },
+  }
 }
 
 export default useImageDimensions
