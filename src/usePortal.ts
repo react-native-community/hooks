@@ -20,5 +20,5 @@ export default function usePortal() {
     Dimensions.addEventListener('change', portalHandler)
   })
 
-  return {isRotation}
+  return {isRotation,}
 }

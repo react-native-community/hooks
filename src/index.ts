@@ -8,7 +8,7 @@ import useKeyboard from './useKeyboard'
 import useInteractionManager from './useInteractionManager'
 import useDeviceOrientation from './useDeviceOrientation'
 import useLayout from './useLayout'
-import usePortal from "./usePortal";
+import usePortal from './usePortal'
 export {
   useDimensions,
   useAppState,
