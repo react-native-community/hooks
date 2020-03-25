@@ -20,5 +20,5 @@ export {
   useInteractionManager,
   useDeviceOrientation,
   useLayout,
-  usePortal
+  usePortal,
 }
