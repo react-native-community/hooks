@@ -36,15 +36,21 @@ function useImageDimensions(source: ImageRequireSource | URISource) {
   }, [source])
 
   return {
-    dimensions: dimensions && {
-      ...dimensions,
-      /**
-       * width to height ratio
-       */
-      get aspectRatio(): number {
-        return this.width / this.height
-      },
-    },
+    dimensions:
+      dimensions &&
+      (Object.setPrototypeOf(dimensions, {
+        get aspectRatio(): number {
+          const _this = this as any
+          return _this.width / _this.height
+        },
+      }) as {
+        /**
+         * width to height ratio
+         */
+        readonly aspectRatio: number
+        width: number
+        height: number
+      }),
     error,
     get loading() {
       return !dimensions && !error
