@@ -7,7 +7,7 @@ export function useLayout() {
     width: 0,
     height: 0,
   })
-  const onLayout = useCallback(e => setLayout(e.nativeEvent.layout), [])
+  const onLayout = useCallback((e) => setLayout(e.nativeEvent.layout), [])
 
   return {
     onLayout,
