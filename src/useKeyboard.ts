@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import {Keyboard, KeyboardEventListener, ScreenRect} from 'react-native'
 
-export default function useKeyboard() {
+export function useKeyboard() {
   const [shown, setShown] = useState(false)
   const [coordinates, setCoordinates] = useState<{
     start: ScreenRect
