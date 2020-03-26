@@ -114,7 +114,12 @@ const source = require('./assets/yourImage.png')
 // or
 const source = {uri: 'https://your.image.URI'}
 
-const {width, height, loading, error} = useImageDimensions(source)
+const {dimensions, loading, error} = useImageDimensions(source)
+
+if(loading || error || !dimensions) {
+  return null
+}
+const {width, height, aspectRatio} = dimensions
 ```
 
 ### `useKeyboard`

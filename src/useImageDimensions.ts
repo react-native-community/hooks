@@ -7,47 +7,45 @@ export interface URISource {
 
 /**
  * @param source either a remote URL or a local file resource.
- * @returns original image dimensions (width and height).
+ * @returns original image dimensions (width, height and aspect ratio).
  */
 function useImageDimensions(source: ImageRequireSource | URISource) {
-  const localAsset = typeof source === 'number'
-  const [dimensions, setDimensions] = useState<
-    | {
-        width: number
-        height: number
-      }
-    | undefined
-  >(localAsset ? Image.resolveAssetSource(source) : undefined)
-  const [error, setError] = useState<Error>()
+  const [[dimensions, error], setState] = useState<
+    [{width: number; height: number}?, Error?]
+  >([])
+
   useEffect(() => {
-    if (localAsset) {
-      return
-    }
     try {
-      Image.getSize(
-        (source as URISource).uri,
-        (width, height) => setDimensions({width, height}),
-        e => {
-          throw e
-        },
-      )
+      if (typeof source === 'number') {
+        const {width, height} = Image.resolveAssetSource(source)
+        setState([{width, height}])
+      } else if (typeof source === 'object' && source.uri) {
+        setState([])
+        Image.getSize(
+          source.uri,
+          (width, height) => setState([{width, height}]),
+          e => setState([dimensions, e]),
+        )
+      } else {
+        throw new Error('not implemented')
+      }
     } catch (e) {
-      setError(e)
+      setState([dimensions, e])
     }
-  }, [source, localAsset])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [source])
 
   return {
-    dimensions,
-    error,
-    /**
-     * width to height ratio
-     */
-    get aspectRatio() {
-      return dimensions && dimensions.width / dimensions.height
+    dimensions: dimensions && {
+      ...dimensions,
+      /**
+       * width to height ratio
+       */
+      get aspectRatio(): number {
+        return this.width / this.height
+      },
     },
-    /**
-     * loading indicator for remote image
-     */
+    error,
     get loading() {
       return !dimensions && !error
     },
