@@ -9,7 +9,7 @@ function setString(content: string) {
   listeners.forEach(listener => listener(content))
 }
 
-export default function useClipBoard(): [string, (content: string) => void] {
+export function useClipboard(): [string, (content: string) => void] {
   const [data, updateClipboardData] = useState('')
 
   // Get initial data

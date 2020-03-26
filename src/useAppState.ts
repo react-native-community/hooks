@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import {AppState, AppStateStatus} from 'react-native'
 
-export default function useAppState() {
+export function useAppState() {
   const currentState = AppState.currentState
   const [appState, setAppState] = useState(currentState)
 
