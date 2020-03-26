@@ -1,6 +1,6 @@
 import {renderHook} from '@testing-library/react-hooks'
 
-import useLayout from './useLayout'
+import {useLayout} from './useLayout'
 
 describe('bla', () => {
   it('should increment counter', () => {

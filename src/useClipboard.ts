@@ -6,10 +6,10 @@ const listeners = new Set<Listener>()
 
 function setString(content: string) {
   Clipboard.setString(content)
-  listeners.forEach(listener => listener(content))
+  listeners.forEach((listener) => listener(content))
 }
 
-export default function useClipBoard(): [string, (content: string) => void] {
+export function useClipboard(): [string, (content: string) => void] {
   const [data, updateClipboardData] = useState('')
 
   // Get initial data
