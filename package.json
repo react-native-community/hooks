@@ -9,6 +9,7 @@
     "build": "tsc",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
+    "eslint-fix": "eslint src/**/*.ts --fix",
     "prettier-fix": "prettier --write \"**/*.{ts,tsx}\"",
     "release": "auto shipit",
     "release-canary": "auto canary"

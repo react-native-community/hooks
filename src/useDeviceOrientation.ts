@@ -24,10 +24,10 @@ export function useDeviceOrientation() {
     landscape: isOrientationLandscape(screen),
   })
 
-  const onChange = useCallback(({screen}: {screen: ScaledSize}) => {
+  const onChange = useCallback(({screen: scr}: {screen: ScaledSize}) => {
     setOrientation({
-      portrait: isOrientationPortrait(screen),
-      landscape: isOrientationLandscape(screen),
+      portrait: isOrientationPortrait(scr),
+      landscape: isOrientationLandscape(scr),
     })
   }, [])
 

@@ -20,8 +20,8 @@ export function useCameraRoll() {
 
   async function getPhotos(config = defaultConfig) {
     try {
-      const photos = await CameraRoll.getPhotos(config)
-      setPhotos(photos)
+      const result = await CameraRoll.getPhotos(config)
+      setPhotos(result)
     } catch (err) {
       console.log('error: ', err)
     }
