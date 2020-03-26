@@ -25,6 +25,15 @@ jobs:
       - run:
           name: Jest
           command: yarn test
+  release-canary:
+    executor: rn/linux_js
+    steps:
+      - attach_workspace:
+          at: .
+      - rn/yarn_install
+      - run:
+          name: Publish a canary release to NPM
+          command: yarn release-canary
   release:
     executor: rn/linux_js
     steps:
@@ -43,6 +52,15 @@ workflows:
         - analyze:
             requires:
               - checkout_code
+        - release-canary:
+            requires:
+              - analyze
+            filters:
+              branches:
+                ignore: master
         - release:
             requires:
               - analyze
+            filters:
+              branches:
+                only: master

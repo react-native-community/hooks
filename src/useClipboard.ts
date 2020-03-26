@@ -1,22 +1,30 @@
 import {useEffect, useState} from 'react'
 import {Clipboard} from 'react-native'
 
-export default function useClipBoard() {
+type Listener = (content: string) => void
+const listeners = new Set<Listener>()
+
+function setString(content: string) {
+  Clipboard.setString(content)
+  listeners.forEach(listener => listener(content))
+}
+
+export default function useClipBoard(): [string, (content: string) => void] {
   const [data, updateClipboardData] = useState('')
 
-  async function updateClipboard() {
-    const content = await Clipboard.getString()
-    updateClipboardData(content)
-  }
-
+  // Get initial data
   useEffect(() => {
-    updateClipboard()
+    Clipboard.getString().then(updateClipboardData)
   }, [])
 
-  function setString(content: string) {
-    Clipboard.setString(content)
-    updateClipboardData(content)
-  }
+  // Listen for updates
+  useEffect(() => {
+    listeners.add(updateClipboardData)
+
+    return () => {
+      listeners.delete(updateClipboardData)
+    }
+  }, [])
 
   return [data, setString]
 }
