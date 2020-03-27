@@ -53,7 +53,7 @@ function useImageDimensions(source: ImageRequireSource | URISource) {
       }),
     error,
     get loading() {
-      return !dimensions && !error
+      return !this.dimensions && !this.error
     },
   }
 }
