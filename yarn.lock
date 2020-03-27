@@ -106,12 +106,12 @@
     typescript-memoize "^1.0.0-alpha.3"
     url-join "^4.0.0"
 
-"@auto-it/first-time-contributor@9.21.0":
-  version "9.21.0"
-  resolved "https://registry.npmjs.org/@auto-it/first-time-contributor/-/first-time-contributor-9.21.0.tgz#017ee458ed82341e5cd59feb80206fd7ad610708"
-  integrity sha512-FXfH5m9LXoVRspxv8DE23oxEMtkI/YlDuI2BcuvX/F1DW7KRJGUYXe1hxCIBpx5g82Fm9ibguNQqcmI2Mi2EnA==
+"@auto-it/first-time-contributor@9.21.2":
+  version "9.21.2"
+  resolved "https://registry.yarnpkg.com/@auto-it/first-time-contributor/-/first-time-contributor-9.21.2.tgz#61e4200536bf1a88e13d8454afa7bb2a96695201"
+  integrity sha512-u6YAIPOOPhxRCrZtBb4Sry32wuYuKJno7KBV+Iv9k5xOrUrXLQsEsUPbGDxXe6C831UkAcANAOBhuc39fIf5mw==
   dependencies:
-    "@auto-it/core" "^9.21.0"
+    "@auto-it/core" "^9.21.2"
     array.prototype.flatmap "^1.2.2"
     endent "^1.3.0"
     tslib "1.11.1"
