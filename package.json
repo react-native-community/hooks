@@ -19,7 +19,7 @@
     "react-native": ">=0.59"
   },
   "devDependencies": {
-    "@auto-it/all-contributors": "9.21.0",
+    "@auto-it/all-contributors": "9.21.2",
     "@auto-it/first-time-contributor": "9.21.0",
     "@react-native-community/eslint-config": "1.0.0",
     "@testing-library/react-hooks": "3.2.1",
