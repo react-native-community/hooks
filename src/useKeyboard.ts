@@ -25,7 +25,9 @@ export function useKeyboard() {
   }
   const handleKeyboardDidHide: KeyboardEventListener = (e) => {
     setShown(false)
-    setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
+    if (e) {
+      setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
+    }
     setKeyboardHeight(0)
   }
 
