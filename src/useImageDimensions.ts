@@ -5,56 +5,52 @@ export interface URISource {
   uri: string
 }
 
+class Dimensions {
+  width: number
+  height: number
+  constructor(width: number, height: number) {
+    this.width = width
+    this.height = height
+  }
+  /**
+   * width to height ratio
+   */
+  get aspectRatio() {
+    return this.width / this.height
+  }
+}
+
 /**
  * @param source either a remote URL or a local file resource.
  * @returns original image dimensions (width, height and aspect ratio).
  */
 function useImageDimensions(source: ImageRequireSource | URISource) {
-  const [[dimensions, error], setState] = useState<
-    [{width: number; height: number}?, Error?]
-  >([])
+  const [[dimensions, error], setState] = useState<[Dimensions?, Error?]>([])
 
   useEffect(() => {
     try {
       if (typeof source === 'number') {
         const {width, height} = Image.resolveAssetSource(source)
-        setState([{width, height}])
+        setState([new Dimensions(width, height)])
       } else if (typeof source === 'object' && source.uri) {
         setState([])
         Image.getSize(
           source.uri,
-          (width, height) => setState([{width, height}]),
-          e => setState([dimensions, e]),
+          (width, height) => setState([new Dimensions(width, height)]),
+          e => setState([undefined, e]),
         )
       } else {
         throw new Error('not implemented')
       }
     } catch (e) {
-      setState([dimensions, e])
+      setState([undefined, e])
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [source])
 
   return {
-    dimensions:
-      dimensions &&
-      (Object.setPrototypeOf(dimensions, {
-        get aspectRatio(): number {
-          const _this = this as any
-          return _this.width / _this.height
-        },
-      }) as {
-        /**
-         * width to height ratio
-         */
-        readonly aspectRatio: number
-        width: number
-        height: number
-      }),
+    dimensions,
     error,
-    get loading() {
-      return !this.dimensions && !this.error
-    },
+    loading: !dimensions && !error,
   }
 }
 
