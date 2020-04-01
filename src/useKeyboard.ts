@@ -29,12 +29,12 @@ export default function useKeyboard() {
       setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
     } else {
       setCoordinates({
-      start: { screenX: 0, screenY: 0, width: 0, height: 0 },
-      end:{ screenX: 0, screenY: 0, width: 0, height: 0 }
-    })
-    setKeyboardHeight(0)
+        start: {screenX: 0, screenY: 0, width: 0, height: 0},
+        end: {screenX: 0, screenY: 0, width: 0, height: 0},
+      })
+      setKeyboardHeight(0)
+    }
   }
-}
 
   useEffect(() => {
     Keyboard.addListener('keyboardWillShow', handleKeyboardWillShow)
