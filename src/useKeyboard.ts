@@ -34,6 +34,7 @@ export default function useKeyboard() {
     })
     setKeyboardHeight(0)
   }
+}
 
   useEffect(() => {
     Keyboard.addListener('keyboardWillShow', handleKeyboardWillShow)
