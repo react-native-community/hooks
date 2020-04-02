@@ -1683,14 +1683,14 @@ ajv@^6.10.0, ajv@^6.10.2, ajv@^6.5.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-all-contributors-cli@6.14.0:
-  version "6.14.0"
-  resolved "https://registry.npmjs.org/all-contributors-cli/-/all-contributors-cli-6.14.0.tgz#9ecddabd9c1befef660f7589289b264db94bbbc8"
-  integrity sha512-rGpKRWXFaxAVWHLRBuJMvkI/86FIW7z2gvuEVTA60FPCw6Z/y0vDZgTATVEJQ4XV2+eSM5BHLZGW7YQTwTHCJQ==
+all-contributors-cli@6.14.1:
+  version "6.14.1"
+  resolved "https://registry.yarnpkg.com/all-contributors-cli/-/all-contributors-cli-6.14.1.tgz#1aec3d79b0f6f72534d3f396ace80a106b90fdc1"
+  integrity sha512-CKebsaWgOpHGC6ypEYv93q6Frh3H/shuSXF/UhSfG46QxvDM98HzL3sY7o/zvoYLrrF8rEhyjEuHzJq/DNiYwg==
   dependencies:
     "@babel/runtime" "^7.7.6"
     async "^3.0.1"
-    chalk "^3.0.0"
+    chalk "^4.0.0"
     didyoumean "^1.2.1"
     inquirer "^7.0.4"
     json-fixer "^1.4.0"
@@ -2319,6 +2319,14 @@ chalk@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz#3f73c2bf526591f574cc492c51e2456349f844e4"
   integrity sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
+
+chalk@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.0.0.tgz#6e98081ed2d17faab615eb52ac66ec1fe6209e72"
+  integrity sha512-N9oWFcegS0sFr9oh1oz2d7Npos6vNoWW9HvtCg5N1KRFpUhaAhvTv5Y58g880fZaEYSNm3qDz8SU1UrGvp+n7A==
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
