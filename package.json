@@ -34,7 +34,7 @@
     "jest": "25.2.7",
     "prettier": "2.0.4",
     "react": "16.13.1",
-    "react-native": "0.62.1",
+    "react-native": "0.62.2",
     "react-test-renderer": "16.13.1",
     "ts-jest": "25.2.1",
     "typescript": "3.8.3"
