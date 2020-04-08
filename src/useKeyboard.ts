@@ -3,7 +3,7 @@ import {Keyboard, KeyboardEventListener, ScreenRect} from 'react-native'
 
 const initialValue = {
   start: {screenX: 0, screenY: 0, width: 0, height: 0},
-  end: {screenX: 0, screenY: 0, width: 0, height: 0}
+  end: {screenX: 0, screenY: 0, width: 0, height: 0},
 }
 
 export default function useKeyboard() {
