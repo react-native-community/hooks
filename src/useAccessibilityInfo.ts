@@ -5,7 +5,7 @@ import {
   AccessibilityEvent,
 } from 'react-native'
 
-export default function useAccessibilityInfo() {
+export function useAccessibilityInfo() {
   const [reduceMotionEnabled, setReduceMotionEnabled] = useState(false)
   const [screenReaderEnabled, setScreenReaderEnabled] = useState(false)
 
