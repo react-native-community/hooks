@@ -1,7 +1,12 @@
 import {useEffect, useState} from 'react'
-import {Keyboard, KeyboardEventListener, ScreenRect, Animated} from 'react-native'
+import {
+  Keyboard,
+  KeyboardEventListener,
+  ScreenRect,
+  Animated,
+} from 'react-native'
 
-import {useAnimatedValue} from './useAnimatedValue';
+import {useAnimatedValue} from './useAnimatedValue'
 
 export function useKeyboard() {
   const [shown, setShown] = useState(false)
@@ -59,6 +64,7 @@ export function useKeyboard() {
       Keyboard.removeListener('keyboardDidHide', handleKeyboardDidHide)
       animatedKeyboardHeight.stopAnimation()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return {
