@@ -160,7 +160,7 @@ import { useAnimatedValue } from '@react-native-community/hooks'
 const animatedValue = useAnimatedValue(0)
 
 useEffect(() => {
-  Animated.timing(animatedKeyboardHeight, {
+  Animated.timing(animatedValue, {
     duration: 250,
     toValue: 200,
   }).start()
