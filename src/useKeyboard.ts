@@ -1,5 +1,7 @@
 import {useEffect, useState} from 'react'
-import {Keyboard, KeyboardEventListener, ScreenRect} from 'react-native'
+import {Keyboard, KeyboardEventListener, ScreenRect, Animated} from 'react-native'
+
+import {useAnimatedValue} from './useAnimatedValue';
 
 export function useKeyboard() {
   const [shown, setShown] = useState(false)
@@ -11,9 +13,16 @@ export function useKeyboard() {
     end: {screenX: 0, screenY: 0, width: 0, height: 0},
   })
   const [keyboardHeight, setKeyboardHeight] = useState<number>(0)
+  const animatedKeyboardHeight = useAnimatedValue(0)
 
   const handleKeyboardWillShow: KeyboardEventListener = (e) => {
     setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
+
+    // Start raise keyboard animated value
+    Animated.timing(animatedKeyboardHeight, {
+      duration: e.duration,
+      toValue: e.endCoordinates.height,
+    }).start()
   }
   const handleKeyboardDidShow: KeyboardEventListener = (e) => {
     setShown(true)
@@ -22,6 +31,12 @@ export function useKeyboard() {
   }
   const handleKeyboardWillHide: KeyboardEventListener = (e) => {
     setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
+
+    // Start close keyboard animated value
+    Animated.timing(animatedKeyboardHeight, {
+      duration: e.duration,
+      toValue: 0,
+    }).start()
   }
   const handleKeyboardDidHide: KeyboardEventListener = (e) => {
     setShown(false)
@@ -42,6 +57,7 @@ export function useKeyboard() {
       Keyboard.removeListener('keyboardDidShow', handleKeyboardDidShow)
       Keyboard.removeListener('keyboardWillHide', handleKeyboardWillHide)
       Keyboard.removeListener('keyboardDidHide', handleKeyboardDidHide)
+      animatedKeyboardHeight.stopAnimation()
     }
   }, [])
 
@@ -49,5 +65,6 @@ export function useKeyboard() {
     keyboardShown: shown,
     coordinates,
     keyboardHeight,
+    animatedKeyboardHeight,
   }
 }

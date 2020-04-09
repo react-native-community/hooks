@@ -30,6 +30,7 @@ yarn add @react-native-community/hooks
 - [useInteractionManager](https://github.com/react-native-community/hooks#useinteractionmanager)
 - [useDeviceOrientation](https://github.com/react-native-community/hooks#usedeviceorientation)
 - [useLayout](https://github.com/react-native-community/hooks#uselayout)
+- [useAnimatedValue](https://github.com/react-native-community/hooks#useAnimatedValue)
 
 ### `useAccessibilityInfo`
 
@@ -146,6 +147,25 @@ const { onLayout, ...layout } = useLayout()
 console.log('layout: ', layout)
 
 <View onLayout={onLayout} style={{width: 200, height: 200, marginTop: 30}} />
+```
+
+### `useAnimatedValue`
+
+```js
+import { useAnimatedValue } from '@react-native-community/hooks'
+
+const animatedValue = useAnimatedValue(0)
+
+useEffect(() => {
+  Animated.timing(animatedKeyboardHeight, {
+    duration: 250,
+    toValue: 200,
+  }).start()
+}, [])
+
+console.log('value: ', animatedValue)
+
+<Animated.View onLayout={onLayout} style={{width: 200, height: animatedValue, marginTop: 30}} />
 ```
 
 [version-badge]: https://img.shields.io/npm/v/@react-native-community/hooks.svg?style=flat-square
