@@ -114,6 +114,9 @@ const keyboard = useKeyboard()
 
 console.log('keyboard isKeyboardShow: ', keyboard.keyboardShown)
 console.log('keyboard keyboardHeight: ', keyboard.keyboardHeight)
+console.log('keyboard animatedKeyboardHeight: ', keyboard.animatedKeyboardHeight)
+
+<Animated.View style={{height: keyboard.animatedKeyboardHeight}} />
 ```
 
 ### `useInteractionManager`
