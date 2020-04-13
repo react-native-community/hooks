@@ -1,3 +1,51 @@
+# v2.4.9 (Mon Apr 13 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Update dependency @auto-it/first-time-contributor to v9.26.4 [#134](https://github.com/react-native-community/hooks/pull/134) ([@renovate-bot](https://github.com/renovate-bot))
+- add value to Coordinates when hide [#120](https://github.com/react-native-community/hooks/pull/120) ([@Gamal-Shaban](https://github.com/Gamal-Shaban) [@pvinis](https://github.com/pvinis))
+- Update dependency @auto-it/all-contributors to v9.26.8 [#114](https://github.com/react-native-community/hooks/pull/114) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency ts-jest to v25.3.1 [#119](https://github.com/react-native-community/hooks/pull/119) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @types/react-native to v0.62.2 [#110](https://github.com/react-native-community/hooks/pull/110) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency auto to v9.26.8 [#123](https://github.com/react-native-community/hooks/pull/123) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency jest to v25.3.0 [#138](https://github.com/react-native-community/hooks/pull/138) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update rn orb to v4 [#141](https://github.com/react-native-community/hooks/pull/141) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency eslint-plugin-prettier to v3.1.3 [#142](https://github.com/react-native-community/hooks/pull/142) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @auto-it/first-time-contributor to v9.26.8 [#137](https://github.com/react-native-community/hooks/pull/137) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency react-native to v0.62.2 [#139](https://github.com/react-native-community/hooks/pull/139) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @auto-it/first-time-contributor to v9.26.6 [#136](https://github.com/react-native-community/hooks/pull/136) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @auto-it/first-time-contributor to v9.26.5 [#135](https://github.com/react-native-community/hooks/pull/135) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @types/jest to v25.2.1 [#129](https://github.com/react-native-community/hooks/pull/129) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @auto-it/first-time-contributor to v9.26.3 [#133](https://github.com/react-native-community/hooks/pull/133) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @auto-it/first-time-contributor to v9.26.2 [#132](https://github.com/react-native-community/hooks/pull/132) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency prettier to v2.0.4 [#131](https://github.com/react-native-community/hooks/pull/131) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @auto-it/first-time-contributor to v9.26.1 [#115](https://github.com/react-native-community/hooks/pull/115) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency prettier to v2.0.3 [#130](https://github.com/react-native-community/hooks/pull/130) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency react-native to v0.62.1 [#128](https://github.com/react-native-community/hooks/pull/128) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency jest to v25.2.7 [#127](https://github.com/react-native-community/hooks/pull/127) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @types/jest to v25.1.5 [#126](https://github.com/react-native-community/hooks/pull/126) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency all-contributors-cli to v6.14.1 [#125](https://github.com/react-native-community/hooks/pull/125) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency jest to v25.2.6 [#124](https://github.com/react-native-community/hooks/pull/124) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency auto to v9.22.4 [#122](https://github.com/react-native-community/hooks/pull/122) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency auto to v9.22.2 [#121](https://github.com/react-native-community/hooks/pull/121) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### ⚠️  Pushed to `master`
+
+- dont worry about canary, since we cant publish from forks ([@pvinis](https://github.com/pvinis))
+
+#### Authors: 4
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Gamal Shaban ([@Gamal-Shaban](https://github.com/Gamal-Shaban))
+- Pavlos Vinieratos ([@pvinis](https://github.com/pvinis))
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v2.4.8 (Mon Mar 30 2020)
 
 :tada: This release contains work from new contributors! :tada:
