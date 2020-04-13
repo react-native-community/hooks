@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@auto-it/all-contributors@9.21.2":
-  version "9.21.2"
-  resolved "https://registry.yarnpkg.com/@auto-it/all-contributors/-/all-contributors-9.21.2.tgz#244609cc02de629e05458c7c17fd672e4868630a"
-  integrity sha512-/ZNG+k1n1qoFmQPSoW1QDsuyHxrQnzIZaijlJNyBSsM23ZKb20BpXjEiNwwSqTTv1CVwimmljfod2STClahqXA==
+"@auto-it/all-contributors@9.26.8":
+  version "9.26.8"
+  resolved "https://registry.yarnpkg.com/@auto-it/all-contributors/-/all-contributors-9.26.8.tgz#39a38a3aa889ab1865cd99532501050c3711e1e1"
+  integrity sha512-rRYkHmwEPHwzHFaJmrsUfcnyaQJ7Qyt3L43H0TbxybkfgzRqf7Z82cX0jaTddEBcay0wJWYAxcKhUuizerzy0g==
   dependencies:
-    "@auto-it/bot-list" "^9.21.2"
-    "@auto-it/core" "^9.21.2"
+    "@auto-it/bot-list" "^9.26.8"
+    "@auto-it/core" "^9.26.8"
     anymatch "^3.1.1"
     await-to-js "^2.1.1"
     fp-ts "^2.5.3"
@@ -16,55 +16,10 @@
     io-ts "^2.1.2"
     tslib "1.11.1"
 
-"@auto-it/bot-list@^9.21.2":
-  version "9.21.2"
-  resolved "https://registry.yarnpkg.com/@auto-it/bot-list/-/bot-list-9.21.2.tgz#6f8b7c71e6957a3fb5e9c98138a3ada636a6a742"
-  integrity sha512-Cfi1+9X1kCiqxjn0UdyONU5Uq/uI9H7+1dcmhqZtUfB1rEOAYwtKQeRoXu3jfyYfNaRyeXWAcMWW/3ErLbZyag==
-
 "@auto-it/bot-list@^9.26.8":
   version "9.26.8"
   resolved "https://registry.yarnpkg.com/@auto-it/bot-list/-/bot-list-9.26.8.tgz#ac05bf0bd61976b7e1ff361691c573420a6658c7"
   integrity sha512-jwUsrlkyq2GALP+FFgR1Qx4/sXK84FQn7aaq6e0iMVDY8erej+9Fb2QxSf6fDQj2us74pwWM6MZQb97hYcKcwg==
-
-"@auto-it/core@^9.21.2":
-  version "9.21.2"
-  resolved "https://registry.yarnpkg.com/@auto-it/core/-/core-9.21.2.tgz#84e99c2eb7c6dae7f0fc1df1a2bc10e29ff323da"
-  integrity sha512-VhwlLeTxKcyotja8xSnvISwQOpTErZPA7bW3H6kVkQJhiHiqty6iScbRzRIe6yyb2UqHKh+TznrF25Z3DVHfyQ==
-  dependencies:
-    "@auto-it/bot-list" "^9.21.2"
-    "@octokit/core" "2.4.2"
-    "@octokit/graphql" "4.3.1"
-    "@octokit/plugin-enterprise-compatibility" "1.2.1"
-    "@octokit/plugin-retry" "3.0.1"
-    "@octokit/plugin-throttling" "^3.2.0"
-    "@octokit/rest" "16.43.1"
-    await-to-js "^2.1.1"
-    chalk "^3.0.0"
-    cosmiconfig "6.0.0"
-    deepmerge "^4.0.0"
-    dotenv "^8.0.0"
-    endent "^1.3.0"
-    enquirer "^2.3.4"
-    env-ci "^5.0.1"
-    fp-ts "^2.5.3"
-    fromentries "^1.2.0"
-    gitlogplus "^3.1.2"
-    https-proxy-agent "^5.0.0"
-    import-cwd "^3.0.0"
-    import-from "^3.0.0"
-    io-ts "^2.1.2"
-    lodash.chunk "^4.2.0"
-    log-symbols "^3.0.0"
-    node-fetch "2.6.0"
-    parse-github-url "1.0.2"
-    semver "^7.0.0"
-    signale "^1.4.0"
-    tapable "^2.0.0-beta.2"
-    terminal-link "^2.1.1"
-    tinycolor2 "^1.4.1"
-    tslib "1.11.1"
-    typescript-memoize "^1.0.0-alpha.3"
-    url-join "^4.0.0"
 
 "@auto-it/core@^9.26.8":
   version "9.26.8"
@@ -1216,14 +1171,6 @@
     "@octokit/types" "^2.0.0"
     universal-user-agent "^4.0.0"
 
-"@octokit/plugin-enterprise-compatibility@1.2.1":
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/@octokit/plugin-enterprise-compatibility/-/plugin-enterprise-compatibility-1.2.1.tgz#ea8fa7fd4b04fac2289bac1d63791c77a23a74fb"
-  integrity sha512-c77pFG3CyxhQbu2B80TI/GVA0ex9krEAyBbdMGn8h8EtZoldK+4Bru2ecdFKfy5xi8RlmzIXIeTwi6wApd5/VQ==
-  dependencies:
-    "@octokit/request-error" "^1.2.0"
-    "@octokit/types" "^2.0.1"
-
 "@octokit/plugin-enterprise-compatibility@1.2.2":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@octokit/plugin-enterprise-compatibility/-/plugin-enterprise-compatibility-1.2.2.tgz#a30b635b63760e1504e57af5cf54da058b32a1de"
@@ -1268,7 +1215,7 @@
     "@octokit/types" "^2.0.1"
     bottleneck "^2.15.3"
 
-"@octokit/request-error@^1.0.1", "@octokit/request-error@^1.0.2", "@octokit/request-error@^1.2.0":
+"@octokit/request-error@^1.0.1", "@octokit/request-error@^1.0.2":
   version "1.2.1"
   resolved "https://registry.npmjs.org/@octokit/request-error/-/request-error-1.2.1.tgz#ede0714c773f32347576c25649dc013ae6b31801"
   integrity sha512-+6yDyk1EES6WK+l3viRDElw96MvwfJxCt45GvmjDUKWjYIb3PJZQkq3i46TwGwoPD4h8NmTrENmtyA1FwbmhRA==
@@ -2808,13 +2755,6 @@ debug@4, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
   dependencies:
     ms "^2.1.1"
 
-debug@^3.1.0:
-  version "3.2.6"
-  resolved "https://registry.npmjs.org/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
-  integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
-  dependencies:
-    ms "^2.1.1"
-
 decamelize@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
@@ -3817,14 +3757,6 @@ gitlog@^3.3.4:
   dependencies:
     debug "^4.1.1"
     tslib "^1.11.1"
-
-gitlogplus@^3.1.2:
-  version "3.1.7"
-  resolved "https://registry.npmjs.org/gitlogplus/-/gitlogplus-3.1.7.tgz#6838390bb21cbdec905a6ac992e421df3220514e"
-  integrity sha512-EqzJcTt04NEXzqAJTehDt4DKjfyuaEPGZhZL2ZRsdRNFHvRp4bqzMraqv0FgohprElBZTW1RNI41Ee4yWCjbKw==
-  dependencies:
-    debug "^3.1.0"
-    lodash.assign "^4.2.0"
 
 glob-parent@^5.0.0:
   version "5.1.0"
@@ -5173,11 +5105,6 @@ locate-path@^5.0.0:
   integrity sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==
   dependencies:
     p-locate "^4.1.0"
-
-lodash.assign@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.npmjs.org/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
-  integrity sha1-DZnzzNem0mHRm9rrkkUAXShYCOc=
 
 lodash.camelcase@^4.3.0:
   version "4.3.0"
