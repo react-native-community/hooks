@@ -52,12 +52,12 @@ workflows:
         - analyze:
             requires:
               - checkout_code
-        - release-canary:
-            requires:
-              - analyze
-            filters:
-              branches:
-                ignore: master
+        # - release-canary:
+        #     requires:
+        #       - analyze
+        #     filters:
+        #       branches:
+        #         ignore: master
         - release:
             requires:
               - analyze
