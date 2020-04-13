@@ -1,9 +1,10 @@
 import {useEffect, useState} from 'react'
 import {Keyboard, KeyboardEventListener, ScreenRect} from 'react-native'
 
+const emptyCoordinates = Object.freeze({ screenX: 0, screenY: 0, width: 0, height: 0 })
 const initialValue = {
-  start: {screenX: 0, screenY: 0, width: 0, height: 0},
-  end: {screenX: 0, screenY: 0, width: 0, height: 0},
+  start: emptyCoordinates,
+  end: emptyCoordinates,
 }
 
 export function useKeyboard() {
