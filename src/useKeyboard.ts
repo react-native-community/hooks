@@ -1,15 +1,23 @@
 import {useEffect, useState} from 'react'
 import {Keyboard, KeyboardEventListener, ScreenRect} from 'react-native'
 
+const emptyCoordinates = Object.freeze({
+  screenX: 0,
+  screenY: 0,
+  width: 0,
+  height: 0,
+})
+const initialValue = {
+  start: emptyCoordinates,
+  end: emptyCoordinates,
+}
+
 export function useKeyboard() {
   const [shown, setShown] = useState(false)
   const [coordinates, setCoordinates] = useState<{
     start: ScreenRect
     end: ScreenRect
-  }>({
-    start: {screenX: 0, screenY: 0, width: 0, height: 0},
-    end: {screenX: 0, screenY: 0, width: 0, height: 0},
-  })
+  }>(initialValue)
   const [keyboardHeight, setKeyboardHeight] = useState<number>(0)
 
   const handleKeyboardWillShow: KeyboardEventListener = (e) => {
@@ -27,8 +35,10 @@ export function useKeyboard() {
     setShown(false)
     if (e) {
       setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
+    } else {
+      setCoordinates(initialValue)
+      setKeyboardHeight(0)
     }
-    setKeyboardHeight(0)
   }
 
   useEffect(() => {
