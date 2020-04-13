@@ -194,7 +194,9 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/17288652?v=4",
       "profile": "https://github.com/Gamal-Shaban",
       "contributions": [
-        "code"
+        "code",
+        "doc",
+        "test"
       ]
     }
   ],
