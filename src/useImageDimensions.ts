@@ -24,7 +24,7 @@ class Dimensions {
  * @param source either a remote URL or a local file resource.
  * @returns original image dimensions (width, height and aspect ratio).
  */
-function useImageDimensions(source: ImageRequireSource | URISource) {
+export function useImageDimensions(source: ImageRequireSource | URISource) {
   const [[dimensions, error], setState] = useState<[Dimensions?, Error?]>([])
 
   useEffect(() => {
@@ -37,7 +37,7 @@ function useImageDimensions(source: ImageRequireSource | URISource) {
         Image.getSize(
           source.uri,
           (width, height) => setState([new Dimensions(width, height)]),
-          e => setState([undefined, e]),
+          (e) => setState([undefined, e]),
         )
       } else {
         throw new Error('not implemented')
@@ -53,5 +53,3 @@ function useImageDimensions(source: ImageRequireSource | URISource) {
     loading: !dimensions && !error,
   }
 }
-
-export default useImageDimensions
