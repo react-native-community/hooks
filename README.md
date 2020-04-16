@@ -26,6 +26,7 @@ yarn add @react-native-community/hooks
 - [useCameraRoll](https://github.com/react-native-community/hooks#usecameraroll)
 - [useClipboard](https://github.com/react-native-community/hooks#useclipboard)
 - [useDimensions](https://github.com/react-native-community/hooks#usedimensions)
+- [useImageDimensions](https://github.com/react-native-community/hooks#useImageDimensions)
 - [useKeyboard](https://github.com/react-native-community/hooks#usekeyboard)
 - [useInteractionManager](https://github.com/react-native-community/hooks#useinteractionmanager)
 - [useDeviceOrientation](https://github.com/react-native-community/hooks#usedeviceorientation)
@@ -102,6 +103,23 @@ const dimensions = useDimensions()
 const { width, height } = useDimensions().window
 // or
 const screen = useDimensions().screen
+```
+
+### `useImageDimensions`
+
+```js
+import {useImageDimensions} from '@react-native-community/hooks'
+
+const source = require('./assets/yourImage.png')
+// or
+const source = {uri: 'https://your.image.URI'}
+
+const {dimensions, loading, error} = useImageDimensions(source)
+
+if(loading || error || !dimensions) {
+  return null
+}
+const {width, height, aspectRatio} = dimensions
 ```
 
 ### `useKeyboard`
