@@ -5,51 +5,55 @@ export interface URISource {
   uri: string
 }
 
-class Dimensions {
-  width: number
-  height: number
-  constructor(width: number, height: number) {
-    this.width = width
-    this.height = height
-  }
-  /**
-   * width to height ratio
-   */
-  get aspectRatio() {
-    return this.width / this.height
-  }
+export type Source = ImageRequireSource | URISource
+
+export interface ImageDimensions {
+  dimensions?: {width: number; height: number; aspectRatio: number}
+  error?: Error
+  loading: boolean
 }
 
 /**
  * @param source either a remote URL or a local file resource.
  * @returns original image dimensions (width, height and aspect ratio).
  */
-export function useImageDimensions(source: ImageRequireSource | URISource) {
-  const [[dimensions, error], setState] = useState<[Dimensions?, Error?]>([])
+export function useImageDimensions(source: Source): ImageDimensions {
+  const [result, setResult] = useState<ImageDimensions>({loading: true})
 
   useEffect(() => {
     try {
       if (typeof source === 'number') {
         const {width, height} = Image.resolveAssetSource(source)
-        setState([new Dimensions(width, height)])
-      } else if (typeof source === 'object' && source.uri) {
-        setState([])
+
+        setResult({
+          dimensions: {width, height, aspectRatio: width / height},
+          loading: false,
+        })
+
+        return
+      }
+
+      if (typeof source === 'object' && source.uri) {
+        setResult({loading: true})
+
         Image.getSize(
           source.uri,
-          (width, height) => setState([new Dimensions(width, height)]),
-          (e) => setState([undefined, e]),
+          (width, height) =>
+            setResult({
+              dimensions: {width, height, aspectRatio: width / height},
+              loading: false,
+            }),
+          error => setResult({error, loading: false}),
         )
-      } else {
-        throw new Error('not implemented')
+
+        return
       }
-    } catch (e) {
-      setState([undefined, e])
+
+      throw new Error('not implemented')
+    } catch (error) {
+      setResult({error, loading: false})
     }
   }, [source])
 
-  return {
-    dimensions,
-    error,
-    loading: !dimensions && !error,
-  }
+  return result
 }
