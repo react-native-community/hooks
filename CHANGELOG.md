@@ -1,3 +1,26 @@
+# v2.5.0 (Thu Apr 16 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, null[@Greg-Bush](https://github.com/Greg-Bush), for all your work!
+
+#### 🚀 Enhancement
+
+- useImageDimensions [#87](https://github.com/react-native-community/hooks/pull/87) ([@Greg-Bush](https://github.com/Greg-Bush) [@pvinis](https://github.com/pvinis) [@LinusU](https://github.com/LinusU))
+
+#### ⚠️  Pushed to `master`
+
+- Merge branch 'master' of github.com:react-native-community/hooks ([@pvinis](https://github.com/pvinis))
+- upgrade ([@pvinis](https://github.com/pvinis))
+
+#### Authors: 3
+
+- [@Greg-Bush](https://github.com/Greg-Bush)
+- Linus Unnebäck ([@LinusU](https://github.com/LinusU))
+- Pavlos Vinieratos ([@pvinis](https://github.com/pvinis))
+
+---
+
 # v2.4.9 (Mon Apr 13 2020)
 
 :tada: This release contains work from a new contributor! :tada:
