@@ -43,7 +43,7 @@ export function useImageDimensions(source: Source): ImageDimensions {
               dimensions: {width, height, aspectRatio: width / height},
               loading: false,
             }),
-          error => setResult({error, loading: false}),
+          (error) => setResult({error, loading: false}),
         )
 
         return
