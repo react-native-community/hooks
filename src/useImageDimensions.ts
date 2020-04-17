@@ -5,10 +5,16 @@ export interface URISource {
   uri: string
 }
 
-export type Source = ImageRequireSource | URISource
+export type ImageDimensionsSource = ImageRequireSource | URISource
 
 export interface ImageDimensions {
-  dimensions?: {width: number; height: number; aspectRatio: number}
+  width: number
+  height: number
+  aspectRatio: number
+}
+
+export interface ImageDimensionsResult {
+  dimensions?: ImageDimensions
   error?: Error
   loading: boolean
 }
@@ -17,8 +23,10 @@ export interface ImageDimensions {
  * @param source either a remote URL or a local file resource.
  * @returns original image dimensions (width, height and aspect ratio).
  */
-export function useImageDimensions(source: Source): ImageDimensions {
-  const [result, setResult] = useState<ImageDimensions>({loading: true})
+export function useImageDimensions(
+  source: ImageDimensionsSource,
+): ImageDimensionsResult {
+  const [result, setResult] = useState<ImageDimensionsResult>({loading: true})
 
   useEffect(() => {
     try {
