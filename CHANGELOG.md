@@ -1,3 +1,25 @@
+# v2.5.1 (Fri Apr 17 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- [useImageDimensions] types refactored [#148](https://github.com/react-native-community/hooks/pull/148) ([@Greg-Bush](https://github.com/Greg-Bush))
+- Update dependency @react-native-community/eslint-config to v1.1.0 [#147](https://github.com/react-native-community/hooks/pull/147) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @auto-it/first-time-contributor to v9.27.3 [#144](https://github.com/react-native-community/hooks/pull/144) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @auto-it/all-contributors to v9.27.3 [#143](https://github.com/react-native-community/hooks/pull/143) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency ts-jest to v25.4.0 [#146](https://github.com/react-native-community/hooks/pull/146) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+
+#### Authors: 3
+
+- [@Greg-Bush](https://github.com/Greg-Bush)
+- [@renovate[bot]](https://github.com/renovate[bot])
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v2.5.0 (Thu Apr 16 2020)
 
 :tada: This release contains work from a new contributor! :tada:
