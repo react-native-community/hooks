@@ -21,7 +21,7 @@
   "devDependencies": {
     "@auto-it/all-contributors": "9.27.3",
     "@auto-it/first-time-contributor": "9.27.3",
-    "@react-native-community/eslint-config": "1.0.0",
+    "@react-native-community/eslint-config": "1.1.0",
     "@testing-library/react-hooks": "3.2.1",
     "@testing-library/react-native": "5.0.3",
     "@types/jest": "25.2.1",
