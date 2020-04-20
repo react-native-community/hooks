@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@auto-it/all-contributors@9.28.2":
-  version "9.28.2"
-  resolved "https://registry.yarnpkg.com/@auto-it/all-contributors/-/all-contributors-9.28.2.tgz#95cce7bd10475503ca423da3d819c3abb38b3ecc"
-  integrity sha512-jsVAJOGpFoJSTb8hKAAEYpolBo0lZlHdRjYOsdtZvnRpWc5OPl1luP37TjNDx8IczWsBEiGpyZ/Pkg7XKOTayQ==
+"@auto-it/all-contributors@9.28.3":
+  version "9.28.3"
+  resolved "https://registry.yarnpkg.com/@auto-it/all-contributors/-/all-contributors-9.28.3.tgz#933b830ca0522eba0070c8f06cdc65852eb15246"
+  integrity sha512-HDvHLCaKjpjZQXotZgNN+aNFdDlUg8CrhT7R5jGKTSqYl5V3Het+GhH2v1axb2PvmE+sUiYOPkSPsAZsEa1fQA==
   dependencies:
-    "@auto-it/bot-list" "^9.28.2"
-    "@auto-it/core" "^9.28.2"
+    "@auto-it/bot-list" "^9.28.3"
+    "@auto-it/core" "^9.28.3"
     anymatch "^3.1.1"
     await-to-js "^2.1.1"
     fp-ts "^2.5.3"
@@ -26,10 +26,10 @@
   resolved "https://registry.yarnpkg.com/@auto-it/bot-list/-/bot-list-9.27.3.tgz#4d3a8d3da2ecc488effb8be77467e3d0c56adf75"
   integrity sha512-i1e4EK6icf2x5K24tvFO30XYcIe4FUvLsKFRItMSR3EtCExTh+f1M4i1ScuLTP9q0nghPhzOFxMXCGCgzZffkQ==
 
-"@auto-it/bot-list@^9.28.2":
-  version "9.28.2"
-  resolved "https://registry.yarnpkg.com/@auto-it/bot-list/-/bot-list-9.28.2.tgz#155b4ec93e5fee5243f43937b07ea454989d82e3"
-  integrity sha512-R6hjQHGqSj0Df7ybQGMoe6kAtsifDlBUpLhK8Xisk4PPQVPFZm2v8OnBH/lk2V/cVlBtj1dmun2voknbK43Dpw==
+"@auto-it/bot-list@^9.28.3":
+  version "9.28.3"
+  resolved "https://registry.yarnpkg.com/@auto-it/bot-list/-/bot-list-9.28.3.tgz#aa36180e53ed59cae55e923659d7154655102ffd"
+  integrity sha512-PCKvowPpltlIKGWKcX+DhRfxP9V/vUWYsCC7ltBwq+dXHhq9BL8tTRKu7XiByMf773cKgYMCCAo4QTJwQF5fbw==
 
 "@auto-it/core@^9.26.8":
   version "9.26.8"
@@ -113,12 +113,12 @@
     typescript-memoize "^1.0.0-alpha.3"
     url-join "^4.0.0"
 
-"@auto-it/core@^9.28.2":
-  version "9.28.2"
-  resolved "https://registry.yarnpkg.com/@auto-it/core/-/core-9.28.2.tgz#d5ed62337ada0686cf1ff08ee8a68dd7199c6242"
-  integrity sha512-lHs+GC2ecOYrjxxrILnealUI2aBCk2QDoh9AjQHyZ5YQIqPHMMRHl1u76QTyoiNLc8ZCsElPhOmqkF7LTHBlOQ==
+"@auto-it/core@^9.28.3":
+  version "9.28.3"
+  resolved "https://registry.yarnpkg.com/@auto-it/core/-/core-9.28.3.tgz#a6a7906ec0117e7c71e8bab5c4290acfd0e94469"
+  integrity sha512-3GBlENwLwT+1b2HGK3Jk2SH3dyiag2mXwVZA1VfYYoBMAD4mncptlEWEQKxJhyUFMvjYrJxtPaoHsHbZU5wUSQ==
   dependencies:
-    "@auto-it/bot-list" "^9.28.2"
+    "@auto-it/bot-list" "^9.28.3"
     "@octokit/core" "2.4.2"
     "@octokit/graphql" "4.3.1"
     "@octokit/plugin-enterprise-compatibility" "1.2.2"
