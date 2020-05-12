@@ -64,7 +64,7 @@ export function useAccessibilityInfo() {
   const screenReaderEnabled = useAccessibilityStateListener(
     'screenReaderChanged',
   )
-  const greyScaleEnabled = useAccessibilityStateListener('grayscaleChanged')
+  const grayscaleEnabled = useAccessibilityStateListener('grayscaleChanged')
   const boldTextEnabled = useAccessibilityStateListener('boldTextChanged')
   const invertColorsEnabled = useAccessibilityStateListener(
     'invertColorsChanged',
@@ -78,7 +78,7 @@ export function useAccessibilityInfo() {
 
   return {
     screenReaderEnabled,
-    greyScaleEnabled,
+    grayscaleEnabled,
     invertColorsEnabled,
     reduceMotionEnabled,
     reduceTransparencyEnabled,
