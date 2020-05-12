@@ -15,8 +15,8 @@
     "release-canary": "auto canary"
   },
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-native": ">=0.59"
+    "react": ">=16.8.6",
+    "react-native": ">=0.60"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "9.28.3",
