@@ -1,13 +1,5 @@
 import {useEffect, useState} from 'react'
-import {AccessibilityInfo, AccessibilityEvent} from 'react-native'
-
-type AccessibilityEventName =
-  | 'boldTextChanged' // iOS-only Event
-  | 'grayscaleChanged' // iOS-only Event
-  | 'invertColorsChanged' // iOS-only Event
-  | 'reduceMotionChanged'
-  | 'screenReaderChanged'
-  | 'reduceTransparencyChanged' // iOS-only Event
+import {AccessibilityInfo, AccessibilityChangeEventName} from 'react-native'
 
 type AccessibilityInfoStaticInitializers =
   | 'isBoldTextEnabled'
@@ -18,7 +10,7 @@ type AccessibilityInfoStaticInitializers =
   | 'isReduceTransparencyEnabled'
 
 type AccessibilityEventToInfoStaticKeyMap = {
-  [K in AccessibilityEventName]?: AccessibilityInfoStaticInitializers
+  [K in AccessibilityChangeEventName]?: AccessibilityInfoStaticInitializers
 }
 
 const EVENT_NAME_TO_INITIALIZER: AccessibilityEventToInfoStaticKeyMap = {
@@ -30,10 +22,8 @@ const EVENT_NAME_TO_INITIALIZER: AccessibilityEventToInfoStaticKeyMap = {
   reduceTransparencyChanged: 'isReduceTransparencyEnabled',
 }
 
-type AccessibilityInfoChangeEventHandler = (event: AccessibilityEvent) => void
-
 function useAccessibilityStateListener(
-  eventName: AccessibilityEventName,
+  eventName: AccessibilityChangeEventName,
 ): boolean {
   const [isEnabled, setIsEnabled] = useState(false)
 
@@ -47,13 +37,13 @@ function useAccessibilityStateListener(
     AccessibilityInfo[initializerKey]().then(setIsEnabled)
     AccessibilityInfo.addEventListener(
       eventName,
-      <AccessibilityInfoChangeEventHandler>setIsEnabled,
+      setIsEnabled,
     )
 
     return () =>
       AccessibilityInfo.removeEventListener(
         eventName,
-        <AccessibilityInfoChangeEventHandler>setIsEnabled,
+        setIsEnabled,
       )
   }, [eventName])
 
