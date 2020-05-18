@@ -38,12 +38,12 @@ yarn add @react-native-community/hooks
 import { useAccessibilityInfo } from '@react-native-community/hooks'
 
 const {
-  reduceMotionEnabled,
+  boldTextEnabled,
   screenReaderEnabled,
-  grayscaleEnabled,
-  invertColorsEnabled,
-  reduceTransparencyEnabled,
-  boldTextEnabled 
+  reduceMotionEnabled, // requires RN60 or newer
+  grayscaleEnabled, // requires RN60 or newer
+  invertColorsEnabled, // requires RN60 or newer
+  reduceTransparencyEnabled // requires RN60 or newer
 } = useAccessibilityInfo()
 ```
 

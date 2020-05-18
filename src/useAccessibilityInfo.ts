@@ -1,6 +1,13 @@
 import {useEffect, useState} from 'react'
 import {AccessibilityInfo, AccessibilityChangeEventName} from 'react-native'
 
+const SUPPORTS_RN60_ACCESSIBILITY_INFO_API = !!(
+  AccessibilityInfo.isGrayscaleEnabled &&
+  AccessibilityInfo.isInvertColorsEnabled &&
+  AccessibilityInfo.isReduceMotionEnabled &&
+  AccessibilityInfo.isReduceTransparencyEnabled
+)
+
 type AccessibilityInfoStaticInitializers =
   | 'isBoldTextEnabled'
   | 'isScreenReaderEnabled'
@@ -35,27 +42,36 @@ function useAccessibilityStateListener(
     }
 
     AccessibilityInfo[initializerKey]().then(setIsEnabled)
-    AccessibilityInfo.addEventListener(
-      eventName,
-      setIsEnabled,
-    )
+    AccessibilityInfo.addEventListener(eventName, setIsEnabled)
 
-    return () =>
-      AccessibilityInfo.removeEventListener(
-        eventName,
-        setIsEnabled,
-      )
+    return () => AccessibilityInfo.removeEventListener(eventName, setIsEnabled)
   }, [eventName])
 
   return isEnabled
 }
 
-export function useAccessibilityInfo() {
+export function useAccessibilityInfo(): {
+  screenReaderEnabled: Boolean
+  boldTextEnabled: Boolean
+  grayscaleEnabled?: Boolean
+  invertColorsEnabled?: Boolean
+  reduceMotionEnabled?: Boolean
+  reduceTransparencyEnabled?: Boolean
+} {
   const screenReaderEnabled = useAccessibilityStateListener(
     'screenReaderChanged',
   )
-  const grayscaleEnabled = useAccessibilityStateListener('grayscaleChanged')
   const boldTextEnabled = useAccessibilityStateListener('boldTextChanged')
+
+  if (!SUPPORTS_RN60_ACCESSIBILITY_INFO_API) {
+    return {
+      screenReaderEnabled,
+      boldTextEnabled,
+    }
+  }
+
+  /* eslint-disable react-hooks/rules-of-hooks */
+  const grayscaleEnabled = useAccessibilityStateListener('grayscaleChanged')
   const invertColorsEnabled = useAccessibilityStateListener(
     'invertColorsChanged',
   )
@@ -65,6 +81,7 @@ export function useAccessibilityInfo() {
   const reduceTransparencyEnabled = useAccessibilityStateListener(
     'reduceTransparencyChanged',
   )
+  /* eslint-enable react-hooks/rules-of-hooks */
 
   return {
     screenReaderEnabled,
