@@ -51,12 +51,12 @@ function useAccessibilityStateListener(
 }
 
 export function useAccessibilityInfo(): {
-  screenReaderEnabled: Boolean
-  boldTextEnabled: Boolean
-  grayscaleEnabled?: Boolean
-  invertColorsEnabled?: Boolean
-  reduceMotionEnabled?: Boolean
-  reduceTransparencyEnabled?: Boolean
+  screenReaderEnabled: boolean
+  boldTextEnabled: boolean
+  grayscaleEnabled?: boolean
+  invertColorsEnabled?: boolean
+  reduceMotionEnabled?: boolean
+  reduceTransparencyEnabled?: boolean
 } {
   const screenReaderEnabled = useAccessibilityStateListener(
     'screenReaderChanged',
