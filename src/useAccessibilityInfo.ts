@@ -1,13 +1,6 @@
 import {useEffect, useState} from 'react'
 import {AccessibilityInfo, AccessibilityChangeEventName} from 'react-native'
 
-const SUPPORTS_RN60_ACCESSIBILITY_INFO_API = !!(
-  AccessibilityInfo.isGrayscaleEnabled &&
-  AccessibilityInfo.isInvertColorsEnabled &&
-  AccessibilityInfo.isReduceMotionEnabled &&
-  AccessibilityInfo.isReduceTransparencyEnabled
-)
-
 type AccessibilityInfoStaticInitializers =
   | 'isBoldTextEnabled'
   | 'isScreenReaderEnabled'
@@ -16,72 +9,58 @@ type AccessibilityInfoStaticInitializers =
   | 'isReduceMotionEnabled'
   | 'isReduceTransparencyEnabled'
 
-type AccessibilityEventToInfoStaticKeyMap = {
-  [K in AccessibilityChangeEventName]?: AccessibilityInfoStaticInitializers
-}
-
-const EVENT_NAME_TO_INITIALIZER: AccessibilityEventToInfoStaticKeyMap = {
-  boldTextChanged: 'isBoldTextEnabled',
-  screenReaderChanged: 'isScreenReaderEnabled',
-  grayscaleChanged: 'isGrayscaleEnabled',
-  invertColorsChanged: 'isInvertColorsEnabled',
-  reduceMotionChanged: 'isReduceMotionEnabled',
-  reduceTransparencyChanged: 'isReduceTransparencyEnabled',
-}
-
 function useAccessibilityStateListener(
   eventName: AccessibilityChangeEventName,
-): boolean {
-  const [isEnabled, setIsEnabled] = useState(false)
+  initializerName: AccessibilityInfoStaticInitializers,
+): boolean | undefined {
+  const [isEnabled, setIsEnabled] = useState<boolean | undefined>(undefined)
 
   useEffect(() => {
-    const initializerKey = EVENT_NAME_TO_INITIALIZER[eventName]
-
-    if (!initializerKey) {
+    if (!AccessibilityInfo[initializerName]) {
       return
     }
 
-    AccessibilityInfo[initializerKey]().then(setIsEnabled)
+    AccessibilityInfo[initializerName]().then(setIsEnabled)
     AccessibilityInfo.addEventListener(eventName, setIsEnabled)
 
     return () => AccessibilityInfo.removeEventListener(eventName, setIsEnabled)
-  }, [eventName])
+  }, [eventName, initializerName])
 
   return isEnabled
 }
 
 export function useAccessibilityInfo(): {
-  screenReaderEnabled: boolean
-  boldTextEnabled: boolean
-  grayscaleEnabled?: boolean
-  invertColorsEnabled?: boolean
-  reduceMotionEnabled?: boolean
-  reduceTransparencyEnabled?: boolean
+  screenReaderEnabled: boolean | undefined
+  boldTextEnabled: boolean | undefined
+  grayscaleEnabled: boolean | undefined
+  invertColorsEnabled: boolean | undefined
+  reduceMotionEnabled: boolean | undefined
+  reduceTransparencyEnabled: boolean | undefined
 } {
-  const screenReaderEnabled = useAccessibilityStateListener(
-    'screenReaderChanged',
+  const boldTextEnabled = useAccessibilityStateListener(
+    'boldTextChanged',
+    'isBoldTextEnabled',
   )
-  const boldTextEnabled = useAccessibilityStateListener('boldTextChanged')
-
-  if (!SUPPORTS_RN60_ACCESSIBILITY_INFO_API) {
-    return {
-      screenReaderEnabled,
-      boldTextEnabled,
-    }
-  }
-
-  /* eslint-disable react-hooks/rules-of-hooks */
-  const grayscaleEnabled = useAccessibilityStateListener('grayscaleChanged')
+  const grayscaleEnabled = useAccessibilityStateListener(
+    'grayscaleChanged',
+    'isGrayscaleEnabled',
+  )
   const invertColorsEnabled = useAccessibilityStateListener(
     'invertColorsChanged',
+    'isInvertColorsEnabled',
   )
   const reduceMotionEnabled = useAccessibilityStateListener(
     'reduceMotionChanged',
+    'isReduceMotionEnabled',
   )
   const reduceTransparencyEnabled = useAccessibilityStateListener(
     'reduceTransparencyChanged',
+    'isReduceTransparencyEnabled',
   )
-  /* eslint-enable react-hooks/rules-of-hooks */
+  const screenReaderEnabled = useAccessibilityStateListener(
+    'screenReaderChanged',
+    'isScreenReaderEnabled',
+  )
 
   return {
     screenReaderEnabled,
