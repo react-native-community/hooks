@@ -12,7 +12,7 @@ type AccessibilityInfoStaticInitializers =
 function useAccessibilityStateListener(
   eventName: AccessibilityChangeEventName,
   initializerName: AccessibilityInfoStaticInitializers,
-): boolean | undefined {
+) {
   const [isEnabled, setIsEnabled] = useState<boolean | undefined>(undefined)
 
   useEffect(() => {
@@ -29,14 +29,7 @@ function useAccessibilityStateListener(
   return isEnabled
 }
 
-export function useAccessibilityInfo(): {
-  screenReaderEnabled: boolean | undefined
-  boldTextEnabled: boolean | undefined
-  grayscaleEnabled: boolean | undefined
-  invertColorsEnabled: boolean | undefined
-  reduceMotionEnabled: boolean | undefined
-  reduceTransparencyEnabled: boolean | undefined
-} {
+export function useAccessibilityInfo() {
   const boldTextEnabled = useAccessibilityStateListener(
     'boldTextChanged',
     'isBoldTextEnabled',
