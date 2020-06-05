@@ -1,3 +1,50 @@
+# v2.6.0 (Fri Jun 05 2020)
+
+:tada: This release contains work from new contributors! :tada:
+
+Thanks for all your work!
+
+:heart: Alan Kenyon ([@adkenyon](https://github.com/adkenyon))
+
+:heart: WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+#### 🚀 Enhancement
+
+- useAccessibilityInfo update [#174](https://github.com/react-native-community/hooks/pull/174) ([@adkenyon](https://github.com/adkenyon))
+
+#### 🐛 Bug Fix
+
+- Update dependency @types/react-native to v0.62.7 [#164](https://github.com/react-native-community/hooks/pull/164) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency typescript to v3.9.5 [#180](https://github.com/react-native-community/hooks/pull/180) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency typescript to v3.9.3 [#177](https://github.com/react-native-community/hooks/pull/177) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @types/jest to v25.2.3 [#176](https://github.com/react-native-community/hooks/pull/176) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @types/jest to v25.2.2 [#172](https://github.com/react-native-community/hooks/pull/172) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @types/react-native to v0.62.8 [#171](https://github.com/react-native-community/hooks/pull/171) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency typescript to v3.9.2 [#170](https://github.com/react-native-community/hooks/pull/170) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency eslint to v7 [#169](https://github.com/react-native-community/hooks/pull/169) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency ts-jest to v25.5.1 [#167](https://github.com/react-native-community/hooks/pull/167) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency jest to v26.0.1 [#166](https://github.com/react-native-community/hooks/pull/166) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency jest to v26 [#165](https://github.com/react-native-community/hooks/pull/165) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency all-contributors-cli to v6.15.0 [#179](https://github.com/react-native-community/hooks/pull/179) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @types/react-native to v0.62.6 [#163](https://github.com/react-native-community/hooks/pull/163) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @types/react-native to v0.62.5 [#162](https://github.com/react-native-community/hooks/pull/162) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @types/react-native to v0.62.4 [#160](https://github.com/react-native-community/hooks/pull/160) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @types/react-native to v0.62.3 [#159](https://github.com/react-native-community/hooks/pull/159) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency prettier to v2.0.5 [#155](https://github.com/react-native-community/hooks/pull/155) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @auto-it/first-time-contributor to v9.28.3 [#151](https://github.com/react-native-community/hooks/pull/151) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @auto-it/all-contributors to v9.28.3 [#154](https://github.com/react-native-community/hooks/pull/154) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @auto-it/all-contributors to v9.28.2 [#150](https://github.com/react-native-community/hooks/pull/150) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update rn orb to v4.1.1 [#153](https://github.com/react-native-community/hooks/pull/153) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency all-contributors-cli to v6.14.2 [#149](https://github.com/react-native-community/hooks/pull/149) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 3
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Alan Kenyon ([@adkenyon](https://github.com/adkenyon))
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v2.5.1 (Fri Apr 17 2020)
 
 :tada: This release contains work from a new contributor! :tada:
