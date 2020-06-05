@@ -211,6 +211,16 @@
         "test",
         "infra"
       ]
+    },
+    {
+      "login": "adkenyon",
+      "name": "Alan Kenyon",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4999026?v=4",
+      "profile": "https://github.com/adkenyon",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
