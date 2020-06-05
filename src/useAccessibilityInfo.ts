@@ -1,43 +1,66 @@
 import {useEffect, useState} from 'react'
-import {
-  AccessibilityInfo,
-  AccessibilityChangeEvent,
-  AccessibilityEvent,
-} from 'react-native'
+import {AccessibilityInfo, AccessibilityChangeEventName} from 'react-native'
 
-export function useAccessibilityInfo() {
-  const [reduceMotionEnabled, setReduceMotionEnabled] = useState(false)
-  const [screenReaderEnabled, setScreenReaderEnabled] = useState(false)
+type AccessibilityInfoStaticInitializers =
+  | 'isBoldTextEnabled'
+  | 'isScreenReaderEnabled'
+  | 'isGrayscaleEnabled'
+  | 'isInvertColorsEnabled'
+  | 'isReduceMotionEnabled'
+  | 'isReduceTransparencyEnabled'
 
-  const handleReduceMotionChanged = (enabled: AccessibilityChangeEvent) =>
-    setReduceMotionEnabled(enabled)
-  const handleScreenReaderChanged = (enabled: AccessibilityChangeEvent) =>
-    setScreenReaderEnabled(enabled)
+function useAccessibilityStateListener(
+  eventName: AccessibilityChangeEventName,
+  initializerName: AccessibilityInfoStaticInitializers,
+) {
+  const [isEnabled, setIsEnabled] = useState<boolean | undefined>(undefined)
 
   useEffect(() => {
-    AccessibilityInfo.isReduceMotionEnabled().then(handleReduceMotionChanged)
-    AccessibilityInfo.isScreenReaderEnabled().then(handleScreenReaderChanged)
-
-    AccessibilityInfo.addEventListener(
-      'reduceMotionChanged',
-      handleReduceMotionChanged as (event: AccessibilityEvent) => void,
-    )
-    AccessibilityInfo.addEventListener(
-      'screenReaderChanged',
-      handleScreenReaderChanged as (event: AccessibilityEvent) => void,
-    )
-
-    return () => {
-      AccessibilityInfo.removeEventListener(
-        'reduceMotionChanged',
-        handleReduceMotionChanged as (event: AccessibilityEvent) => void,
-      )
-      AccessibilityInfo.removeEventListener(
-        'screenReaderChanged',
-        handleScreenReaderChanged as (event: AccessibilityEvent) => void,
-      )
+    if (!AccessibilityInfo[initializerName]) {
+      return
     }
-  }, [])
 
-  return {reduceMotionEnabled, screenReaderEnabled}
+    AccessibilityInfo[initializerName]().then(setIsEnabled)
+    AccessibilityInfo.addEventListener(eventName, setIsEnabled)
+
+    return () => AccessibilityInfo.removeEventListener(eventName, setIsEnabled)
+  }, [eventName, initializerName])
+
+  return isEnabled
+}
+
+export function useAccessibilityInfo() {
+  const boldTextEnabled = useAccessibilityStateListener(
+    'boldTextChanged',
+    'isBoldTextEnabled',
+  )
+  const grayscaleEnabled = useAccessibilityStateListener(
+    'grayscaleChanged',
+    'isGrayscaleEnabled',
+  )
+  const invertColorsEnabled = useAccessibilityStateListener(
+    'invertColorsChanged',
+    'isInvertColorsEnabled',
+  )
+  const reduceMotionEnabled = useAccessibilityStateListener(
+    'reduceMotionChanged',
+    'isReduceMotionEnabled',
+  )
+  const reduceTransparencyEnabled = useAccessibilityStateListener(
+    'reduceTransparencyChanged',
+    'isReduceTransparencyEnabled',
+  )
+  const screenReaderEnabled = useAccessibilityStateListener(
+    'screenReaderChanged',
+    'isScreenReaderEnabled',
+  )
+
+  return {
+    screenReaderEnabled,
+    grayscaleEnabled,
+    invertColorsEnabled,
+    reduceMotionEnabled,
+    reduceTransparencyEnabled,
+    boldTextEnabled,
+  }
 }

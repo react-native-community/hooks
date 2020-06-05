@@ -37,7 +37,14 @@ yarn add @react-native-community/hooks
 ```js
 import { useAccessibilityInfo } from '@react-native-community/hooks'
 
-const { reduceMotionEnabled, screenReaderEnabled } = useAccessibilityInfo()
+const {
+  boldTextEnabled,
+  screenReaderEnabled,
+  reduceMotionEnabled, // requires RN60 or newer
+  grayscaleEnabled, // requires RN60 or newer
+  invertColorsEnabled, // requires RN60 or newer
+  reduceTransparencyEnabled // requires RN60 or newer
+} = useAccessibilityInfo()
 ```
 
 ### `useAppState`
