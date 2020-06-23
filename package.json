@@ -29,7 +29,7 @@
     "@types/react-native": "0.62.13",
     "all-contributors-cli": "6.15.0",
     "auto": "9.26.8",
-    "eslint": "7.0.0",
+    "eslint": "7.3.1",
     "eslint-plugin-prettier": "3.1.4",
     "jest": "26.0.1",
     "prettier": "2.0.5",
