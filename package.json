@@ -37,7 +37,7 @@
     "react-native": "0.62.2",
     "react-test-renderer": "16.13.1",
     "ts-jest": "25.5.1",
-    "typescript": "3.9.6"
+    "typescript": "3.9.7"
   },
   "author": "Nader Dabit",
   "repository": {
