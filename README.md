@@ -69,7 +69,7 @@ useBackHandler(() => {
   }
   // let the default thing happen
   return false
-})
+},[shouldBeHandledHere])
 ```
 
 ### `useCameraRoll`
