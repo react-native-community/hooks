@@ -1,10 +1,10 @@
-import { useEffect } from "react"
+import { DependencyList, useEffect } from "react"
 import { BackHandler } from "react-native"
 
-export function useBackHandler(handler: () => boolean) {
+export function useBackHandler(handler: () => boolean, deps: DependencyList = []) {
 	useEffect(() => {
-		const subscription = BackHandler.addEventListener("hardwareBackPress", handler)
+		const sub = BackHandler.addEventListener("hardwareBackPress", handler)
 
-		return () => subscription.remove()
-	}, [handler])
+		return () => sub.remove()
+	}, [handler, ...deps])
 }
