@@ -1,7 +1,7 @@
-import {useEffect} from 'react'
+import {useEffect, DependencyList} from 'react'
 import {BackHandler} from 'react-native'
 
-export function useBackHandler(handler: () => boolean, deps: any[]) {
+export function useBackHandler(handler: () => boolean, deps?: DependencyList) {
   useEffect(() => {
     BackHandler.addEventListener('hardwareBackPress', handler)
 
