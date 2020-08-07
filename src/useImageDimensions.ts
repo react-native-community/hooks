@@ -29,14 +29,17 @@ export function useImageDimensions(
   const [result, setResult] = useState<ImageDimensionsResult>({loading: true})
 
   useEffect(() => {
+    let mounted = true
     try {
       if (typeof source === 'number') {
         const {width, height} = Image.resolveAssetSource(source)
 
-        setResult({
-          dimensions: {width, height, aspectRatio: width / height},
-          loading: false,
-        })
+        if (mounted) {
+          setResult({
+            dimensions: {width, height, aspectRatio: width / height},
+            loading: false,
+          })
+        }
 
         return
       }
@@ -46,12 +49,19 @@ export function useImageDimensions(
 
         Image.getSize(
           source.uri,
-          (width, height) =>
-            setResult({
-              dimensions: {width, height, aspectRatio: width / height},
-              loading: false,
-            }),
-          (error) => setResult({error, loading: false}),
+          (width: number, height: number) => {
+            if (mounted) {
+              setResult({
+                dimensions: {width, height, aspectRatio: width / height},
+                loading: false,
+              })
+            }
+          },
+          (error: Error) => {
+            if (mounted) {
+              setResult({error, loading: false})
+            }
+          },
         )
 
         return
@@ -61,6 +71,7 @@ export function useImageDimensions(
     } catch (error) {
       setResult({error, loading: false})
     }
+    return () => (mounted = false)
   }, [source])
 
   return result
