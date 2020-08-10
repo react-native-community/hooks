@@ -25,6 +25,7 @@ yarn add @react-native-community/hooks
 - [useBackHandler](https://github.com/react-native-community/hooks#usebackhandler)
 - [useCameraRoll](https://github.com/react-native-community/hooks#usecameraroll)
 - [useClipboard](https://github.com/react-native-community/hooks#useclipboard)
+- [useDeepLinking](https://github.com/react-native-community/hooks#usedeeplinking)
 - [useDimensions](https://github.com/react-native-community/hooks#usedimensions)
 - [useImageDimensions](https://github.com/react-native-community/hooks#useImageDimensions)
 - [useKeyboard](https://github.com/react-native-community/hooks#usekeyboard)
@@ -96,6 +97,18 @@ const [data, setString] = useClipboard()
 <Text>{data}</Text>
 
 <Button title='Update Clipboard' onPress={() => setString('new clipboard data')}>Set Clipboard</Button>
+```
+
+### `useDeepLinking`
+
+> __Note:__ You'll still need to properly enable deep linking within your application, here are the [steps](https://reactnative.dev/docs/linking#enabling-deep-links)
+
+```js
+import { useDeepLinking } from '@react-native-community/hooks'
+
+useDeepLinking((url) => {
+  // handle deep linking logic
+})
 ```
 
 ### `useDimensions`
