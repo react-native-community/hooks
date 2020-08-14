@@ -28,6 +28,7 @@ yarn add @react-native-community/hooks
 - [useDimensions](https://github.com/react-native-community/hooks#usedimensions)
 - [useImageDimensions](https://github.com/react-native-community/hooks#useImageDimensions)
 - [useKeyboard](https://github.com/react-native-community/hooks#usekeyboard)
+- [useKeyboardEffect](https: //github.com/react-native-community/hooks#useKeyboardEffect)
 - [useInteractionManager](https://github.com/react-native-community/hooks#useinteractionmanager)
 - [useDeviceOrientation](https://github.com/react-native-community/hooks#usedeviceorientation)
 - [useLayout](https://github.com/react-native-community/hooks#uselayout)
@@ -138,6 +139,20 @@ const keyboard = useKeyboard()
 
 console.log('keyboard isKeyboardShow: ', keyboard.keyboardShown)
 console.log('keyboard keyboardHeight: ', keyboard.keyboardHeight)
+```
+
+### `useKeyboardEffect`
+
+```js
+import {useKeyboardEffect} from '@react-native-community/hooks'
+
+useKeyboardEffect((type, event) => {
+  if (type === 'keyboardDidShow') {
+    console.log('keyboard did show')
+  } else if (type === 'keyboardDidHide') {
+    console.log('keyboard did hide')
+  }
+}, [])
 ```
 
 ### `useInteractionManager`
