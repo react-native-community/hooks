@@ -1,5 +1,10 @@
 import {useEffect} from 'react'
-import {Keyboard, KeyboardEventListener, KeyboardEventName} from 'react-native'
+import {
+  Keyboard,
+  KeyboardEventListener,
+  KeyboardEventName,
+  KeyboardEvent,
+} from 'react-native'
 
 type EffectCallback = (
   eventType: KeyboardEventName,
