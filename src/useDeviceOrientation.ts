@@ -1,43 +1,27 @@
 import {useEffect, useState, useCallback} from 'react'
 import {Dimensions, ScaledSize} from 'react-native'
 
-const screen = Dimensions.get('screen')
+interface DeviceOrientation {
+  portrait: boolean
+  landscape: boolean
+}
 
-export function useDeviceOrientation() {
-  const isOrientationPortrait = ({
-    width,
-    height,
-  }: {
-    width: number
-    height: number
-  }) => height >= width
-  const isOrientationLandscape = ({
-    width,
-    height,
-  }: {
-    width: number
-    height: number
-  }) => width >= height
+function calculateDeviceOrientation(screen: ScaledSize): DeviceOrientation {
+  return { portrait: screen.height >= screen.width, landscape: screen.width >= screen.height }
+}
 
-  const [orientation, setOrientation] = useState({
-    portrait: isOrientationPortrait(screen),
-    landscape: isOrientationLandscape(screen),
-  })
+export function useDeviceOrientation(): DeviceOrientation {
+  const [orientation, setOrientation] = useState(calculateDeviceOrientation(Dimensions.get('screen')))
 
-  const onChange = useCallback(({screen: scr}: {screen: ScaledSize}) => {
-    setOrientation({
-      portrait: isOrientationPortrait(scr),
-      landscape: isOrientationLandscape(scr),
-    })
+  const onChange = useCallback(({screen}: {screen: ScaledSize}) => {
+    setOrientation(calculateDeviceOrientation(screen))
   }, [])
 
   useEffect(() => {
     Dimensions.addEventListener('change', onChange)
 
-    return () => {
-      Dimensions.removeEventListener('change', onChange)
-    }
-  }, [orientation.portrait, orientation.landscape, onChange])
+    return () => Dimensions.removeEventListener('change', onChange)
+  }, [onChange])
 
   return orientation
 }
