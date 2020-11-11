@@ -31,6 +31,7 @@ yarn add @react-native-community/hooks
 - [useInteractionManager](https://github.com/react-native-community/hooks#useinteractionmanager)
 - [useDeviceOrientation](https://github.com/react-native-community/hooks#usedeviceorientation)
 - [useLayout](https://github.com/react-native-community/hooks#uselayout)
+- [useLayoutAnimation](https://github.com/react-native-community/hooks#uselayoutanimation)
 
 ### `useAccessibilityInfo`
 
@@ -171,6 +172,32 @@ const { onLayout, ...layout } = useLayout()
 console.log('layout: ', layout)
 
 <View onLayout={onLayout} style={{width: 200, height: 200, marginTop: 30}} />
+```
+
+### `useLayoutAnimation`
+
+```js
+import { useLayoutAnimation } from '@react-native-community/hooks'
+
+const { animateNext } = useLayoutAnimation()
+
+const removeItem = (id: number) => {
+  // Animates the row deletion,
+  // you can also provide the same parameters as with `.configureNext`.
+  animateNext()
+  setItems(items.filter((item: Item) => item.id !== id))
+}
+
+return (
+  <View>
+    {items.map((item: Item) => (
+      <View key={item.id}>
+        <Text>{item.name}</Text>
+        <Button color="red" title="delete" onPress={() => removeItem(item.id)}/>
+      </View>
+    ))}
+  </View>
+)
 ```
 
 [version-badge]: https://img.shields.io/npm/v/@react-native-community/hooks.svg?style=flat-square
