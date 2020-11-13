@@ -15,11 +15,13 @@ npm install @react-native-community/hooks
 ```
 
 Installation with yarn
+
 ```sh
 yarn add @react-native-community/hooks
 ```
 
 ## API
+
 - [useAccessibilityInfo](https://github.com/react-native-community/hooks#useaccessibilityinfo)
 - [useAppState](https://github.com/react-native-community/hooks#useappstate)
 - [useBackHandler](https://github.com/react-native-community/hooks#usebackhandler)
@@ -35,7 +37,7 @@ yarn add @react-native-community/hooks
 ### `useAccessibilityInfo`
 
 ```js
-import { useAccessibilityInfo } from '@react-native-community/hooks'
+import {useAccessibilityInfo} from '@react-native-community/hooks'
 
 const {
   boldTextEnabled,
@@ -43,7 +45,7 @@ const {
   reduceMotionEnabled, // requires RN60 or newer
   grayscaleEnabled, // requires RN60 or newer
   invertColorsEnabled, // requires RN60 or newer
-  reduceTransparencyEnabled // requires RN60 or newer
+  reduceTransparencyEnabled, // requires RN60 or newer
 } = useAccessibilityInfo()
 ```
 
@@ -52,7 +54,7 @@ const {
 AppState will change between one of 'active', 'background', or (iOS) 'inactive' when the app is closed or put into the background.
 
 ```js
-import { useAppState } from '@react-native-community/hooks'
+import {useAppState} from '@react-native-community/hooks'
 
 const currentAppState = useAppState()
 ```
@@ -60,7 +62,7 @@ const currentAppState = useAppState()
 ### `useBackHandler`
 
 ```js
-import { useBackHandler } from '@react-native-community/hooks'
+import {useBackHandler} from '@react-native-community/hooks'
 
 useBackHandler(() => {
   if (shouldBeHandledHere) {
@@ -103,11 +105,11 @@ const [data, setString] = useClipboard()
 Gets dimensions and sets up a listener that will change the dimensions if the user changes device orientation.
 
 ```js
-import { useDimensions } from '@react-native-community/hooks'
+import {useDimensions} from '@react-native-community/hooks'
 
 const dimensions = useDimensions()
 // or
-const { width, height } = useDimensions().window
+const {width, height} = useDimensions().window
 // or
 const screen = useDimensions().screen
 ```
@@ -123,7 +125,7 @@ const source = {uri: 'https://your.image.URI'}
 
 const {dimensions, loading, error} = useImageDimensions(source)
 
-if(loading || error || !dimensions) {
+if (loading || error || !dimensions) {
   return null
 }
 const {width, height, aspectRatio} = dimensions
@@ -132,18 +134,23 @@ const {width, height, aspectRatio} = dimensions
 ### `useKeyboard`
 
 ```js
-import { useKeyboard } from '@react-native-community/hooks'
+import {useKeyboard} from '@react-native-community/hooks'
 
 const keyboard = useKeyboard()
 
 console.log('keyboard isKeyboardShow: ', keyboard.keyboardShown)
 console.log('keyboard keyboardHeight: ', keyboard.keyboardHeight)
+console.log(
+  'keyboard animation is happening (show/hide): ',
+  keyboard.animation.active,
+  keyboard.animation.type,
+)
 ```
 
 ### `useInteractionManager`
 
 ```js
-import { useInteractionManager } from '@react-native-community/hooks'
+import {useInteractionManager} from '@react-native-community/hooks'
 
 const interactionReady = useInteractionManager()
 
@@ -153,7 +160,7 @@ console.log('interaction ready: ', interactionReady)
 ### `useDeviceOrientation`
 
 ```js
-import { useDeviceOrientation } from '@react-native-community/hooks'
+import {useDeviceOrientation} from '@react-native-community/hooks'
 
 const orientation = useDeviceOrientation()
 
@@ -219,6 +226,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
