@@ -19,3 +19,5 @@ export function useAppState() {
 
   return appState
 }
+
+export {AppStateStatus}
