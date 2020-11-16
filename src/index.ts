@@ -1,5 +1,5 @@
 import {useDimensions} from './useDimensions'
-import {useAppState} from './useAppState'
+import {useAppState, AppStateStatus} from './useAppState'
 import {useBackHandler} from './useBackHandler'
 import {useCameraRoll} from './useCameraRoll'
 import {useClipboard} from './useClipboard'
@@ -13,6 +13,7 @@ import {useImageDimensions} from './useImageDimensions'
 export {
   useDimensions,
   useAppState,
+  AppStateStatus,
   useBackHandler,
   useCameraRoll,
   useClipboard,
