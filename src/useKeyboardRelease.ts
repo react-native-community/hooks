@@ -1,4 +1,4 @@
-import {Keyboard} from 'react-native'
+import {Keyboard, Platform} from 'react-native'
 
 export interface KeyboardReleaseReturns {
   shouldSetResponse: () => boolean
@@ -6,7 +6,7 @@ export interface KeyboardReleaseReturns {
 }
 
 export function useKeyboardRelease(): KeyboardReleaseReturns {
-  const shouldSetResponse = () => true
+  const shouldSetResponse = () => (Platform.OS === 'web' ? false : true)
   const onRelease = () => Keyboard.dismiss()
 
   return {onRelease, shouldSetResponse}
