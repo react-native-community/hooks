@@ -176,11 +176,11 @@ console.log('layout: ', layout)
 ### `useKeyboardRelease`
 
 ```js
-import { useKeyboardRelease } from '@react-native-community/hooks'
+import {useKeyboardRelease} from '@react-native-community/hooks'
 
-const { onRelease, shouldSetResponse } = useKeyboardRelease()
+const {onRelease, shouldSetResponse} = useKeyboardRelease()
 
-<View onResponderRelease={ onRelease } onStartShouldSetResponder={ shouldSetResponse }>
+<View onResponderRelease={onRelease} onStartShouldSetResponder={shouldSetResponse}>
 ```
 
 [version-badge]: https://img.shields.io/npm/v/@react-native-community/hooks.svg?style=flat-square

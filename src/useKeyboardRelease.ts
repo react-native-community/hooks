@@ -1,4 +1,4 @@
-import { Keyboard } from 'react-native'
+import {Keyboard} from 'react-native'
 
 export interface KeyboardReleaseReturns {
   shouldSetResponse: () => boolean
@@ -9,5 +9,5 @@ export function useKeyboardRelease(): KeyboardReleaseReturns {
   const shouldSetResponse = () => true
   const onRelease = () => Keyboard.dismiss()
 
-  return { onRelease, shouldSetResponse }
+  return {onRelease, shouldSetResponse}
 }
