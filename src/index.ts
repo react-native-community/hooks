@@ -9,6 +9,7 @@ import {useInteractionManager} from './useInteractionManager'
 import {useDeviceOrientation} from './useDeviceOrientation'
 import {useLayout} from './useLayout'
 import {useImageDimensions} from './useImageDimensions'
+import {useKeyboardRelease} from './useKeyboardRelease'
 
 export {
   useDimensions,
@@ -23,4 +24,5 @@ export {
   useDeviceOrientation,
   useLayout,
   useImageDimensions,
+  useKeyboardRelease,
 }
