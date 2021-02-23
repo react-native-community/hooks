@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import {Clipboard} from 'react-native'
+import Clipboard from '@react-native-clipboard/clipboard';
 
 type Listener = (content: string) => void
 const listeners = new Set<Listener>()
