@@ -47,5 +47,8 @@
   "license": "ISC",
   "files": [
     "lib"
-  ]
+  ],
+  "dependencies": {
+    "@react-native-clipboard/clipboard": "^1.6.0"
+  }
 }
