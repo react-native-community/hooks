@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import {Image, ImageRequireSource} from 'react-native'
+import {Image, ImageRequireSource, ImageURISource} from 'react-native'
 
 export interface URISource {
   uri: string
@@ -21,10 +21,12 @@ export interface ImageDimensionsResult {
 
 /**
  * @param source either a remote URL or a local file resource.
+ * @param headers headers to be passed to a remote URL resource.
  * @returns original image dimensions (width, height and aspect ratio).
  */
 export function useImageDimensions(
   source: ImageDimensionsSource,
+  headers?: ImageURISource['headers']
 ): ImageDimensionsResult {
   const [result, setResult] = useState<ImageDimensionsResult>({loading: true})
 
@@ -43,16 +45,29 @@ export function useImageDimensions(
 
       if (typeof source === 'object' && source.uri) {
         setResult({loading: true})
-
-        Image.getSize(
-          source.uri,
-          (width, height) =>
-            setResult({
-              dimensions: {width, height, aspectRatio: width / height},
-              loading: false,
-            }),
-          (error) => setResult({error, loading: false}),
-        )
+        
+        if (typeof headers === 'object') {
+          Image.getSizeWithHeaders(
+            source.uri,
+            headers,
+            (width, height) =>
+              setResult({
+                dimensions: {width, height, aspectRatio: width / height},
+                loading: false,
+              }),
+            (error) => setResult({error, loading: false}),
+          )
+        } else {
+          Image.getSize(
+            source.uri,
+            (width, height) =>
+              setResult({
+                dimensions: {width, height, aspectRatio: width / height},
+                loading: false,
+              }),
+            (error) => setResult({error, loading: false}),
+          )
+        }
 
         return
       }
