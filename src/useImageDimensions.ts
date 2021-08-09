@@ -76,7 +76,7 @@ export function useImageDimensions(
     } catch (error) {
       setResult({error, loading: false})
     }
-  }, [source])
+  }, [source, headers])
 
   return result
 }
