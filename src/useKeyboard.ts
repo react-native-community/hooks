@@ -15,7 +15,7 @@ const initialValue = {
 export function useKeyboard() {
   const [shown, setShown] = useState(false)
   const [coordinates, setCoordinates] = useState<{
-    start: ScreenRect
+    start: undefined | ScreenRect
     end: ScreenRect
   }>(initialValue)
   const [keyboardHeight, setKeyboardHeight] = useState<number>(0)
