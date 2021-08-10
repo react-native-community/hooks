@@ -26,7 +26,7 @@ export interface ImageDimensionsResult {
  */
 export function useImageDimensions(
   source: ImageDimensionsSource,
-  headers?: ImageURISource['headers']
+  headers?: ImageURISource['headers'],
 ): ImageDimensionsResult {
   const [result, setResult] = useState<ImageDimensionsResult>({loading: true})
 
@@ -45,7 +45,7 @@ export function useImageDimensions(
 
       if (typeof source === 'object' && source.uri) {
         setResult({loading: true})
-        
+
         if (typeof headers === 'object') {
           Image.getSizeWithHeaders(
             source.uri,
