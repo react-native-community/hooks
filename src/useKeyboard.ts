@@ -42,19 +42,28 @@ export function useKeyboard() {
   }
 
   useEffect(() => {
-    Keyboard.addListener('keyboardWillShow', handleKeyboardWillShow)
-    Keyboard.addListener('keyboardDidShow', handleKeyboardDidShow)
-    Keyboard.addListener('keyboardWillHide', handleKeyboardWillHide)
-    Keyboard.addListener('keyboardDidHide', handleKeyboardDidHide)
+    const subscriptions = [
+      Keyboard.addListener('keyboardWillShow', handleKeyboardWillShow),
+      Keyboard.addListener('keyboardDidShow', handleKeyboardDidShow),
+      Keyboard.addListener('keyboardWillHide', handleKeyboardWillHide),
+      Keyboard.addListener('keyboardDidHide', handleKeyboardDidHide),
+    ]
 
     return () => {
-      Keyboard.removeListener('keyboardWillShow', handleKeyboardWillShow)
-      Keyboard.removeListener('keyboardDidShow', handleKeyboardDidShow)
-      Keyboard.removeListener('keyboardWillHide', handleKeyboardWillHide)
-      Keyboard.removeListener('keyboardDidHide', handleKeyboardDidHide)
+      if (Keyboard.removeListener) {
+        // React Native < 0.65
+        Keyboard.removeListener('keyboardWillShow', handleKeyboardWillShow)
+        Keyboard.removeListener('keyboardDidShow', handleKeyboardDidShow)
+        Keyboard.removeListener('keyboardWillHide', handleKeyboardWillHide)
+        Keyboard.removeListener('keyboardDidHide', handleKeyboardDidHide)
+      } else {
+        // React Native >= 0.65
+        for (const subscription of subscriptions) {
+          subscription.remove()
+        }
+      }
     }
   }, [])
-
   return {
     keyboardShown: shown,
     coordinates,
