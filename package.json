@@ -46,6 +46,7 @@
   },
   "license": "ISC",
   "files": [
-    "lib"
+    "lib",
+    "!*.test.*"
   ]
 }
