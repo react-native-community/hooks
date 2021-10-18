@@ -231,6 +231,16 @@
         "test",
         "code"
       ]
+    },
+    {
+      "login": "GertjanReynaert",
+      "name": "Gertjan Reynaert",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4712292?v=4",
+      "profile": "https://github.com/GertjanReynaert",
+      "contributions": [
+        "test",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7

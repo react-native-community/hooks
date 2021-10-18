@@ -217,6 +217,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/thibmaek"><img src="https://avatars.githubusercontent.com/u/6213695?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thibault Maekelbergh</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=thibmaek" title="Tests">⚠️</a> <a href="https://github.com/react-native-community/hooks/commits?author=thibmaek" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/GertjanReynaert"><img src="https://avatars.githubusercontent.com/u/4712292?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gertjan Reynaert</b></sub></a><br /><a href="https://github.com/react-native-community/hooks/commits?author=GertjanReynaert" title="Tests">⚠️</a> <a href="https://github.com/react-native-community/hooks/commits?author=GertjanReynaert" title="Code">💻</a></td>
   </tr>
 </table>
 
