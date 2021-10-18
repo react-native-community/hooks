@@ -14,10 +14,10 @@ export function useDeviceOrientation() {
   const [orientation, setOrientation] = useState(initialState)
 
   useEffect(() => {
-    const onChange = ({screen: scr}: {screen: ScaledSize}) => {
+    const onChange = ({screen}: {screen: ScaledSize}) => {
       setOrientation({
-        portrait: isOrientationPortrait(scr),
-        landscape: isOrientationLandscape(scr),
+        portrait: isOrientationPortrait(screen),
+        landscape: isOrientationLandscape(screen),
       })
     }
 
