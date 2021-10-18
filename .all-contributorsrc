@@ -241,6 +241,16 @@
         "test",
         "code"
       ]
+    },
+    {
+      "login": "retyui",
+      "name": "David NRB",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4661784?v=4",
+      "profile": "https://profile.codersrank.io/user/retyui",
+      "contributions": [
+        "test",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
