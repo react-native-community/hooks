@@ -221,6 +221,16 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "thibmaek",
+      "name": "Thibault Maekelbergh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6213695?v=4",
+      "profile": "https://github.com/thibmaek",
+      "contributions": [
+        "test",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
