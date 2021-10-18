@@ -76,7 +76,8 @@ export function useImageDimensions(
     } catch (error) {
       setResult({error, loading: false})
     }
-  }, [source, headers])
+    // eslint-disable-next-line
+  }, [typeof source === 'object' ? source.uri : source, headers])
 
   return result
 }
