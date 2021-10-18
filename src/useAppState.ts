@@ -5,11 +5,11 @@ export function useAppState() {
   const currentState = AppState.currentState
   const [appState, setAppState] = useState(currentState)
 
-  function onChange(newState: AppStateStatus) {
-    setAppState(newState)
-  }
-
   useEffect(() => {
+    function onChange(newState: AppStateStatus) {
+      setAppState(newState)
+    }
+
     AppState.addEventListener('change', onChange)
 
     return () => {
