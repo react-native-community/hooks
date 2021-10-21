@@ -1887,10 +1887,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@16.14.17":
-  version "16.14.17"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.14.17.tgz#c57fcfb05efa6423f5b65fcd4a75f63f05b162bf"
-  integrity sha512-pMLc/7+7SEdQa9A+hN9ujI8blkjFqYAZVqh3iNXqdZ0cQ8TIR502HMkNJniaOGv9SAgc47jxVKoiBJ7c0AakvQ==
+"@types/react@16.14.18":
+  version "16.14.18"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.14.18.tgz#b2bcea05ee244fde92d409f91bd888ca8e54b20f"
+  integrity sha512-eeyqd1mqoG43mI0TvNKy9QNf1Tjz3DEOsRP3rlPo35OeMIt05I+v9RR8ZvL2GuYZeF2WAcLXJZMzu6zdz3VbtQ==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
