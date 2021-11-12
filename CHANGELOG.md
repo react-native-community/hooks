@@ -1,3 +1,28 @@
+# v2.8.1 (Fri Nov 12 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot)), for all your work!
+
+#### 🐛 Bug Fix
+
+- [Fix][useKeyboard] Adapt unsubscription for new EventEmitter API [#279](https://github.com/react-native-community/hooks/pull/279) ([@retyui](https://github.com/retyui))
+- Update dependency @types/react-native to v0.64.19 [#278](https://github.com/react-native-community/hooks/pull/278) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @types/react to v16.14.20 [#277](https://github.com/react-native-community/hooks/pull/277) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @types/react-native to v0.64.18 [#276](https://github.com/react-native-community/hooks/pull/276) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @types/react to v16.14.19 [#275](https://github.com/react-native-community/hooks/pull/275) ([@renovate-bot](https://github.com/renovate-bot))
+- Update rn orb to v5.6.0 [#274](https://github.com/react-native-community/hooks/pull/274) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @types/react-native to v0.64.17 [#272](https://github.com/react-native-community/hooks/pull/272) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @types/react to v16.14.18 [#271](https://github.com/react-native-community/hooks/pull/271) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### Authors: 3
+
+- [@renovate[bot]](https://github.com/renovate[bot])
+- David NRB ([@retyui](https://github.com/retyui))
+- WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot))
+
+---
+
 # v2.8.0 (Tue Oct 19 2021)
 
 :tada: This release contains work from a new contributor! :tada:
