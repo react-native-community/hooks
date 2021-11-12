@@ -50,18 +50,7 @@ export function useKeyboard() {
     ]
 
     return () => {
-      if (Keyboard.removeListener) {
-        // React Native < 0.65
-        Keyboard.removeListener('keyboardWillShow', handleKeyboardWillShow)
-        Keyboard.removeListener('keyboardDidShow', handleKeyboardDidShow)
-        Keyboard.removeListener('keyboardWillHide', handleKeyboardWillHide)
-        Keyboard.removeListener('keyboardDidHide', handleKeyboardDidHide)
-      } else {
-        // React Native >= 0.65
-        for (const subscription of subscriptions) {
-          subscription.remove()
-        }
-      }
+      subscriptions.forEach((subscription) => subscription.remove())
     }
   }, [])
   return {
