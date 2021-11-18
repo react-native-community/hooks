@@ -24,7 +24,7 @@
     "@react-native-community/eslint-config": "1.1.0",
     "@testing-library/react-hooks": "7.0.2",
     "@testing-library/react-native": "8.0.0",
-    "@types/jest": "27.0.2",
+    "@types/jest": "27.0.3",
     "@types/react": "16.14.21",
     "@types/react-native": "0.64.19",
     "all-contributors-cli": "6.20.0",
