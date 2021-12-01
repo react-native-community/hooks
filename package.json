@@ -31,7 +31,7 @@
     "auto": "9.26.8",
     "eslint": "7.3.1",
     "eslint-plugin-prettier": "3.4.1",
-    "jest": "27.4.2",
+    "jest": "27.4.3",
     "prettier": "2.5.0",
     "react": "17.0.2",
     "react-native": "0.62.3",
