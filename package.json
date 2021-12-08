@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@auto-it/all-contributors": "9.28.3",
-    "@auto-it/first-time-contributor": "9.28.3",
+    "@auto-it/first-time-contributor": "9.61.0",
     "@react-native-community/eslint-config": "3.0.1",
     "@testing-library/react-hooks": "7.0.2",
     "@testing-library/react-native": "8.0.0",
