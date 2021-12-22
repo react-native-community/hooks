@@ -48,5 +48,8 @@
   "files": [
     "lib",
     "!*.test.*"
-  ]
+  ],
+  "dependencies": {
+    "@react-native-community/netinfo": "^7.1.7"
+  }
 }
