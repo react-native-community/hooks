@@ -173,6 +173,21 @@ console.log('layout: ', layout)
 <View onLayout={onLayout} style={{width: 200, height: 200, marginTop: 30}} />
 ```
 
+### `useNetInfo`
+
+```js
+import { useNetInfo } from '@react-native-community/hooks'
+
+const { wasConnected, isConnected, type, isInternetReachable, isWifiEnabled, details } = useLayout()
+
+console.log('previous online? ', wasConnected)
+console.log('is online? ', isConnected)
+console.log('connection type: ', type)
+console.log('internet reachable? ', isInternetReachable)
+console.log('wifi enabled? ', isWifiEnabled)
+console.log('details: ', details)
+```
+
 [version-badge]: https://img.shields.io/npm/v/@react-native-community/hooks.svg?style=flat-square
 [package]: https://www.npmjs.com/package/@react-native-community/hooks
 
