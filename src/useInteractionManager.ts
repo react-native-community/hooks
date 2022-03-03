@@ -5,9 +5,14 @@ export function useInteractionManager() {
   const [complete, updateInteractionStatus] = useState(false)
 
   useEffect(() => {
-    InteractionManager.runAfterInteractions(() => {
+    const {cancel} = InteractionManager.runAfterInteractions(() => {
       updateInteractionStatus(true)
     })
+
+    return () => {
+      cancel?.()
+    }
   }, [])
+
   return complete
 }
