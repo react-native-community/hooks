@@ -2,12 +2,15 @@ import {useEffect, useState} from 'react'
 import {InteractionManager} from 'react-native'
 
 export function useInteractionManager() {
-  const [complete, updateInteractionStatus] = useState(false)
+  const [complete, setComplete] = useState(false)
 
   useEffect(() => {
-    InteractionManager.runAfterInteractions(() => {
-      updateInteractionStatus(true)
+    const interactionPromise = InteractionManager.runAfterInteractions(() => {
+      setComplete(true)
     })
+
+    return () => interactionPromise.cancel()
   }, [])
+
   return complete
 }
