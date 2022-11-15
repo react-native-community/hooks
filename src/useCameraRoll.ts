@@ -15,6 +15,10 @@ const defaultConfig: GetPhotosParamType = {
   groupTypes: 'All',
 }
 
+/**
+ * @deprecated Please use "useCameraRoll" from "@react-native-camera-roll/camera-roll" instead
+ * More: https://github.com/react-native-cameraroll/react-native-cameraroll#usecameraroll
+ */
 export function useCameraRoll() {
   const [photos, setPhotos] = useState(initialState)
 

@@ -23,8 +23,8 @@ yarn add @react-native-community/hooks
 - [useAccessibilityInfo](https://github.com/react-native-community/hooks#useaccessibilityinfo)
 - [useAppState](https://github.com/react-native-community/hooks#useappstate)
 - [useBackHandler](https://github.com/react-native-community/hooks#usebackhandler)
-- [useCameraRoll](https://github.com/react-native-community/hooks#usecameraroll)
-- [useClipboard](https://github.com/react-native-community/hooks#useclipboard)
+- ~~[useCameraRoll](https://github.com/react-native-community/hooks#usecameraroll)~~
+- ~~[useClipboard](https://github.com/react-native-community/hooks#useclipboard)~~
 - [useDimensions](https://github.com/react-native-community/hooks#usedimensions)
 - [useImageDimensions](https://github.com/react-native-community/hooks#useImageDimensions)
 - [useKeyboard](https://github.com/react-native-community/hooks#usekeyboard)
@@ -74,6 +74,8 @@ useBackHandler(() => {
 
 ### `useCameraRoll`
 
+⚠️ **Deprecated**. Please use `useCameraRoll()` from [`@react-native-camera-roll/camera-roll`](https://github.com/react-native-cameraroll/react-native-cameraroll#usecameraroll) 
+
 ```js
 import { useCameraRoll } from '@react-native-community/hooks'
 
@@ -87,6 +89,8 @@ const [photos, getPhotos, saveToCameraRoll] = useCameraRoll()
 ```
 
 ### `useClipboard`
+
+⚠️ **Deprecated**. Please use `useClipboard()` from [`@react-native-clipboard/clipboard`](https://github.com/react-native-clipboard/clipboard#useclipboard)
 
 ```js
 import { useClipboard } from '@react-native-community/hooks'
