@@ -9,6 +9,10 @@ function setString(content: string) {
   listeners.forEach((listener) => listener(content))
 }
 
+/**
+ * @deprecated Please use "useClipboard" from "@react-native-clipboard/clipboard" instead
+ * More: https://github.com/react-native-clipboard/clipboard#useclipboard
+ */
 export function useClipboard(): [string, (content: string) => void] {
   const [data, updateClipboardData] = useState('')
 
