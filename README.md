@@ -177,6 +177,16 @@ console.log('layout: ', layout)
 <View onLayout={onLayout} style={{width: 200, height: 200, marginTop: 30}} />
 ```
 
+### `useKeyboardRelease`
+
+```js
+import {useKeyboardRelease} from '@react-native-community/hooks'
+
+const {onRelease, shouldSetResponse} = useKeyboardRelease()
+
+<View onResponderRelease={onRelease} onStartShouldSetResponder={shouldSetResponse}>
+```
+
 [version-badge]: https://img.shields.io/npm/v/@react-native-community/hooks.svg?style=flat-square
 [package]: https://www.npmjs.com/package/@react-native-community/hooks
 
