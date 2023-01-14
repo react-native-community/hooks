@@ -187,13 +187,13 @@ const fetch = () => {
     return new Promise((resolve) => setTimeout(resolve, 500))
 }
 
-const { isRefreshing, initiateRefresh } = useRefresh(fetch);
+const { isRefreshing, onRefresh } = useRefresh(fetch);
 
 <ScrollView 
   refreshControl= {
     <RefreshControl
       refreshing={isRefreshing}
-      onRefresh={initiateRefresh}
+      onRefresh={onRefresh}
     />
   }
 />
