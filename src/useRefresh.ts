@@ -3,7 +3,7 @@ import {useState} from 'react'
 export function useRefresh(refresh: () => Promise<unknown>) {
   const [isRefreshing, setIsRefreshing] = useState<boolean>(false)
 
-  async function initiateRefresh() {
+  async function onRefresh() {
     setIsRefreshing(true)
 
     try {
@@ -13,5 +13,5 @@ export function useRefresh(refresh: () => Promise<unknown>) {
     }
   }
 
-  return {isRefreshing, initiateRefresh}
+  return {isRefreshing, onRefresh}
 }

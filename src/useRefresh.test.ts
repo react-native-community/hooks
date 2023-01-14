@@ -11,9 +11,9 @@ describe('useRefresh', () => {
 
     const {result} = renderHook(() => useRefresh(wait))
 
-    const spy = jest.spyOn(result.current, 'initiateRefresh')
+    const spy = jest.spyOn(result.current, 'onRefresh')
     act(() => {
-      result.current.initiateRefresh()
+      result.current.onRefresh()
     })
 
     expect(result.current.isRefreshing).toBe(true)
