@@ -1,0 +1,25 @@
+name: Publish canary
+
+on:
+  pull_request:
+    branches: ['main']
+
+jobs:
+  publish-canary:
+    name: Publish canary
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'yarn'
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Install deps
+        run: yarn install
+      - name: Publish canary
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn release:canary
