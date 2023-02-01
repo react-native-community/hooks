@@ -30,6 +30,7 @@ yarn add @react-native-community/hooks
 - [useInteractionManager](https://github.com/react-native-community/hooks#useinteractionmanager)
 - [useDeviceOrientation](https://github.com/react-native-community/hooks#usedeviceorientation)
 - [useLayout](https://github.com/react-native-community/hooks#uselayout)
+- [useRefresh](https://github.com/react-native-community/hooks#useRefresh)
 
 ### `useAccessibilityInfo`
 
@@ -129,6 +130,27 @@ const { onLayout, ...layout } = useLayout()
 console.log('layout: ', layout)
 
 <View onLayout={onLayout} style={{width: 200, height: 200, marginTop: 30}} />
+```
+
+### `useRefresh`
+
+```js
+import { useRefresh } from '@react-native-community/hooks'
+
+const fetch = () => {
+    return new Promise((resolve) => setTimeout(resolve, 500))
+}
+
+const { isRefreshing, onRefresh } = useRefresh(fetch);
+
+<ScrollView 
+  refreshControl= {
+    <RefreshControl
+      refreshing={isRefreshing}
+      onRefresh={onRefresh}
+    />
+  }
+/>
 ```
 
 [version-badge]: https://img.shields.io/npm/v/@react-native-community/hooks.svg?style=flat-square
