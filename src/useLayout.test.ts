@@ -1,5 +1,4 @@
 import {renderHook, act} from '@testing-library/react-hooks'
-
 import {useLayout} from './useLayout'
 
 describe('useLayout', () => {

@@ -76,7 +76,7 @@ export function useImageDimensions(
     } catch (error) {
       setResult({error, loading: false})
     }
-    // eslint-disable-next-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [typeof source === 'object' ? source.uri : source, headers])
 
   return result
