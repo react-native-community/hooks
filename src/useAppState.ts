@@ -13,16 +13,9 @@ export function useAppState() {
     const subscription = AppState.addEventListener('change', onChange)
 
     return () => {
-      if (typeof subscription?.remove === 'function') {
-        subscription.remove()
-      } else {
-        // @ts-expect-error - React Native < 0.65
-        AppState.removeEventListener('change', onChange)
-      }
+      subscription.remove()
     }
   }, [])
 
   return appState
 }
-
-export {AppStateStatus}

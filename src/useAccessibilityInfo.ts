@@ -28,12 +28,7 @@ function useAccessibilityStateListener(
     )
 
     return () => {
-      if (typeof subscription?.remove === 'function') {
-        subscription.remove()
-      } else {
-        // @ts-expect-error - React Native < 0.65
-        AccessibilityInfo.removeEventListener(eventName, setIsEnabled)
-      }
+      subscription.remove()
     }
   }, [eventName, initializerName])
 
