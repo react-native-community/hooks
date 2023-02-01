@@ -15,17 +15,16 @@ npm install @react-native-community/hooks
 ```
 
 Installation with yarn
+
 ```sh
 yarn add @react-native-community/hooks
 ```
 
 ## API
+
 - [useAccessibilityInfo](https://github.com/react-native-community/hooks#useaccessibilityinfo)
 - [useAppState](https://github.com/react-native-community/hooks#useappstate)
 - [useBackHandler](https://github.com/react-native-community/hooks#usebackhandler)
-- ~~[useCameraRoll](https://github.com/react-native-community/hooks#usecameraroll)~~
-- ~~[useClipboard](https://github.com/react-native-community/hooks#useclipboard)~~
-- [useDimensions](https://github.com/react-native-community/hooks#usedimensions)
 - [useImageDimensions](https://github.com/react-native-community/hooks#useImageDimensions)
 - [useKeyboard](https://github.com/react-native-community/hooks#usekeyboard)
 - [useInteractionManager](https://github.com/react-native-community/hooks#useinteractionmanager)
@@ -35,7 +34,7 @@ yarn add @react-native-community/hooks
 ### `useAccessibilityInfo`
 
 ```js
-import { useAccessibilityInfo } from '@react-native-community/hooks'
+import {useAccessibilityInfo} from '@react-native-community/hooks'
 
 const {
   boldTextEnabled,
@@ -43,7 +42,7 @@ const {
   reduceMotionEnabled, // requires RN60 or newer
   grayscaleEnabled, // requires RN60 or newer
   invertColorsEnabled, // requires RN60 or newer
-  reduceTransparencyEnabled // requires RN60 or newer
+  reduceTransparencyEnabled, // requires RN60 or newer
 } = useAccessibilityInfo()
 ```
 
@@ -52,7 +51,7 @@ const {
 AppState will change between one of 'active', 'background', or (iOS) 'inactive' when the app is closed or put into the background.
 
 ```js
-import { useAppState } from '@react-native-community/hooks'
+import {useAppState} from '@react-native-community/hooks'
 
 const currentAppState = useAppState()
 ```
@@ -60,7 +59,7 @@ const currentAppState = useAppState()
 ### `useBackHandler`
 
 ```js
-import { useBackHandler } from '@react-native-community/hooks'
+import {useBackHandler} from '@react-native-community/hooks'
 
 useBackHandler(() => {
   if (shouldBeHandledHere) {
@@ -70,50 +69,6 @@ useBackHandler(() => {
   // let the default thing happen
   return false
 })
-```
-
-### `useCameraRoll`
-
-⚠️ **Deprecated**. Please use `useCameraRoll()` from [`@react-native-camera-roll/camera-roll`](https://github.com/react-native-cameraroll/react-native-cameraroll#usecameraroll) 
-
-```js
-import { useCameraRoll } from '@react-native-community/hooks'
-
-const [photos, getPhotos, saveToCameraRoll] = useCameraRoll()
-
-{
-  photos.map((photo, index) => /* render photos */)
-}
-
-<Button title='Get Photos' onPress={() => getPhotos()}>Get Photos</Button>
-```
-
-### `useClipboard`
-
-⚠️ **Deprecated**. Please use `useClipboard()` from [`@react-native-clipboard/clipboard`](https://github.com/react-native-clipboard/clipboard#useclipboard)
-
-```js
-import { useClipboard } from '@react-native-community/hooks'
-
-const [data, setString] = useClipboard()
-
-<Text>{data}</Text>
-
-<Button title='Update Clipboard' onPress={() => setString('new clipboard data')}>Set Clipboard</Button>
-```
-
-### `useDimensions`
-
-Gets dimensions and sets up a listener that will change the dimensions if the user changes device orientation.
-
-```js
-import { useDimensions } from '@react-native-community/hooks'
-
-const dimensions = useDimensions()
-// or
-const { width, height } = useDimensions().window
-// or
-const screen = useDimensions().screen
 ```
 
 ### `useImageDimensions`
@@ -127,7 +82,7 @@ const source = {uri: 'https://your.image.URI'}
 
 const {dimensions, loading, error} = useImageDimensions(source)
 
-if(loading || error || !dimensions) {
+if (loading || error || !dimensions) {
   return null
 }
 const {width, height, aspectRatio} = dimensions
@@ -136,7 +91,7 @@ const {width, height, aspectRatio} = dimensions
 ### `useKeyboard`
 
 ```js
-import { useKeyboard } from '@react-native-community/hooks'
+import {useKeyboard} from '@react-native-community/hooks'
 
 const keyboard = useKeyboard()
 
@@ -147,7 +102,7 @@ console.log('keyboard keyboardHeight: ', keyboard.keyboardHeight)
 ### `useInteractionManager`
 
 ```js
-import { useInteractionManager } from '@react-native-community/hooks'
+import {useInteractionManager} from '@react-native-community/hooks'
 
 const interactionReady = useInteractionManager()
 
@@ -157,12 +112,11 @@ console.log('interaction ready: ', interactionReady)
 ### `useDeviceOrientation`
 
 ```js
-import { useDeviceOrientation } from '@react-native-community/hooks'
+import {useDeviceOrientation} from '@react-native-community/hooks'
 
 const orientation = useDeviceOrientation()
 
-console.log('is orientation portrait: ', orientation.portrait)
-console.log('is orientation landscape: ', orientation.landscape)
+console.log('orientation is:', orientation)
 ```
 
 ### `useLayout`

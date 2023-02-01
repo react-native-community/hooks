@@ -1,6 +1,6 @@
 {
-    "extends": [
-      "config:base",
-      ":automergePatch"
-    ]
-  }
+  "extends": [
+    "config:base",
+    ":automergePatch"
+  ]
+}

@@ -1,5 +1,5 @@
 import {renderHook, act} from '@testing-library/react-hooks'
-
+import {LayoutRectangle, NativeSyntheticEvent} from 'react-native'
 import {useLayout} from './useLayout'
 
 describe('useLayout', () => {
@@ -18,7 +18,9 @@ describe('useLayout', () => {
     act(() => {
       const layout = {x: 1, y: 2, width: 3, height: 4}
 
-      result.current.onLayout({nativeEvent: {layout}})
+      result.current.onLayout({
+        nativeEvent: {layout},
+      } as NativeSyntheticEvent<{layout: LayoutRectangle}>)
     })
 
     expect(result.current.x).toBe(1)
