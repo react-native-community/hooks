@@ -21,8 +21,6 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Install deps
         run: yarn install
-      - name: Build palette-mobile
-        run: yarn build-lib:clean
       - name: Release new version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
