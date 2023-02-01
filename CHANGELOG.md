@@ -1,3 +1,68 @@
+# v3.0.0 (Wed Feb 01 2023)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Babis Kanellopoulos ([@kanelloc](https://github.com/kanelloc)), for all your work!
+
+### Release Notes
+
+#### upgrades and types ([#322](https://github.com/react-native-community/hooks/pull/322))
+
+### Breaking Changes
+- `useCameraRoll` was removed. Use `useCameraRoll` from [`@react-native-camera-roll/camera-roll`](https://github.com/react-native-cameraroll/react-native-cameraroll#usecameraroll).
+- `useClipboard` was removed. Use `useClipboard` from [`@react-native-clipboard/clipboard`](https://github.com/react-native-clipboard/clipboard#useclipboard).
+- `useDimensions` was removed. Use `useWindowDimensions` from [`react-native`](https://reactnative.dev/docs/usewindowdimensions).
+- `useDeviceOrientation` is now returning `"portrait" | "landscape"`.
+
+---
+
+#### 💥 Breaking Change
+
+- remove step [#323](https://github.com/react-native-community/hooks/pull/323) ([@pvinis](https://github.com/pvinis))
+- upgrades and types [#322](https://github.com/react-native-community/hooks/pull/322) ([@pvinis](https://github.com/pvinis))
+
+#### 🚀 Enhancement
+
+- feat: add useRefresh hook [#320](https://github.com/react-native-community/hooks/pull/320) ([@kanelloc](https://github.com/kanelloc) [@pvinis](https://github.com/pvinis))
+- Deprecate hooks that use old API (fix: #267) [#315](https://github.com/react-native-community/hooks/pull/315) ([@retyui](https://github.com/retyui))
+
+#### 🐛 Bug Fix
+
+- Bump json5 from 2.1.2 to 2.2.3 [#317](https://github.com/react-native-community/hooks/pull/317) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- [useInteractionManager] Cleanup promise on unmount [#310](https://github.com/react-native-community/hooks/pull/310) ([@LinusU](https://github.com/LinusU))
+- Update dependency ts-jest to v27.1.1 [#296](https://github.com/react-native-community/hooks/pull/296) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency ts-jest to v27.1.0 [#294](https://github.com/react-native-community/hooks/pull/294) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency prettier to v2.5.1 [#293](https://github.com/react-native-community/hooks/pull/293) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency jest to v27.4.3 [#291](https://github.com/react-native-community/hooks/pull/291) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency jest to v27.4.2 [#290](https://github.com/react-native-community/hooks/pull/290) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency jest to v27.4.1 [#289](https://github.com/react-native-community/hooks/pull/289) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update react monorepo (major) [#183](https://github.com/react-native-community/hooks/pull/183) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency jest to v27.4.0 [#288](https://github.com/react-native-community/hooks/pull/288) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency prettier to v2.5.0 [#285](https://github.com/react-native-community/hooks/pull/285) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update rn orb to v6.0.1 [#284](https://github.com/react-native-community/hooks/pull/284) ([@renovate-bot](https://github.com/renovate-bot))
+- Update rn orb to v6 [#283](https://github.com/react-native-community/hooks/pull/283) ([@renovate-bot](https://github.com/renovate-bot) [@renovate[bot]](https://github.com/renovate[bot]))
+- Update dependency @types/jest to v27.0.3 [#281](https://github.com/react-native-community/hooks/pull/281) ([@renovate-bot](https://github.com/renovate-bot))
+- Update dependency @types/react to v16.14.21 [#280](https://github.com/react-native-community/hooks/pull/280) ([@renovate-bot](https://github.com/renovate-bot))
+
+#### 🔩 Dependency Updates
+
+- Bump plist from 3.0.4 to 3.0.5 [#311](https://github.com/react-native-community/hooks/pull/311) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump async from 2.6.3 to 2.6.4 [#306](https://github.com/react-native-community/hooks/pull/306) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump plist from 3.0.1 to 3.0.4 [#301](https://github.com/react-native-community/hooks/pull/301) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump ajv from 6.12.0 to 6.12.6 [#299](https://github.com/react-native-community/hooks/pull/299) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 7
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- [@renovate[bot]](https://github.com/renovate[bot])
+- Babis Kanellopoulos ([@kanelloc](https://github.com/kanelloc))
+- Davyd NRB ([@retyui](https://github.com/retyui))
+- Linus Unnebäck ([@LinusU](https://github.com/LinusU))
+- Mend Renovate ([@renovate-bot](https://github.com/renovate-bot))
+- Pavlos Vinieratos ([@pvinis](https://github.com/pvinis))
+
+---
+
 # v2.8.1 (Fri Nov 12 2021)
 
 :tada: This release contains work from a new contributor! :tada:
