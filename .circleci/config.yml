@@ -1,9 +1,7 @@
 version: 2.1
 
-
 orbs:
-  rn: react-native-community/react-native@6.0.1
-
+  rn: react-native-community/react-native@7.1.1
 
 jobs:
   checkout_code:
@@ -44,23 +42,22 @@ jobs:
           name: Publish a release to NPM
           command: yarn release
 
-
 workflows:
-    build-test-release:
-      jobs:
-        - checkout_code
-        - analyze:
-            requires:
-              - checkout_code
-        # - release-canary:
-        #     requires:
-        #       - analyze
-        #     filters:
-        #       branches:
-        #         ignore: master
-        - release:
-            requires:
-              - analyze
-            filters:
-              branches:
-                only: master
+  build-test-release:
+    jobs:
+      - checkout_code
+      - analyze:
+          requires:
+            - checkout_code
+      # - release-canary:
+      #     requires:
+      #       - analyze
+      #     filters:
+      #       branches:
+      #         ignore: master
+      - release:
+          requires:
+            - analyze
+          filters:
+            branches:
+              only: master
