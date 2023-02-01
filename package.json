@@ -8,15 +8,16 @@
     "prepare": "yarn build",
     "build": "tsc",
     "test": "jest",
+    "test:w": "jest --watch",
     "lint": "eslint src/**/*.ts",
-    "eslint-fix": "eslint src/**/*.ts --fix",
-    "prettier-fix": "prettier --write \"**/*.{ts,tsx}\"",
+    "eslint:fix": "eslint src/**/*.ts --fix",
+    "prettier:fix": "prettier --write \"**/*.{ts,tsx}\"",
     "release": "auto shipit",
-    "release-canary": "auto canary"
+    "release:canary": "auto canary"
   },
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-native": ">=0.59"
+    "react": ">=17.0.2",
+    "react-native": ">=0.65"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "10.37.6",
