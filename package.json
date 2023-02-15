@@ -27,7 +27,7 @@
     "@testing-library/react-native": "11.5.2",
     "@types/jest": "29.4.0",
     "@types/react": "18.0.28",
-    "@types/react-native": "0.71.2",
+    "@types/react-native": "0.71.3",
     "all-contributors-cli": "6.24.0",
     "auto": "10.37.6",
     "eslint": "8.33.0",
