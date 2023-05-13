@@ -28,7 +28,7 @@
     "@types/jest": "29.4.4",
     "@types/react": "18.0.38",
     "@types/react-native": "0.71.6",
-    "all-contributors-cli": "6.24.0",
+    "all-contributors-cli": "6.25.1",
     "auto": "10.37.6",
     "eslint": "8.33.0",
     "eslint-plugin-prettier": "4.2.1",
