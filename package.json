@@ -26,7 +26,7 @@
     "@testing-library/react-hooks": "8.0.1",
     "@testing-library/react-native": "12.1.2",
     "@types/jest": "29.5.2",
-    "@types/react": "18.2.13",
+    "@types/react": "18.2.14",
     "@types/react-native": "0.72.2",
     "all-contributors-cli": "6.25.1",
     "auto": "10.46.0",
