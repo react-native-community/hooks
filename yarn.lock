@@ -6478,10 +6478,10 @@ react-native-gradle-plugin@^0.71.19:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.19.tgz#3379e28341fcd189bc1f4691cefc84c1a4d7d232"
   integrity sha512-1dVk9NwhoyKHCSxcrM6vY6cxmojeATsBobDicX0ZKr7DgUF2cBQRTKsimQFvzH8XhOVXyH8p4HyDSZNIFI8OlQ==
 
-react-native@0.71.11:
-  version "0.71.11"
-  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.71.11.tgz#c459f2b9ae775307c88a12b6dcee3cc4680a1dae"
-  integrity sha512-++8IxgUe4Ev+bTiFlLfJCdSoE5cReVP1DTpVJ8f/QtzaxA3h1008Y3Xah1Q5vsR4rZcYMO7Pn3af+wOshdQFug==
+react-native@0.71.12:
+  version "0.71.12"
+  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.71.12.tgz#a4a37de71931b5f483a15b8ab9114b9c01e1317d"
+  integrity sha512-1zDOTdalLepcVB8ZRIZpWlIGyyJISzAF4MIYSDdW7VDJtIRC7ybXsj/kSARF1zpGSg+LgAV8NMCZzGg598M7Iw==
   dependencies:
     "@jest/create-cache-key-function" "^29.2.1"
     "@react-native-community/cli" "10.2.4"
@@ -6492,6 +6492,7 @@ react-native@0.71.11:
     "@react-native/polyfills" "2.0.0"
     abort-controller "^3.0.0"
     anser "^1.4.9"
+    ansi-regex "^5.0.0"
     base64-js "^1.1.2"
     deprecated-react-native-prop-types "^3.0.1"
     event-target-shim "^5.0.1"
