@@ -31,6 +31,7 @@ yarn add @react-native-community/hooks
 - [useDeviceOrientation](https://github.com/react-native-community/hooks#usedeviceorientation)
 - [useLayout](https://github.com/react-native-community/hooks#uselayout)
 - [useRefresh](https://github.com/react-native-community/hooks#useRefresh)
+- [useLinking](https://github.com/react-native-community/hooks#useLinking)
 
 ### `useAccessibilityInfo`
 
@@ -151,6 +152,18 @@ const { isRefreshing, onRefresh } = useRefresh(fetch);
     />
   }
 />
+```
+
+### `useLinking`
+
+useLinking can handle incoming your app's deeplinks and opening external urls through the [`Linking`](https://reactnative.dev/docs/linking) API.
+
+```js
+import {useLinking} from '@react-native-community/hooks'
+
+const { deepLink, openLinkInBrowser } = useLinking()
+
+console.log('Initial deep link is:', deepLink)
 ```
 
 [version-badge]: https://img.shields.io/npm/v/@react-native-community/hooks.svg?style=flat-square
