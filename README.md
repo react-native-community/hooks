@@ -98,6 +98,9 @@ const keyboard = useKeyboard()
 
 console.log('keyboard isKeyboardShow: ', keyboard.keyboardShown)
 console.log('keyboard keyboardHeight: ', keyboard.keyboardHeight)
+console.log('keyboard keyboardShowing: ', keyboard.keyboardShowing)
+console.log('keyboard keyboardHiding: ', keyboard.keyboardHiding)
+
 ```
 
 ### `useInteractionManager`
