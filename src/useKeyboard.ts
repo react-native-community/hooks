@@ -1,44 +1,52 @@
 import {useEffect, useState} from 'react'
 import {Keyboard, KeyboardEventListener, KeyboardMetrics} from 'react-native'
 
-const emptyCoordinates = Object.freeze({
+const emptyCoordinates: KeyboardMetrics = Object.freeze({
   screenX: 0,
   screenY: 0,
   width: 0,
   height: 0,
 })
 const initialValue = {
-  start: emptyCoordinates,
+  start: emptyCoordinates as KeyboardMetrics | undefined,
   end: emptyCoordinates,
+}
+const defaultState = {
+  keyboardShown: false,
+  coordinates: initialValue,
+  keyboardHeight: 0,
 }
 
 export function useKeyboard() {
-  const [shown, setShown] = useState(false)
-  const [coordinates, setCoordinates] = useState<{
-    start: undefined | KeyboardMetrics
-    end: KeyboardMetrics
-  }>(initialValue)
-  const [keyboardHeight, setKeyboardHeight] = useState<number>(0)
+  const [state, setState] = useState(defaultState)
 
   const handleKeyboardWillShow: KeyboardEventListener = (e) => {
-    setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
+    setState((prevState) => ({
+      ...prevState,
+      coordinates: {start: e.startCoordinates, end: e.endCoordinates},
+    }))
   }
   const handleKeyboardDidShow: KeyboardEventListener = (e) => {
-    setShown(true)
-    setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
-    setKeyboardHeight(e.endCoordinates.height)
+    setState(() => ({
+      keyboardShown: true,
+      coordinates: {start: e.startCoordinates, end: e.endCoordinates},
+      keyboardHeight: e.endCoordinates.height,
+    }))
   }
   const handleKeyboardWillHide: KeyboardEventListener = (e) => {
-    setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
+    setState((prevState) => ({
+      ...prevState,
+      coordinates: {start: e.startCoordinates, end: e.endCoordinates},
+    }))
   }
   const handleKeyboardDidHide: KeyboardEventListener = (e) => {
-    setShown(false)
-    if (e) {
-      setCoordinates({start: e.startCoordinates, end: e.endCoordinates})
-    } else {
-      setCoordinates(initialValue)
-      setKeyboardHeight(0)
-    }
+    setState((prevState) => ({
+      keyboardShown: false,
+      coordinates: e
+        ? {start: e.startCoordinates, end: e.endCoordinates}
+        : initialValue,
+      keyboardHeight: e ? prevState.keyboardHeight : 0,
+    }))
   }
 
   useEffect(() => {
@@ -54,9 +62,5 @@ export function useKeyboard() {
     }
   }, [])
 
-  return {
-    keyboardShown: shown,
-    coordinates,
-    keyboardHeight,
-  }
+  return state
 }
