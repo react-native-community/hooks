@@ -2,16 +2,20 @@ import {useBackHandler} from './useBackHandler'
 import {renderHook} from '@testing-library/react-hooks'
 import {BackHandler} from 'react-native'
 
+const removeEventListenerMock = jest.fn()
+
 jest.mock('react-native', () => ({
   BackHandler: {
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
+    addEventListener: jest.fn().mockImplementation(() => {
+      return {
+        remove: removeEventListenerMock,
+      }
+    }),
   },
 }))
 
 describe('useBackHandler', () => {
   const addEventListenerMock = BackHandler.addEventListener as jest.Mock
-  const removeEventListenerMock = BackHandler.removeEventListener as jest.Mock
 
   beforeEach(() => {
     jest.clearAllMocks()
@@ -40,7 +44,7 @@ describe('useBackHandler', () => {
 
     rerender({handler: handler2})
 
-    expect(removeEventListenerMock).toBeCalledWith('hardwareBackPress', handler)
+    expect(removeEventListenerMock).toBeCalledTimes(1)
     expect(addEventListenerMock).toBeCalledWith('hardwareBackPress', handler2)
   })
 
@@ -56,6 +60,5 @@ describe('useBackHandler', () => {
     unmount()
 
     expect(removeEventListenerMock).toBeCalledTimes(1)
-    expect(removeEventListenerMock).toBeCalledWith('hardwareBackPress', handler)
   })
 })
