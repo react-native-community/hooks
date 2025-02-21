@@ -1,300 +1,288 @@
-import {useAccessibilityInfo} from './useAccessibilityInfo'
-import {act, renderHook} from '@testing-library/react-hooks'
-import {AccessibilityChangeEventName, AccessibilityInfo} from 'react-native'
-
-describe('useAccessibilityInfo', () => {
-  const mockAddEventListener = AccessibilityInfo.addEventListener as jest.Mock
-
-  const mockIsBoldTextEnabled = AccessibilityInfo.isBoldTextEnabled as jest.Mock
-  const mockIsGrayscaleEnabled =
-    AccessibilityInfo.isGrayscaleEnabled as jest.Mock
-  const mockIsInvertColorsEnabled =
-    AccessibilityInfo.isInvertColorsEnabled as jest.Mock
-  const mockIsReduceMotionEnabled =
-    AccessibilityInfo.isReduceMotionEnabled as jest.Mock
-  const mockIsReduceTransparencyEnabled =
-    AccessibilityInfo.isReduceTransparencyEnabled as jest.Mock
-  const mockIsScreenReaderEnabled =
-    AccessibilityInfo.isScreenReaderEnabled as jest.Mock
-
-  const createEmitChangeEvent = (event: AccessibilityChangeEventName) => {
-    let handler: (value: boolean) => void
-
-    mockAddEventListener.mockImplementation((eventName, fn) => {
-      if (eventName === event) {
-        handler = fn
-      }
-    })
-
-    return (value: boolean) => handler(value)
-  }
-
-  beforeAll(() => {
-    mockIsBoldTextEnabled.mockResolvedValue(false)
-    mockIsGrayscaleEnabled.mockResolvedValue(false)
-    mockIsInvertColorsEnabled.mockResolvedValue(false)
-    mockIsReduceMotionEnabled.mockResolvedValue(false)
-    mockIsReduceTransparencyEnabled.mockResolvedValue(false)
-    mockIsScreenReaderEnabled.mockResolvedValue(false)
-  })
-
-  describe('screenReaderEnabled', () => {
-    it('should return undefined until promise will be resolved', async () => {
-      const {result} = renderHook(
-        () => useAccessibilityInfo().screenReaderEnabled,
-      )
-
-      expect(result.current).toBeUndefined()
-    })
+import { useAccessibilityInfo } from "./useAccessibilityInfo"
+import { act, renderHook } from "@testing-library/react-hooks"
+import { AccessibilityChangeEventName, AccessibilityInfo } from "react-native"
 
-    it('should return default value', async () => {
-      const defaultValue = true
+describe("useAccessibilityInfo", () => {
+	const mockAddEventListener = AccessibilityInfo.addEventListener as jest.Mock
+
+	const mockIsBoldTextEnabled = AccessibilityInfo.isBoldTextEnabled as jest.Mock
+	const mockIsGrayscaleEnabled = AccessibilityInfo.isGrayscaleEnabled as jest.Mock
+	const mockIsInvertColorsEnabled = AccessibilityInfo.isInvertColorsEnabled as jest.Mock
+	const mockIsReduceMotionEnabled = AccessibilityInfo.isReduceMotionEnabled as jest.Mock
+	const mockIsReduceTransparencyEnabled =
+		AccessibilityInfo.isReduceTransparencyEnabled as jest.Mock
+	const mockIsScreenReaderEnabled = AccessibilityInfo.isScreenReaderEnabled as jest.Mock
 
-      mockIsScreenReaderEnabled.mockResolvedValueOnce(defaultValue)
-
-      const {result, waitForNextUpdate} = renderHook(
-        () => useAccessibilityInfo().screenReaderEnabled,
-      )
-
-      await waitForNextUpdate() // wait when promise will be resolved
+	const createEmitChangeEvent = (event: AccessibilityChangeEventName) => {
+		let handler: (value: boolean) => void
 
-      expect(result.current).toBe(defaultValue)
-    })
+		mockAddEventListener.mockImplementation((eventName, fn) => {
+			if (eventName === event) {
+				handler = fn
+			}
+		})
 
-    it('should update value when it change', async () => {
-      const newValue = true
-      const emit = createEmitChangeEvent('screenReaderChanged')
-      const {result, waitForNextUpdate} = renderHook(
-        () => useAccessibilityInfo().screenReaderEnabled,
-      )
-      await waitForNextUpdate() // wait when promise will be resolved
+		return (value: boolean) => handler(value)
+	}
 
-      const {current: initial} = result
+	beforeAll(() => {
+		mockIsBoldTextEnabled.mockResolvedValue(false)
+		mockIsGrayscaleEnabled.mockResolvedValue(false)
+		mockIsInvertColorsEnabled.mockResolvedValue(false)
+		mockIsReduceMotionEnabled.mockResolvedValue(false)
+		mockIsReduceTransparencyEnabled.mockResolvedValue(false)
+		mockIsScreenReaderEnabled.mockResolvedValue(false)
+	})
 
-      act(() => emit(newValue))
-
-      const {current: afterUpdate} = result
+	describe("screenReaderEnabled", () => {
+		it("should return undefined until promise will be resolved", async () => {
+			const { result } = renderHook(() => useAccessibilityInfo().screenReaderEnabled)
 
-      expect({initial, afterUpdate}).toEqual({
-        initial: false,
-        afterUpdate: newValue,
-      })
-    })
-  })
+			expect(result.current).toBeUndefined()
+		})
 
-  describe('grayscaleEnabled', () => {
-    it('should return undefined until promise will be resolved', async () => {
-      const {result} = renderHook(() => useAccessibilityInfo().grayscaleEnabled)
+		it("should return default value", async () => {
+			const defaultValue = true
 
-      expect(result.current).toBeUndefined()
-    })
+			mockIsScreenReaderEnabled.mockResolvedValueOnce(defaultValue)
 
-    it('should return default value', async () => {
-      const defaultValue = true
+			const { result, waitForNextUpdate } = renderHook(
+				() => useAccessibilityInfo().screenReaderEnabled,
+			)
 
-      mockIsGrayscaleEnabled.mockResolvedValueOnce(defaultValue)
+			await waitForNextUpdate() // wait when promise will be resolved
 
-      const {result, waitForNextUpdate} = renderHook(
-        () => useAccessibilityInfo().grayscaleEnabled,
-      )
+			expect(result.current).toBe(defaultValue)
+		})
 
-      await waitForNextUpdate() // wait when promise will be resolved
+		it("should update value when it change", async () => {
+			const newValue = true
+			const emit = createEmitChangeEvent("screenReaderChanged")
+			const { result, waitForNextUpdate } = renderHook(
+				() => useAccessibilityInfo().screenReaderEnabled,
+			)
+			await waitForNextUpdate() // wait when promise will be resolved
 
-      expect(result.current).toBe(defaultValue)
-    })
+			const { current: initial } = result
 
-    it('should update value when it change', async () => {
-      const newValue = true
-      const emit = createEmitChangeEvent('grayscaleChanged')
-      const {result, waitForNextUpdate} = renderHook(
-        () => useAccessibilityInfo().grayscaleEnabled,
-      )
-      await waitForNextUpdate() // wait when promise will be resolved
+			act(() => emit(newValue))
 
-      const {current: initial} = result
+			const { current: afterUpdate } = result
 
-      act(() => emit(newValue))
+			expect({ initial, afterUpdate }).toEqual({
+				initial: false,
+				afterUpdate: newValue,
+			})
+		})
+	})
 
-      const {current: afterUpdate} = result
+	describe("grayscaleEnabled", () => {
+		it("should return undefined until promise will be resolved", async () => {
+			const { result } = renderHook(() => useAccessibilityInfo().grayscaleEnabled)
 
-      expect({initial, afterUpdate}).toEqual({
-        initial: false,
-        afterUpdate: newValue,
-      })
-    })
-  })
+			expect(result.current).toBeUndefined()
+		})
 
-  describe('invertColorsEnabled', () => {
-    it('should return undefined until promise will be resolved', async () => {
-      const {result} = renderHook(
-        () => useAccessibilityInfo().invertColorsEnabled,
-      )
+		it("should return default value", async () => {
+			const defaultValue = true
 
-      expect(result.current).toBeUndefined()
-    })
+			mockIsGrayscaleEnabled.mockResolvedValueOnce(defaultValue)
 
-    it('should return default value', async () => {
-      const defaultValue = true
+			const { result, waitForNextUpdate } = renderHook(
+				() => useAccessibilityInfo().grayscaleEnabled,
+			)
 
-      mockIsInvertColorsEnabled.mockResolvedValueOnce(defaultValue)
+			await waitForNextUpdate() // wait when promise will be resolved
 
-      const {result, waitForNextUpdate} = renderHook(
-        () => useAccessibilityInfo().invertColorsEnabled,
-      )
+			expect(result.current).toBe(defaultValue)
+		})
 
-      await waitForNextUpdate() // wait when promise will be resolved
+		it("should update value when it change", async () => {
+			const newValue = true
+			const emit = createEmitChangeEvent("grayscaleChanged")
+			const { result, waitForNextUpdate } = renderHook(
+				() => useAccessibilityInfo().grayscaleEnabled,
+			)
+			await waitForNextUpdate() // wait when promise will be resolved
 
-      expect(result.current).toBe(defaultValue)
-    })
+			const { current: initial } = result
 
-    it('should update value when it change', async () => {
-      const newValue = true
-      const emit = createEmitChangeEvent('invertColorsChanged')
-      const {result, waitForNextUpdate} = renderHook(
-        () => useAccessibilityInfo().invertColorsEnabled,
-      )
-      await waitForNextUpdate() // wait when promise will be resolved
+			act(() => emit(newValue))
 
-      const {current: initial} = result
+			const { current: afterUpdate } = result
 
-      act(() => emit(newValue))
+			expect({ initial, afterUpdate }).toEqual({
+				initial: false,
+				afterUpdate: newValue,
+			})
+		})
+	})
 
-      const {current: afterUpdate} = result
+	describe("invertColorsEnabled", () => {
+		it("should return undefined until promise will be resolved", async () => {
+			const { result } = renderHook(() => useAccessibilityInfo().invertColorsEnabled)
 
-      expect({initial, afterUpdate}).toEqual({
-        initial: false,
-        afterUpdate: newValue,
-      })
-    })
-  })
+			expect(result.current).toBeUndefined()
+		})
 
-  describe('reduceMotionEnabled', () => {
-    it('should return undefined until promise will be resolved', async () => {
-      const {result} = renderHook(
-        () => useAccessibilityInfo().reduceMotionEnabled,
-      )
+		it("should return default value", async () => {
+			const defaultValue = true
 
-      expect(result.current).toBeUndefined()
-    })
+			mockIsInvertColorsEnabled.mockResolvedValueOnce(defaultValue)
 
-    it('should return default value', async () => {
-      const defaultValue = true
+			const { result, waitForNextUpdate } = renderHook(
+				() => useAccessibilityInfo().invertColorsEnabled,
+			)
 
-      mockIsReduceMotionEnabled.mockResolvedValueOnce(defaultValue)
+			await waitForNextUpdate() // wait when promise will be resolved
 
-      const {result, waitForNextUpdate} = renderHook(
-        () => useAccessibilityInfo().reduceMotionEnabled,
-      )
+			expect(result.current).toBe(defaultValue)
+		})
 
-      await waitForNextUpdate() // wait when promise will be resolved
+		it("should update value when it change", async () => {
+			const newValue = true
+			const emit = createEmitChangeEvent("invertColorsChanged")
+			const { result, waitForNextUpdate } = renderHook(
+				() => useAccessibilityInfo().invertColorsEnabled,
+			)
+			await waitForNextUpdate() // wait when promise will be resolved
 
-      expect(result.current).toBe(defaultValue)
-    })
+			const { current: initial } = result
 
-    it('should update value when it change', async () => {
-      const newValue = true
-      const emit = createEmitChangeEvent('reduceMotionChanged')
-      const {result, waitForNextUpdate} = renderHook(
-        () => useAccessibilityInfo().reduceMotionEnabled,
-      )
-      await waitForNextUpdate() // wait when promise will be resolved
+			act(() => emit(newValue))
 
-      const {current: initial} = result
+			const { current: afterUpdate } = result
 
-      act(() => emit(newValue))
+			expect({ initial, afterUpdate }).toEqual({
+				initial: false,
+				afterUpdate: newValue,
+			})
+		})
+	})
 
-      const {current: afterUpdate} = result
+	describe("reduceMotionEnabled", () => {
+		it("should return undefined until promise will be resolved", async () => {
+			const { result } = renderHook(() => useAccessibilityInfo().reduceMotionEnabled)
 
-      expect({initial, afterUpdate}).toEqual({
-        initial: false,
-        afterUpdate: newValue,
-      })
-    })
-  })
+			expect(result.current).toBeUndefined()
+		})
 
-  describe('reduceTransparencyEnabled', () => {
-    it('should return undefined until promise will be resolved', async () => {
-      const {result} = renderHook(
-        () => useAccessibilityInfo().reduceTransparencyEnabled,
-      )
+		it("should return default value", async () => {
+			const defaultValue = true
 
-      expect(result.current).toBeUndefined()
-    })
+			mockIsReduceMotionEnabled.mockResolvedValueOnce(defaultValue)
 
-    it('should return default value', async () => {
-      const defaultValue = true
+			const { result, waitForNextUpdate } = renderHook(
+				() => useAccessibilityInfo().reduceMotionEnabled,
+			)
 
-      mockIsReduceTransparencyEnabled.mockResolvedValueOnce(defaultValue)
+			await waitForNextUpdate() // wait when promise will be resolved
 
-      const {result, waitForNextUpdate} = renderHook(
-        () => useAccessibilityInfo().reduceTransparencyEnabled,
-      )
+			expect(result.current).toBe(defaultValue)
+		})
 
-      await waitForNextUpdate() // wait when promise will be resolved
+		it("should update value when it change", async () => {
+			const newValue = true
+			const emit = createEmitChangeEvent("reduceMotionChanged")
+			const { result, waitForNextUpdate } = renderHook(
+				() => useAccessibilityInfo().reduceMotionEnabled,
+			)
+			await waitForNextUpdate() // wait when promise will be resolved
 
-      expect(result.current).toBe(defaultValue)
-    })
+			const { current: initial } = result
 
-    it('should update value when it change', async () => {
-      const newValue = true
-      const emit = createEmitChangeEvent('reduceTransparencyChanged')
-      const {result, waitForNextUpdate} = renderHook(
-        () => useAccessibilityInfo().reduceTransparencyEnabled,
-      )
-      await waitForNextUpdate() // wait when promise will be resolved
+			act(() => emit(newValue))
 
-      const {current: initial} = result
+			const { current: afterUpdate } = result
 
-      act(() => emit(newValue))
+			expect({ initial, afterUpdate }).toEqual({
+				initial: false,
+				afterUpdate: newValue,
+			})
+		})
+	})
 
-      const {current: afterUpdate} = result
+	describe("reduceTransparencyEnabled", () => {
+		it("should return undefined until promise will be resolved", async () => {
+			const { result } = renderHook(() => useAccessibilityInfo().reduceTransparencyEnabled)
 
-      expect({initial, afterUpdate}).toEqual({
-        initial: false,
-        afterUpdate: newValue,
-      })
-    })
-  })
+			expect(result.current).toBeUndefined()
+		})
 
-  describe('boldTextEnabled', () => {
-    it('should return undefined until promise will be resolved', async () => {
-      const {result} = renderHook(() => useAccessibilityInfo().boldTextEnabled)
+		it("should return default value", async () => {
+			const defaultValue = true
 
-      expect(result.current).toBeUndefined()
-    })
+			mockIsReduceTransparencyEnabled.mockResolvedValueOnce(defaultValue)
 
-    it('should return default value', async () => {
-      const defaultValue = true
+			const { result, waitForNextUpdate } = renderHook(
+				() => useAccessibilityInfo().reduceTransparencyEnabled,
+			)
 
-      mockIsBoldTextEnabled.mockResolvedValueOnce(defaultValue)
+			await waitForNextUpdate() // wait when promise will be resolved
 
-      const {result, waitForNextUpdate} = renderHook(
-        () => useAccessibilityInfo().boldTextEnabled,
-      )
+			expect(result.current).toBe(defaultValue)
+		})
 
-      await waitForNextUpdate() // wait when promise will be resolved
+		it("should update value when it change", async () => {
+			const newValue = true
+			const emit = createEmitChangeEvent("reduceTransparencyChanged")
+			const { result, waitForNextUpdate } = renderHook(
+				() => useAccessibilityInfo().reduceTransparencyEnabled,
+			)
+			await waitForNextUpdate() // wait when promise will be resolved
 
-      expect(result.current).toBe(defaultValue)
-    })
+			const { current: initial } = result
 
-    it('should update value when it change', async () => {
-      const newValue = true
-      const emit = createEmitChangeEvent('boldTextChanged')
-      const {result, waitForNextUpdate} = renderHook(
-        () => useAccessibilityInfo().boldTextEnabled,
-      )
-      await waitForNextUpdate() // wait when promise will be resolved
+			act(() => emit(newValue))
 
-      const {current: initial} = result
+			const { current: afterUpdate } = result
 
-      act(() => emit(newValue))
+			expect({ initial, afterUpdate }).toEqual({
+				initial: false,
+				afterUpdate: newValue,
+			})
+		})
+	})
 
-      const {current: afterUpdate} = result
+	describe("boldTextEnabled", () => {
+		it("should return undefined until promise will be resolved", async () => {
+			const { result } = renderHook(() => useAccessibilityInfo().boldTextEnabled)
 
-      expect({initial, afterUpdate}).toEqual({
-        initial: false,
-        afterUpdate: newValue,
-      })
-    })
-  })
+			expect(result.current).toBeUndefined()
+		})
+
+		it("should return default value", async () => {
+			const defaultValue = true
+
+			mockIsBoldTextEnabled.mockResolvedValueOnce(defaultValue)
+
+			const { result, waitForNextUpdate } = renderHook(
+				() => useAccessibilityInfo().boldTextEnabled,
+			)
+
+			await waitForNextUpdate() // wait when promise will be resolved
+
+			expect(result.current).toBe(defaultValue)
+		})
+
+		it("should update value when it change", async () => {
+			const newValue = true
+			const emit = createEmitChangeEvent("boldTextChanged")
+			const { result, waitForNextUpdate } = renderHook(
+				() => useAccessibilityInfo().boldTextEnabled,
+			)
+			await waitForNextUpdate() // wait when promise will be resolved
+
+			const { current: initial } = result
+
+			act(() => emit(newValue))
+
+			const { current: afterUpdate } = result
+
+			expect({ initial, afterUpdate }).toEqual({
+				initial: false,
+				afterUpdate: newValue,
+			})
+		})
+	})
 })
