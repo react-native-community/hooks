@@ -1,4 +1,10 @@
-# v3.0.0 (Wed Feb 01 2023)
+# React Native Hooks
+
+## 100.0.0
+
+### Epoch Changes
+
+- a bunch of deps bumped, and epoch semver
 
 ## 3.1.0
 
