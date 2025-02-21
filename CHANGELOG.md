@@ -1,5 +1,11 @@
 # React Native Hooks
 
+## 100.0.1
+
+### Patch Changes
+
+- a3b0915: test for canary
+
 ## 100.0.0
 
 ### Epoch Changes
