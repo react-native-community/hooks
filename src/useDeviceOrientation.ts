@@ -1,12 +1,12 @@
-import {useWindowDimensions} from 'react-native'
+import { useWindowDimensions } from "react-native"
 
-type DeviceOrientation = 'portrait' | 'landscape'
+type DeviceOrientation = "portrait" | "landscape"
 
 export function useDeviceOrientation(): DeviceOrientation {
-  const {width, height} = useWindowDimensions()
+	const { width, height } = useWindowDimensions()
 
-  if (width >= height) {
-    return 'landscape'
-  }
-  return 'portrait'
+	if (width >= height) {
+		return "landscape"
+	}
+	return "portrait"
 }

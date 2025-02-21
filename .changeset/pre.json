@@ -1,0 +1,10 @@
+{
+  "mode": "exit",
+  "tag": "canary",
+  "initialVersions": {
+    "@react-native-community/hooks": "100.0.0"
+  },
+  "changesets": [
+    "two-pets-allow"
+  ]
+}

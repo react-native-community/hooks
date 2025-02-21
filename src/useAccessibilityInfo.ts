@@ -1,72 +1,63 @@
-import {useEffect, useState} from 'react'
-import {AccessibilityInfo, AccessibilityChangeEventName} from 'react-native'
+import { useEffect, useState } from "react"
+import { AccessibilityInfo, AccessibilityChangeEventName } from "react-native"
 
 type AccessibilityInfoStaticInitializers =
-  | 'isBoldTextEnabled'
-  | 'isScreenReaderEnabled'
-  | 'isGrayscaleEnabled'
-  | 'isInvertColorsEnabled'
-  | 'isReduceMotionEnabled'
-  | 'isReduceTransparencyEnabled'
+	| "isBoldTextEnabled"
+	| "isScreenReaderEnabled"
+	| "isGrayscaleEnabled"
+	| "isInvertColorsEnabled"
+	| "isReduceMotionEnabled"
+	| "isReduceTransparencyEnabled"
 
 function useAccessibilityStateListener(
-  eventName: AccessibilityChangeEventName,
-  initializerName: AccessibilityInfoStaticInitializers,
+	eventName: AccessibilityChangeEventName,
+	initializerName: AccessibilityInfoStaticInitializers,
 ) {
-  const [isEnabled, setIsEnabled] = useState<boolean | undefined>(undefined)
+	const [isEnabled, setIsEnabled] = useState<boolean | undefined>(undefined)
 
-  useEffect(() => {
-    if (!AccessibilityInfo[initializerName]) {
-      return
-    }
+	useEffect(() => {
+		if (!AccessibilityInfo[initializerName]) {
+			return
+		}
 
-    AccessibilityInfo[initializerName]().then(setIsEnabled)
+		AccessibilityInfo[initializerName]().then(setIsEnabled)
 
-    const subscription = AccessibilityInfo.addEventListener(
-      eventName,
-      setIsEnabled,
-    )
+		const subscription = AccessibilityInfo.addEventListener(eventName, setIsEnabled)
 
-    return () => {
-      subscription.remove()
-    }
-  }, [eventName, initializerName])
+		return () => {
+			subscription.remove()
+		}
+	}, [eventName, initializerName])
 
-  return isEnabled
+	return isEnabled
 }
 
 export function useAccessibilityInfo() {
-  const boldTextEnabled = useAccessibilityStateListener(
-    'boldTextChanged',
-    'isBoldTextEnabled',
-  )
-  const grayscaleEnabled = useAccessibilityStateListener(
-    'grayscaleChanged',
-    'isGrayscaleEnabled',
-  )
-  const invertColorsEnabled = useAccessibilityStateListener(
-    'invertColorsChanged',
-    'isInvertColorsEnabled',
-  )
-  const reduceMotionEnabled = useAccessibilityStateListener(
-    'reduceMotionChanged',
-    'isReduceMotionEnabled',
-  )
-  const reduceTransparencyEnabled = useAccessibilityStateListener(
-    'reduceTransparencyChanged',
-    'isReduceTransparencyEnabled',
-  )
-  const screenReaderEnabled = useAccessibilityStateListener(
-    'screenReaderChanged',
-    'isScreenReaderEnabled',
-  )
+	const boldTextEnabled = useAccessibilityStateListener("boldTextChanged", "isBoldTextEnabled")
+	const grayscaleEnabled = useAccessibilityStateListener("grayscaleChanged", "isGrayscaleEnabled")
+	const invertColorsEnabled = useAccessibilityStateListener(
+		"invertColorsChanged",
+		"isInvertColorsEnabled",
+	)
+	const reduceMotionEnabled = useAccessibilityStateListener(
+		"reduceMotionChanged",
+		"isReduceMotionEnabled",
+	)
+	const reduceTransparencyEnabled = useAccessibilityStateListener(
+		"reduceTransparencyChanged",
+		"isReduceTransparencyEnabled",
+	)
+	const screenReaderEnabled = useAccessibilityStateListener(
+		"screenReaderChanged",
+		"isScreenReaderEnabled",
+	)
 
-  return {
-    screenReaderEnabled,
-    grayscaleEnabled,
-    invertColorsEnabled,
-    reduceMotionEnabled,
-    reduceTransparencyEnabled,
-    boldTextEnabled,
-  }
+	return {
+		screenReaderEnabled,
+		grayscaleEnabled,
+		invertColorsEnabled,
+		reduceMotionEnabled,
+		reduceTransparencyEnabled,
+		boldTextEnabled,
+	}
 }
