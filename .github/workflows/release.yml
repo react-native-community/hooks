@@ -21,6 +21,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
+          title: "Version bump and Release"
           publish: bun run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
