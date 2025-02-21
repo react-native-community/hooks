@@ -13,7 +13,7 @@ jest.mock("react-native", () => ({
 describe("useAppState", () => {
 	const addEventListenerMock = AppState.addEventListener as jest.Mock
 	const createEmitAppStateChange = () => {
-		let listener: (newStatus: AppStateStatus) => {}
+		let listener: (newStatus: AppStateStatus) => void
 
 		addEventListenerMock.mockImplementationOnce((_, fn) => {
 			listener = fn
