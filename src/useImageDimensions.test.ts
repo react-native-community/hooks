@@ -17,11 +17,7 @@ describe("useImageDimensions", () => {
 		it("should invoke getSize with with passed uri", () => {
 			renderHook(() => useImageDimensions(mockSource))
 
-			expect(getSizeMock).toBeCalledWith(
-				mockSource.uri,
-				expect.any(Function),
-				expect.any(Function),
-			)
+			expect(getSizeMock).toBeCalledWith(mockSource.uri, expect.any(Function), expect.any(Function))
 		})
 
 		it("should return error when cannot get image size", () => {

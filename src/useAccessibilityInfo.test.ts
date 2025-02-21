@@ -9,8 +9,7 @@ describe("useAccessibilityInfo", () => {
 	const mockIsGrayscaleEnabled = AccessibilityInfo.isGrayscaleEnabled as jest.Mock
 	const mockIsInvertColorsEnabled = AccessibilityInfo.isInvertColorsEnabled as jest.Mock
 	const mockIsReduceMotionEnabled = AccessibilityInfo.isReduceMotionEnabled as jest.Mock
-	const mockIsReduceTransparencyEnabled =
-		AccessibilityInfo.isReduceTransparencyEnabled as jest.Mock
+	const mockIsReduceTransparencyEnabled = AccessibilityInfo.isReduceTransparencyEnabled as jest.Mock
 	const mockIsScreenReaderEnabled = AccessibilityInfo.isScreenReaderEnabled as jest.Mock
 
 	const createEmitChangeEvent = (event: AccessibilityChangeEventName) => {
@@ -256,9 +255,7 @@ describe("useAccessibilityInfo", () => {
 
 			mockIsBoldTextEnabled.mockResolvedValueOnce(defaultValue)
 
-			const { result, waitForNextUpdate } = renderHook(
-				() => useAccessibilityInfo().boldTextEnabled,
-			)
+			const { result, waitForNextUpdate } = renderHook(() => useAccessibilityInfo().boldTextEnabled)
 
 			await waitForNextUpdate() // wait when promise will be resolved
 
@@ -268,9 +265,7 @@ describe("useAccessibilityInfo", () => {
 		it("should update value when it change", async () => {
 			const newValue = true
 			const emit = createEmitChangeEvent("boldTextChanged")
-			const { result, waitForNextUpdate } = renderHook(
-				() => useAccessibilityInfo().boldTextEnabled,
-			)
+			const { result, waitForNextUpdate } = renderHook(() => useAccessibilityInfo().boldTextEnabled)
 			await waitForNextUpdate() // wait when promise will be resolved
 
 			const { current: initial } = result
