@@ -1,5 +1,11 @@
 # React Native Hooks
 
+## 100.1.0
+
+### Minor Changes
+
+- 56bdf51: dep list on useBackHandler
+
 ## 100.0.1
 
 ### Patch Changes
