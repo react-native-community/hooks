@@ -12,7 +12,7 @@
         "@types/jest": "29.5.3",
         "@types/react": "18.2.20",
         "@types/react-native": "0.72.2",
-        "all-contributors-cli": "6.25.1",
+        "all-contributors-cli": "6.26.1",
         "auto": "10.46.0",
         "eslint": "8.41.0",
         "eslint-plugin-prettier": "4.2.1",
@@ -545,7 +545,7 @@
 
     "ajv": ["ajv@6.12.6", "", { "dependencies": { "fast-deep-equal": "^3.1.1", "fast-json-stable-stringify": "^2.0.0", "json-schema-traverse": "^0.4.1", "uri-js": "^4.2.2" } }, "sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g=="],
 
-    "all-contributors-cli": ["all-contributors-cli@6.25.1", "", { "dependencies": { "@babel/runtime": "^7.7.6", "async": "^3.1.0", "chalk": "^4.0.0", "didyoumean": "^1.2.1", "inquirer": "^7.3.3", "json-fixer": "^1.6.8", "lodash": "^4.11.2", "node-fetch": "^2.6.0", "pify": "^5.0.0", "yargs": "^15.0.1" }, "bin": { "all-contributors": "dist/cli.js" } }, "sha512-Q9MfsO6FH09h71IG6OobfESA7lbooB3/bnO2wnuXbLPye1lFsYsa/jpNZP0YBx6zbhwXqqm6CXRZ9HO/tmD4NQ=="],
+    "all-contributors-cli": ["all-contributors-cli@6.26.1", "", { "dependencies": { "@babel/runtime": "^7.7.6", "async": "^3.1.0", "chalk": "^4.0.0", "didyoumean": "^1.2.1", "inquirer": "^7.3.3", "json-fixer": "^1.6.8", "lodash": "^4.11.2", "node-fetch": "^2.6.0", "pify": "^5.0.0", "yargs": "^15.0.1" }, "optionalDependencies": { "prettier": "^2" }, "bin": { "all-contributors": "dist/cli.js" } }, "sha512-Ymgo3FJACRBEd1eE653FD1J/+uD0kqpUNYfr9zNC1Qby0LgbhDBzB3EF6uvkAbYpycStkk41J+0oo37Lc02yEw=="],
 
     "anser": ["anser@1.4.10", "", {}, "sha512-hCv9AqTQ8ycjpSd3upOJd7vFwW1JaoYQ7tpham03GJ1ca8/65rqn0RpaWpItOAd6ylW9wAw6luXYPJIyPFVOww=="],
 
