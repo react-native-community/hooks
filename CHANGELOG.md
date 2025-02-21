@@ -1,5 +1,11 @@
 # v3.0.0 (Wed Feb 01 2023)
 
+## 3.1.0
+
+### Minor Changes
+
+- 6f153b8: new version
+
 :tada: This release contains work from a new contributor! :tada:
 
 Thank you, Babis Kanellopoulos ([@kanelloc](https://github.com/kanelloc)), for all your work!
@@ -9,6 +15,7 @@ Thank you, Babis Kanellopoulos ([@kanelloc](https://github.com/kanelloc)), for a
 #### upgrades and types ([#322](https://github.com/react-native-community/hooks/pull/322))
 
 ### Breaking Changes
+
 - `useCameraRoll` was removed. Use `useCameraRoll` from [`@react-native-camera-roll/camera-roll`](https://github.com/react-native-cameraroll/react-native-cameraroll#usecameraroll).
 - `useClipboard` was removed. Use `useClipboard` from [`@react-native-clipboard/clipboard`](https://github.com/react-native-clipboard/clipboard#useclipboard).
 - `useDimensions` was removed. Use `useWindowDimensions` from [`react-native`](https://reactnative.dev/docs/usewindowdimensions).
@@ -237,7 +244,7 @@ Thank you, null[@Greg-Bush](https://github.com/Greg-Bush), for all your work!
 
 - useImageDimensions [#87](https://github.com/react-native-community/hooks/pull/87) ([@Greg-Bush](https://github.com/Greg-Bush) [@pvinis](https://github.com/pvinis) [@LinusU](https://github.com/LinusU))
 
-#### ⚠️  Pushed to `master`
+#### ⚠️ Pushed to `master`
 
 - Merge branch 'master' of github.com:react-native-community/hooks ([@pvinis](https://github.com/pvinis))
 - upgrade ([@pvinis](https://github.com/pvinis))
@@ -285,7 +292,7 @@ Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot
 - Update dependency auto to v9.22.4 [#122](https://github.com/react-native-community/hooks/pull/122) ([@renovate-bot](https://github.com/renovate-bot))
 - Update dependency auto to v9.22.2 [#121](https://github.com/react-native-community/hooks/pull/121) ([@renovate-bot](https://github.com/renovate-bot))
 
-#### ⚠️  Pushed to `master`
+#### ⚠️ Pushed to `master`
 
 - dont worry about canary, since we cant publish from forks ([@pvinis](https://github.com/pvinis))
 
@@ -329,7 +336,7 @@ Thanks for all your work!
 - Update dependency @auto-it/all-contributors to v9.20.1 [#92](https://github.com/react-native-community/hooks/pull/92) ([@renovate-bot](https://github.com/renovate-bot))
 - Update react monorepo to v16.13.1 [#91](https://github.com/react-native-community/hooks/pull/91) ([@renovate-bot](https://github.com/renovate-bot))
 
-#### ⚠️  Pushed to `master`
+#### ⚠️ Pushed to `master`
 
 - get rid of some shadowing ([@pvinis](https://github.com/pvinis))
 - bump pretteir ([@pvinis](https://github.com/pvinis))
@@ -395,7 +402,7 @@ Thank you, WhiteSource Renovate ([@renovate-bot](https://github.com/renovate-bot
 
 # v2.4.5 (Mon Mar 16 2020)
 
-#### 🐛  Bug Fix
+#### 🐛 Bug Fix
 
 - Use a global list of clipboard listeners [#76](https://github.com/react-native-community/hooks/pull/76) ([@LinusU](https://github.com/LinusU))
 
@@ -415,7 +422,7 @@ Thanks for all your work!
 
 :heart: Pierre Skowron ([@pistou](https://github.com/pistou))
 
-#### 🐛  Bug Fix
+#### 🐛 Bug Fix
 
 - Bump acorn from 6.4.0 to 6.4.1 [#78](https://github.com/react-native-community/hooks/pull/78) ([@dependabot[bot]](https://github.com/dependabot[bot]))
 - Create PULL_REQUEST_TEMPLATE.md [#77](https://github.com/react-native-community/hooks/pull/77) ([@LinusU](https://github.com/LinusU))
@@ -424,10 +431,10 @@ Thanks for all your work!
 - Update auto + add initial contributor table [#73](https://github.com/react-native-community/hooks/pull/73) ([@hipstersmoothie](https://github.com/hipstersmoothie) [@pvinis](https://github.com/pvinis))
 - put in file [#74](https://github.com/react-native-community/hooks/pull/74) ([@pvinis](https://github.com/pvinis))
 
-#### ⚠️  Pushed to master
+#### ⚠️ Pushed to master
 
-- lint  ([@pvinis](https://github.com/pvinis))
-- Update README.md  ([@pvinis](https://github.com/pvinis))
+- lint ([@pvinis](https://github.com/pvinis))
+- Update README.md ([@pvinis](https://github.com/pvinis))
 
 #### Authors: 6
 
@@ -442,16 +449,16 @@ Thanks for all your work!
 
 # v2.4.3 (Sat Feb 22 2020)
 
-#### 🐛  Bug Fix
+#### 🐛 Bug Fix
 
 - upg [#72](https://github.com/react-native-community/hooks/pull/72) ([@pvinis](https://github.com/pvinis))
 - aha [#71](https://github.com/react-native-community/hooks/pull/71) ([@pvinis](https://github.com/pvinis))
 
-#### ⚠️  Pushed to master
+#### ⚠️ Pushed to master
 
-- use v prefix :(  ([@pvinis](https://github.com/pvinis))
-- Merge branch 'master' of github.com:react-native-community/hooks  ([@pvinis](https://github.com/pvinis))
-- Revert "move config out"  ([@pvinis](https://github.com/pvinis))
+- use v prefix :( ([@pvinis](https://github.com/pvinis))
+- Merge branch 'master' of github.com:react-native-community/hooks ([@pvinis](https://github.com/pvinis))
+- Revert "move config out" ([@pvinis](https://github.com/pvinis))
 
 #### Authors: 1
 
@@ -461,18 +468,18 @@ Thanks for all your work!
 
 # v2.4.2 (Sat Feb 22 2020)
 
-#### 🐛  Bug Fix
+#### 🐛 Bug Fix
 
 - ok [#70](https://github.com/react-native-community/hooks/pull/70) ([@pvinis](https://github.com/pvinis))
 - hm [#69](https://github.com/react-native-community/hooks/pull/69) ([@pvinis](https://github.com/pvinis))
 - set up auto [#66](https://github.com/react-native-community/hooks/pull/66) ([@hipstersmoothie](https://github.com/hipstersmoothie) [@pvinis](https://github.com/pvinis))
 - (fix): Add a prepare script to package.json [#68](https://github.com/react-native-community/hooks/pull/68) ([@Naturalclar](https://github.com/Naturalclar))
 
-#### ⚠️  Pushed to master
+#### ⚠️ Pushed to master
 
-- move config out  ([@pvinis](https://github.com/pvinis))
-- upgrade  ([@pvinis](https://github.com/pvinis))
-- add renovate  ([@pvinis](https://github.com/pvinis))
+- move config out ([@pvinis](https://github.com/pvinis))
+- upgrade ([@pvinis](https://github.com/pvinis))
+- add renovate ([@pvinis](https://github.com/pvinis))
 
 #### Authors: 3
 
@@ -492,34 +499,34 @@ Thanks for all your work!
 
 :heart: Ronaldo Lima ([@ronal2do](https://github.com/ronal2do))
 
-#### 🚀  Enhancement
+#### 🚀 Enhancement
 
 - trying out auto [#60](https://github.com/react-native-community/hooks/pull/60) ([@pvinis](https://github.com/pvinis))
 
-#### 🐛  Bug Fix
+#### 🐛 Bug Fix
 
 - Update README.md [#61](https://github.com/react-native-community/hooks/pull/61) ([@pvinis](https://github.com/pvinis))
 - Create LICENSE [#57](https://github.com/react-native-community/hooks/pull/57) ([@pvinis](https://github.com/pvinis))
 - Make sure initial dimensions are up-to-date [#58](https://github.com/react-native-community/hooks/pull/58) ([@LinusU](https://github.com/LinusU))
-- from pr #38 from @arielger  ([@pvinis](https://github.com/pvinis))
+- from pr #38 from @arielger ([@pvinis](https://github.com/pvinis))
 - Update useBackHandler.js
 
 Every time this function was called you will add a new `addEventListener`, now we passed an argument to create a new listener only when receive a new function [#40](https://github.com/react-native-community/hooks/pull/40) ([@ronal2do](https://github.com/ronal2do))
 
-#### ⚠️  Pushed to master
+#### ⚠️ Pushed to master
 
-- bump  ([@pvinis](https://github.com/pvinis))
-- aha  ([@pvinis](https://github.com/pvinis))
-- upg  ([@pvinis](https://github.com/pvinis))
-- test  ([@pvinis](https://github.com/pvinis))
-- try  ([@pvinis](https://github.com/pvinis))
-- some baaaasic tests  ([@pvinis](https://github.com/pvinis))
-- rename repo to be canonical with the rest and fix links  ([@pvinis](https://github.com/pvinis))
-- 2.0.1  ([@LinusU](https://github.com/LinusU))
-- avoid shadowing  ([@pvinis](https://github.com/pvinis))
-- Merge branch 'ronal2do-patch-1'  ([@pvinis](https://github.com/pvinis))
-- Merge branch 'patch-1' of https://github.com/ronal2do/react-native-hooks into ronal2do-patch-1  ([@pvinis](https://github.com/pvinis))
-- upgrade  ([@pvinis](https://github.com/pvinis))
+- bump ([@pvinis](https://github.com/pvinis))
+- aha ([@pvinis](https://github.com/pvinis))
+- upg ([@pvinis](https://github.com/pvinis))
+- test ([@pvinis](https://github.com/pvinis))
+- try ([@pvinis](https://github.com/pvinis))
+- some baaaasic tests ([@pvinis](https://github.com/pvinis))
+- rename repo to be canonical with the rest and fix links ([@pvinis](https://github.com/pvinis))
+- 2.0.1 ([@LinusU](https://github.com/LinusU))
+- avoid shadowing ([@pvinis](https://github.com/pvinis))
+- Merge branch 'ronal2do-patch-1' ([@pvinis](https://github.com/pvinis))
+- Merge branch 'patch-1' of https://github.com/ronal2do/react-native-hooks into ronal2do-patch-1 ([@pvinis](https://github.com/pvinis))
+- upgrade ([@pvinis](https://github.com/pvinis))
 
 #### Authors: 3
 
@@ -528,4 +535,3 @@ Every time this function was called you will add a new `addEventListener`, now w
 - Ronaldo Lima ([@ronal2do](https://github.com/ronal2do))
 
 ---
-
