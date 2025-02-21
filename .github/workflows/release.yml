@@ -16,14 +16,14 @@ jobs:
         run: git fetch --unshallow --tags
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
-          cache: 'yarn'
+          node-version: 22
+          cache: 'bun'
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Install deps
-        run: yarn install
+        run: bun install
       - name: Release new version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn release
+        run: bun release

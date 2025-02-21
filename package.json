@@ -1,11 +1,11 @@
 {
   "name": "@react-native-community/hooks",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "prepare": "yarn build",
+    "prepare": "bun run build",
     "build": "tsc",
     "test": "jest",
     "test:w": "jest --watch",

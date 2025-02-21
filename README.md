@@ -135,20 +135,17 @@ console.log('layout: ', layout)
 ### `useRefresh`
 
 ```js
-import { useRefresh } from '@react-native-community/hooks'
+import {useRefresh} from '@react-native-community/hooks'
 
 const fetch = () => {
-    return new Promise((resolve) => setTimeout(resolve, 500))
+  return new Promise((resolve) => setTimeout(resolve, 500))
 }
 
-const { isRefreshing, onRefresh } = useRefresh(fetch);
+const {isRefreshing, onRefresh} = useRefresh(fetch)
 
-<ScrollView 
-  refreshControl= {
-    <RefreshControl
-      refreshing={isRefreshing}
-      onRefresh={onRefresh}
-    />
+;<ScrollView
+  refreshControl={
+    <RefreshControl refreshing={isRefreshing} onRefresh={onRefresh} />
   }
 />
 ```
