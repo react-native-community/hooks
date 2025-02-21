@@ -155,7 +155,7 @@ const {isRefreshing, onRefresh} = useRefresh(fetch)
 
 ## Thanks
 
-We use [auto](https://github.com/intuit/auto) for automatic releases, an awesome tool by an awesome [dude](https://github.com/hipstersmoothie)!
+We use [Changesets](https://github.com/changesets/changesets) for managing releases and versioning.
 
 ## Contributors ✨
 

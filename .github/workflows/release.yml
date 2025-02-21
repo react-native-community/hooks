@@ -12,13 +12,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Fetch tags # we need them for auto to work correctly
-        run: git fetch --unshallow --tags
+        with:
+          fetch-depth: 0
       - uses: jdx/mise-action@v2
       - name: Install deps
         run: bun install
-      - name: Release new version
+      - name: Create Release PR or Publish
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: bun run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: bun release
