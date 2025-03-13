@@ -4,18 +4,12 @@ import {Linking} from 'react-native'
 const useLinking = () => {
   const [deepLink, setDeepLink] = useState<string | null>(null)
 
-  const openLinkInBrowser = (url: string) => {
-    Linking.canOpenURL(url).then((canOpen) => canOpen && Linking.openURL(url))
-  }
-
-  const openAppSettings = async () => await Linking.openSettings()
-
   const handleURLChange = (event: {url: string}) => {
     setDeepLink(event.url)
   }
 
   useEffect(() => {
-    Linking.getInitialURL().then((url) => setDeepLink(url))
+    Linking.getInitialURL().then((url: string) => setDeepLink(url))
   }, [])
 
   useEffect(() => {
@@ -24,7 +18,7 @@ const useLinking = () => {
     return () => listener.remove()
   }, [])
 
-  return {openLinkInBrowser, openAppSettings, deepLink}
+  return {deepLink}
 }
 
 export {useLinking}

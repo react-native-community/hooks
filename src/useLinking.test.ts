@@ -33,26 +33,4 @@ describe('useLinking', () => {
 
     expect(result.current.deepLink).toBe('app://magic_screen')
   })
-
-  it('should open link in browser', async () => {
-    const {result} = renderHook(() => useLinking())
-    const url = 'https://reactnative.dev'
-
-    await act(async () => {
-      result.current.openLinkInBrowser(url)
-    })
-
-    expect(Linking.canOpenURL).toHaveBeenCalledWith(url)
-    expect(Linking.openURL).toHaveBeenCalledWith(url)
-  })
-
-  it('should open app settings', async () => {
-    const {result} = renderHook(() => useLinking())
-
-    await act(async () => {
-      result.current.openAppSettings()
-    })
-
-    expect(Linking.openSettings).toHaveBeenCalled()
-  })
 })

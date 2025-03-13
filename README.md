@@ -156,12 +156,12 @@ const { isRefreshing, onRefresh } = useRefresh(fetch);
 
 ### `useLinking`
 
-useLinking can handle incoming your app's deeplinks and opening external urls through the [`Linking`](https://reactnative.dev/docs/linking) API.
+useLinking can handle incoming your app's deeplinks through the [`Linking`](https://reactnative.dev/docs/linking) API.
 
 ```js
 import {useLinking} from '@react-native-community/hooks'
 
-const { deepLink, openLinkInBrowser } = useLinking()
+const { deepLink } = useLinking()
 
 console.log('Initial deep link is:', deepLink)
 ```
