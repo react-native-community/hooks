@@ -5,7 +5,7 @@ jest.mock("react-native/Libraries/Utilities/Platform", () => ({
 }))
 
 jest.mock("react-native", () => {
-	const RN = jest.requireActual("react-native/Libraries/ReactNative/oss/ReactNativeRenderer-prod")
+	const keyboardListeners = new Map()
 
 	return {
 		Platform: {
@@ -28,10 +28,19 @@ jest.mock("react-native", () => {
 			})),
 		},
 		Keyboard: {
-			addListener: jest.fn(() => ({
-				remove: jest.fn(),
-			})),
-			emit: jest.fn(),
+			addListener: jest.fn((event, listener) => {
+				const listeners = keyboardListeners.get(event) ?? new Set()
+				listeners.add(listener)
+				keyboardListeners.set(event, listeners)
+				return {
+					remove: jest.fn(() => listeners.delete(listener)),
+				}
+			}),
+			emit: jest.fn((event, payload) => {
+				keyboardListeners.get(event)?.forEach((listener) => listener(payload))
+			}),
+			isVisible: jest.fn().mockReturnValue(false),
+			metrics: jest.fn().mockReturnValue(undefined),
 		},
 		AccessibilityInfo: {
 			addEventListener: jest.fn(() => ({
