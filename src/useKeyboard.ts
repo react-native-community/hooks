@@ -13,12 +13,17 @@ const initialValue = {
 }
 
 export function useKeyboard() {
-	const [shown, setShown] = useState(false)
+	// These APIs are unavailable in older supported React Native versions.
+	const [initialMetrics] = useState(() => Keyboard.metrics?.())
+	const [shown, setShown] = useState(() => {
+		const isVisible = Keyboard.isVisible?.()
+		return isVisible ?? initialMetrics !== undefined
+	})
 	const [coordinates, setCoordinates] = useState<{
 		start: undefined | KeyboardMetrics
 		end: KeyboardMetrics
-	}>(initialValue)
-	const [keyboardHeight, setKeyboardHeight] = useState<number>(0)
+	}>(initialMetrics ? { start: undefined, end: initialMetrics } : initialValue)
+	const [keyboardHeight, setKeyboardHeight] = useState(initialMetrics?.height ?? 0)
 
 	const handleKeyboardWillShow: KeyboardEventListener = (e) => {
 		setCoordinates({ start: e.startCoordinates, end: e.endCoordinates })
@@ -33,11 +38,11 @@ export function useKeyboard() {
 	}
 	const handleKeyboardDidHide: KeyboardEventListener = (e) => {
 		setShown(false)
+		setKeyboardHeight(0)
 		if (e) {
 			setCoordinates({ start: e.startCoordinates, end: e.endCoordinates })
 		} else {
 			setCoordinates(initialValue)
-			setKeyboardHeight(0)
 		}
 	}
 
