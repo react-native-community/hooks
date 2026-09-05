@@ -1,4 +1,4 @@
-import { renderHook, act } from "@testing-library/react-hooks"
+import { renderHook, act } from "@testing-library/react-native"
 import { LayoutRectangle, NativeSyntheticEvent } from "react-native"
 import { useLayout } from "./useLayout"
 

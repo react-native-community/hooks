@@ -1,11 +1,11 @@
-import { act, renderHook } from "@testing-library/react-hooks"
+import { act, renderHook } from "@testing-library/react-native"
 import { AppState, AppStateStatus } from "react-native"
 import { useAppState } from "./useAppState"
 
 jest.mock("react-native", () => ({
 	AppState: {
 		currentState: "mock-currentState",
-		addEventListener: jest.fn(),
+		addEventListener: jest.fn(() => ({ remove: jest.fn() })),
 		removeEventListener: jest.fn(),
 	},
 }))
@@ -17,6 +17,8 @@ describe("useAppState", () => {
 
 		addEventListenerMock.mockImplementationOnce((_, fn) => {
 			listener = fn
+
+			return { remove: jest.fn() }
 		})
 
 		return (newStatus: AppStateStatus) => listener(newStatus)

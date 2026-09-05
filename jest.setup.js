@@ -5,8 +5,6 @@ jest.mock("react-native/Libraries/Utilities/Platform", () => ({
 }))
 
 jest.mock("react-native", () => {
-	const RN = jest.requireActual("react-native/Libraries/ReactNative/oss/ReactNativeRenderer-prod")
-
 	return {
 		Platform: {
 			select: jest.fn((platform) => platform.default),
@@ -27,12 +25,25 @@ jest.mock("react-native", () => {
 				remove: jest.fn(),
 			})),
 		},
-		Keyboard: {
-			addListener: jest.fn(() => ({
-				remove: jest.fn(),
-			})),
-			emit: jest.fn(),
-		},
+		Keyboard: (() => {
+			const listeners = {}
+
+			return {
+				addListener: jest.fn((eventType, listener) => {
+					listeners[eventType] = listeners[eventType] || []
+					listeners[eventType].push(listener)
+
+					return {
+						remove: jest.fn(() => {
+							listeners[eventType] = (listeners[eventType] || []).filter((l) => l !== listener)
+						}),
+					}
+				}),
+				emit: jest.fn((eventType, event) => {
+					;(listeners[eventType] || []).forEach((listener) => listener(event))
+				}),
+			}
+		})(),
 		AccessibilityInfo: {
 			addEventListener: jest.fn(() => ({
 				remove: jest.fn(),
@@ -59,6 +70,3 @@ jest.mock("react-native", () => {
 		},
 	}
 })
-
-global.window = {}
-global.window.addEventListener = () => {}

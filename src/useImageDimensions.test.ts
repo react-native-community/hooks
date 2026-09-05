@@ -1,5 +1,5 @@
 import { useImageDimensions } from "./useImageDimensions"
-import { act, renderHook } from "@testing-library/react-hooks"
+import { act, renderHook } from "@testing-library/react-native"
 import { Image } from "react-native"
 
 jest.mock("react-native", () => ({
