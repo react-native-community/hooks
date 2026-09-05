@@ -1,5 +1,5 @@
 import { useBackHandler } from "./useBackHandler"
-import { renderHook } from "@testing-library/react-hooks"
+import { renderHook } from "@testing-library/react-native"
 import { BackHandler } from "react-native"
 
 const removeEventListenerMock = jest.fn()

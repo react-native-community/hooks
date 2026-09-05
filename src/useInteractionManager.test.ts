@@ -1,10 +1,10 @@
 import { useInteractionManager } from "./useInteractionManager"
-import { act, renderHook } from "@testing-library/react-hooks"
+import { act, renderHook } from "@testing-library/react-native"
 import { InteractionManager } from "react-native"
 
 jest.mock("react-native", () => ({
 	InteractionManager: {
-		runAfterInteractions: jest.fn(),
+		runAfterInteractions: jest.fn(() => ({ cancel: jest.fn() })),
 	},
 }))
 
@@ -22,6 +22,8 @@ describe("useInteractionManager", () => {
 
 		runAfterInteractionsMock.mockImplementationOnce((cb) => {
 			emitAfterInteractions = cb
+
+			return { cancel: jest.fn() }
 		})
 
 		const { result } = renderHook(() => useInteractionManager())

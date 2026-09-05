@@ -1,5 +1,5 @@
 import { useKeyboard } from "./useKeyboard"
-import { act, renderHook } from "@testing-library/react-hooks"
+import { act, renderHook } from "@testing-library/react-native"
 import { Keyboard } from "react-native"
 
 describe("useKeyboard", () => {

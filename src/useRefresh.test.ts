@@ -1,10 +1,10 @@
-import { act, renderHook } from "@testing-library/react-hooks"
+import { act, renderHook } from "@testing-library/react-native"
 import { useRefresh } from "./useRefresh"
 
 const DELAY_IN_MS = 300
 jest.useFakeTimers()
 describe("useRefresh", () => {
-	it("should invoke refresh and return correct refreshing state", () => {
+	it("should invoke refresh and return correct refreshing state", async () => {
 		const wait = () => {
 			return new Promise((resolve) => setTimeout(resolve, DELAY_IN_MS))
 		}
@@ -18,7 +18,7 @@ describe("useRefresh", () => {
 
 		expect(result.current.isRefreshing).toBe(true)
 		expect(spy).toHaveBeenCalledTimes(1)
-		act(() => {
+		await act(async () => {
 			jest.advanceTimersByTime(DELAY_IN_MS)
 		})
 
